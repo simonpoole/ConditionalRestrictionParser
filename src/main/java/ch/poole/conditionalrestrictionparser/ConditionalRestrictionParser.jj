@@ -1,0 +1,244 @@
+/**
+ * Parser for OpenStreetMap opening_hours values
+ * See http://wiki.openstreetmap.org/wiki/Key:opening_hours/specification
+ *
+ * @author Simon Poole
+ *
+ * Copyright (c) 2015 Simon Poole
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ * and associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all copies
+ * or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ * BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ " OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+options{  JDK_VERSION = "1.5";
+
+  static = false;
+
+  LOOKAHEAD= 2;
+  IGNORE_CASE = true;
+  FORCE_LA_CHECK = true;
+  CHOICE_AMBIGUITY_CHECK = 2;
+  OTHER_AMBIGUITY_CHECK = 2;
+  DEBUG_PARSER = false;
+  DEBUG_LOOKAHEAD = false;
+  DEBUG_TOKEN_MANAGER = false;
+  UNICODE_INPUT = true;}PARSER_BEGIN(ConditionalRestrictionParser)package ch.poole.conditionalrestrictionparser;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class ConditionalRestrictionParser{ }PARSER_END(ConditionalRestrictionParser)SKIP :{  " "| "\r"| "\t"| "\n"}
+TOKEN :
+{
+  < AT : "@" >
+| < SEMICOLON : ";" >
+| < LBRACKET : "(" >
+| < RBRACKET : ")" >
+| < AND : "AND" >
+}
+TOKEN :
+{
+  < CHAR : ~[ "@", "\"", "\\" ] >
+}
+
+TOKEN :
+{
+  < QUOTE : "\"" > : QUOTED_STRING_STATE
+}
+
+< QUOTED_STRING_STATE >
+TOKEN :
+{
+  < ENDQUOTE : < QUOTE >> : DEFAULT
+| < QUOTED_STRING_CHAR : ~[ "\"", "\\" ] >
+}
+
+/**
+ * Match a value
+ */
+String value() :
+{
+  StringBuilder builder = new StringBuilder();
+}
+{
+  (
+    getChar(builder)
+  )*
+  {
+    return builder.toString();
+  }
+}
+
+/**
+ * Add char to StringBuilder
+ */
+void getChar(StringBuilder builder) :
+{
+  Token t;
+  String s;
+}
+{
+  (    
+    (t = < CHAR >)
+    {
+      if (t.image.length() < 2)
+      {
+        // CHAR
+        builder.append(t.image.charAt(0));
+      }
+    }
+  |
+    s = quotedString()
+    {
+      builder.append(s);
+    }
+  )    
+}
+
+/**
+ * Match char inside quoted string.
+ */
+void getQuotedStringChar(StringBuilder builder) :
+{
+  Token t;
+}
+{
+  (t = < QUOTED_STRING_CHAR >)
+  {
+    if (t.image.length() < 2)
+    {
+      // CHAR
+      builder.append(t.image.charAt(0));
+    }
+  }
+}
+
+/**
+ * Match a quoted string.
+ */
+String quotedString() :
+{
+  StringBuilder builder = new StringBuilder();
+}
+{
+  < QUOTE >
+  (
+    getQuotedStringChar(builder)
+  )*
+  < ENDQUOTE >
+  {
+    return '"' + builder.toString() + '"';
+  }
+}
+
+
+ArrayList<String> conditions() :
+{
+  StringBuilder builder = new StringBuilder();
+  ArrayList<String> result = null;
+  ArrayList<String> temp = null;
+}
+{
+  (    
+    (
+      getChar(builder)
+      (        < AND >
+        temp = conditions()
+      )*
+      {
+        if (temp != null) {
+          if (result == null) {
+            result = temp;
+          } else {
+            result.addAll(temp);
+          }
+        }
+      }
+    )+
+  |
+    (      < LBRACKET >
+      (
+        getChar(builder)
+        (
+          < AND >
+          temp = conditions()
+        )*
+        {
+          if (temp != null) {
+            if (result == null) {
+              result = temp;
+            } else {
+              result.addAll(temp);
+            }
+          }
+        }
+      )+
+      < RBRACKET >
+    )
+  )
+  {
+    if (builder.length() > 0) {
+      if (result == null) {
+        result = new ArrayList<String>();
+      }
+      result.add(builder.toString());
+    }
+    return result;
+  }
+}
+
+Restriction restriction() :
+{
+  String value = null;
+  List< String > conditions = null; // ANDed conditions
+}
+{ 
+  ( 
+    value = value() < AT > conditions = conditions()
+  )
+  {
+    return new Restriction(value,conditions);
+  }
+}  
+
+ArrayList < Restriction > restrictions() :
+{
+  ArrayList < Restriction > result = new ArrayList < Restriction > ();
+  Restriction r = null;
+  Restriction r1 = null;
+}
+{
+  r = restriction()
+  (
+    < SEMICOLON >
+    (
+      r1 = restriction()
+      {
+      	result.add(0, r1);
+      }
+    )
+  )*
+  < EOF >
+  {
+    result.add(r);
+    Collections.reverse(result);
+    return result;
+  }
+}
+
+< * > TOKEN :
+{
+  < UNEXPECTED_CHAR : ~[] >
+} 
