@@ -25,7 +25,7 @@
 
   static = false;
 
-  LOOKAHEAD= 2;
+  LOOKAHEAD= 4;
   IGNORE_CASE = true;
   FORCE_LA_CHECK = true;
   CHOICE_AMBIGUITY_CHECK = 2;
@@ -39,14 +39,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ConditionalRestrictionParser{ }PARSER_END(ConditionalRestrictionParser)SKIP :{  " "| "\r"| "\t"| "\n"}
+public class ConditionalRestrictionParser{ }PARSER_END(ConditionalRestrictionParser)
+TOKEN_MGR_DECLS : {
+    int bracketNestingDepth ;
+    int prevState ; 
+}
+
 TOKEN :
 {
-  < AT : "@" >
-| < SEMICOLON : ";" >
-| < LBRACKET : "(" >
-| < RBRACKET : ")" >
-| < AND : "AND" >
+  < AT : "@" > : CONDITION_STATE
 }
 TOKEN :
 {
@@ -55,14 +56,48 @@ TOKEN :
 
 TOKEN :
 {
-  < QUOTE : "\"" > : QUOTED_STRING_STATE
+  < QUOTE : "\"" > { prevState = curLexState; } : QUOTED_STRING_STATE // save current state
 }
 
 < QUOTED_STRING_STATE >
 TOKEN :
 {
-  < ENDQUOTE : < QUOTE >> : DEFAULT
+  < ENDQUOTE : < QUOTE >> { SwitchTo(prevState); }  // need to switch to prev state 
 | < QUOTED_STRING_CHAR : ~[ "\"", "\\" ] >
+}
+
+< CONDITION_STATE >
+TOKEN :
+{
+  < CONDITION_QUOTE : "\"" > { prevState = curLexState; } : QUOTED_STRING_STATE // save current state
+}
+
+< CONDITION_STATE >
+TOKEN :
+{
+  < CONDITION_CHAR : ~[ "(", "\"", "\\", ";", " ", "\t" ] >
+| < WS : [" ","\t"] >
+| < LPAREN :  "(" > { bracketNestingDepth=1; }  : PAREN_STATE
+| < SEMICOLON : ";" > : DEFAULT
+| < AND : "AND" >
+}
+
+< PAREN_STATE >
+TOKEN :
+{
+  < PAREN_QUOTE : "\"" > { prevState = curLexState; } : QUOTED_STRING_STATE // save current state
+}
+
+< PAREN_STATE >
+TOKEN :
+{
+  < PAREN_LPAREN : "(" >  { bracketNestingDepth+=1; }
+| < RPAREN :  ")" >  {
+    bracketNestingDepth -= 1;
+    SwitchTo( bracketNestingDepth==0 ? CONDITION_STATE : PAREN_STATE );}  
+| < PAREN_CHAR : ~[ "(", ")", "\"", "\\", " ", "\t" ] >
+| < WS_PAREN : [" ","\t"] >
+| < PAREN_AND : "AND" >
 }
 
 /**
@@ -75,7 +110,7 @@ String value() :
 {
   (
     getChar(builder)
-  )*
+  )+
   {
     return builder.toString();
   }
@@ -113,16 +148,24 @@ void getChar(StringBuilder builder) :
 void getQuotedStringChar(StringBuilder builder) :
 {
   Token t;
+  String s;
 }
 {
-  (t = < QUOTED_STRING_CHAR >)
-  {
-    if (t.image.length() < 2)
+  (
+    (t = < QUOTED_STRING_CHAR >)
     {
-      // CHAR
-      builder.append(t.image.charAt(0));
+      if (t.image.length() < 2)
+      {
+        // CHAR
+        builder.append(t.image.charAt(0));
+      }
     }
-  }
+  | 
+    s = quotedString()
+    {
+      builder.append(s);
+    }
+  )
 }
 
 /**
@@ -133,7 +176,8 @@ String quotedString() :
   StringBuilder builder = new StringBuilder();
 }
 {
-  < QUOTE >
+  (    < QUOTE > | <  CONDITION_QUOTE > | <  PAREN_QUOTE >
+  )
   (
     getQuotedStringChar(builder)
   )*
@@ -143,55 +187,184 @@ String quotedString() :
   }
 }
 
-
-ArrayList<String> conditions() :
+/**
+ * Match char in condition 
+ */
+void getConditionChar(StringBuilder builder) :
 {
-  StringBuilder builder = new StringBuilder();
-  ArrayList<String> result = null;
-  ArrayList<String> temp = null;
+  Token t;
+  String s;
 }
 {
-  (    
-    (
-      getChar(builder)
-      (        < AND >
-        temp = conditions()
-      )*
+  (
+    (t = < CONDITION_CHAR > | t = < WS >)
+    {
+      if (t.image.length() < 2)
       {
-        if (temp != null) {
-          if (result == null) {
+        // CHAR
+        builder.append(t.image.charAt(0));
+      }
+    }
+  | 
+    s = quotedString()
+    {
+      builder.append(s);
+    }
+  )
+}
+
+/**
+ * Match char inside parenthesis 
+ */
+void getParenChar(StringBuilder builder) :
+{
+  Token t;
+  String s;
+}
+{
+  (
+    (t = < PAREN_CHAR > | t = < WS_PAREN >)
+    {
+      if (t.image.length() < 2)
+      {
+        // CHAR
+        builder.append(t.image.charAt(0));
+      }
+    }
+  | 
+    s = quotedString()
+    {
+      builder.append(s);
+    }
+  )
+}
+
+Conditions conditions() :
+{
+  StringBuilder builder = new StringBuilder();
+  List < String > result = null;
+  List < String > temp = null;
+  Conditions tempConditions = null;
+  boolean inParen = false;
+}
+{
+  (
+  < WS >
+  )*
+  (
+    (
+      getConditionChar(builder)
+    )+
+  |
+    (
+      < LPAREN >
+      {
+        inParen = true;
+      }
+      temp = conditionsInParen() 
+      < RPAREN > 
+      (
+      < WS >
+      )*
+    )
+  )
+  {
+    if (temp != null)
+    {
+      if (result == null)
+      {
+        result = temp;
+      }
+      else
+      {
+        result.addAll(temp);
+      }
+    }
+  }
+  (
+    (
+    < WS >
+    )* 
+    < AND >
+    tempConditions = conditions()
+    {
+      if (tempConditions != null)
+      {
+        if (result == null)
+        {
+          result = tempConditions.getConditions();
+        }
+        else
+        {
+          result.addAll(tempConditions.getConditions());
+        }
+        // strictly only one level of parentheses is necessary we merge them here
+        inParen = inParen || tempConditions.inParen(); 
+      }
+    }
+  )*
+  {
+    if (builder.length() > 0)
+    {
+      if (result == null)
+      {
+        result = new ArrayList < String > ();
+      }
+      result.add(builder.toString());
+    }
+    Collections.reverse(result);
+    return new Conditions(result, inParen);
+  }
+}
+
+ArrayList < String > conditionsInParen() :
+{
+  StringBuilder builder = new StringBuilder();
+  ArrayList < String > result = null;
+  ArrayList < String > temp = null;
+}
+{
+  (
+    (  
+      getParenChar(builder)
+    )+
+    (
+      (
+    	< WS >
+      )* 
+      < PAREN_AND >
+      (
+        (
+          temp = conditionsInParen()
+        )
+      |
+        (
+          < PAREN_LPAREN > 
+          temp = conditionsInParen() 
+          < RPAREN >
+        )
+      )
+      {
+        if (temp != null)
+        {
+          if (result == null)
+          {
             result = temp;
-          } else {
+          }
+          else
+          {
             result.addAll(temp);
           }
         }
       }
-    )+
-  |
-    (      < LBRACKET >
-      (
-        getChar(builder)
-        (
-          < AND >
-          temp = conditions()
-        )*
-        {
-          if (temp != null) {
-            if (result == null) {
-              result = temp;
-            } else {
-              result.addAll(temp);
-            }
-          }
-        }
-      )+
-      < RBRACKET >
-    )
+    )*
   )
   {
-    if (builder.length() > 0) {
-      if (result == null) {
-        result = new ArrayList<String>();
+    if (builder.length() > 0)
+    {
+      if (result == null)
+      {
+        result = new ArrayList < String > ();
       }
       result.add(builder.toString());
     }
@@ -202,7 +375,7 @@ ArrayList<String> conditions() :
 Restriction restriction() :
 {
   String value = null;
-  List< String > conditions = null; // ANDed conditions
+  Conditions conditions = null; // ANDed conditions
 }
 { 
   ( 
@@ -229,6 +402,8 @@ ArrayList < Restriction > restrictions() :
       	result.add(0, r1);
       }
     )
+  )*
+  (    < SEMICOLON >
   )*
   < EOF >
   {
