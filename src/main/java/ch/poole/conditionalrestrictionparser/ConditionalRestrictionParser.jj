@@ -76,7 +76,7 @@ TOKEN :
 TOKEN :
 {
   < CONDITION_CHAR : ~[ "(", "\"", "\\", ";", " ", "\t" ] >
-| < WS : [" ","\t"] >
+| < WS_COND : [" ","\t"] >
 | < LPAREN :  "(" > { bracketNestingDepth=1; }  : PAREN_STATE
 | < SEMICOLON : ";" > : DEFAULT
 | < AND : "AND" >
@@ -112,7 +112,7 @@ String value() :
     getChar(builder)
   )+
   {
-    return builder.toString();
+    return builder.toString().trim();
   }
 }
 
@@ -197,7 +197,7 @@ void getConditionChar(StringBuilder builder) :
 }
 {
   (
-    (t = < CONDITION_CHAR > | t = < WS >)
+    (t = < CONDITION_CHAR > | t = < WS_COND >)
     {
       if (t.image.length() < 2)
       {
@@ -249,7 +249,7 @@ Conditions conditions() :
 }
 {
   (
-  < WS >
+  < WS_COND >
   )*
   (
     (
@@ -264,7 +264,7 @@ Conditions conditions() :
       temp = conditionsInParen() 
       < RPAREN > 
       (
-      < WS >
+      < WS_COND >
       )*
     )
   )
@@ -283,7 +283,7 @@ Conditions conditions() :
   }
   (
     (
-    < WS >
+    < WS_COND >
     )* 
     < AND >
     tempConditions = conditions()
@@ -330,7 +330,7 @@ ArrayList < String > conditionsInParen() :
     )+
     (
       (
-    	< WS >
+    	< WS_PAREN >
       )* 
       < PAREN_AND >
       (
@@ -377,12 +377,12 @@ Restriction restriction() :
   String value = null;
   Conditions conditions = null; // ANDed conditions
 }
-{ 
-  ( 
+{
+  (
     value = value() < AT > conditions = conditions()
   )
   {
-    return new Restriction(value,conditions);
+    return new Restriction(value, conditions);
   }
 }  
 

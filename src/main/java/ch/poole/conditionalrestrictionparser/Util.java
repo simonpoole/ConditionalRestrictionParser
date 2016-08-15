@@ -7,7 +7,7 @@ public class Util {
 		StringBuilder result = new StringBuilder();
 		for (Restriction r:restrictions) {
 			if (result.length() != 0) {
-				result.append(";");
+				result.append("; ");
 			}
 			result.append(r);
 		}

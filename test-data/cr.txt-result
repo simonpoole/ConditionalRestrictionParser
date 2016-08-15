@@ -5,7 +5,7 @@
 0	100 @ (*)
 0	100 @ (05:00-11:00)
 0	100 @ (06:00-19:00)
-0	100@ (06:00-19:00)
+0	100 @ (06:00-19:00)
 0	100 @ (06:00-19:00;Su,PH off)
 0	100 @ (2014 Sep 29 - 2014 Nov 14 00:00-24:00)
 0	100 @ (22:00-06:00)
@@ -15,16 +15,16 @@
 0	100 @ (Mo-Fr 07:00-09:00)
 0	100 @ (Mo-Sa 05:00-22:00;PH off)
 0	100 @ (Nov-Apr)
-0	100 @ (weight<=3.5);  70 @ (weight>3.5)
 0	100 @ (weight<=3.5); 70 @ (weight>3.5)
-0	100 @ (weight<=3.5);  80 @ (weight>3.5)
+0	100 @ (weight<=3.5); 70 @ (weight>3.5)
+0	100 @ (weight<=3.5); 80 @ (weight>3.5)
 0	100 @ (weight<=3.5); 80 @ (weight>3.5)
 0	100 @ wet
 0	100 @ (wet)
 0	100 @ wet; 100 @ snow
 0	10 @ (12:00-24:00)
-0	10@ (12:00-24:00)
-0	10 @ (20:00-06:00);  30 @ (06:00-20:00)
+0	10 @ (12:00-24:00)
+0	10 @ (20:00-06:00); 30 @ (06:00-20:00)
 0	10 @ (2014 Sep 1-2014 Nov 30)
 0	10 @ (2014 Sep 1-2014 Nov 31)
 0	1 @ (05:00-19:00)
@@ -33,18 +33,18 @@
 0	1 @ (07:00-19:00)
 0	10 @ maxweight>3
 0	10 @ (Sat AM)
-0	10 @ snow;  10 @ wet
+0	10 @ snow; 10 @ wet
 0	-1 @ (10:00-05:00)
 0	110 @ (05:00-19:00)
 0	110 @ (22:00-05:00)
 0	110 @ (22:00-06:00)
 0	110 @ (May-Oct)
 0	110 @ (Nov - Mar)
-0	110 @ rain;  110 @ snow
+0	110 @ rain; 110 @ snow
 0	110 @ summer
-0	110 @ (weight<=3.5);  80 @ (weight>3.5)
+0	110 @ (weight<=3.5); 80 @ (weight>3.5)
 0	110 @ wet
-0	1@ (11:00-6:00)
+0	1 @ (11:00-6:00)
 0	-1 @ (12:00-24:00)
 0	120 @ (06:00-09:00)
 0	120 @ (06:00-19:00)
@@ -59,34 +59,34 @@
 0	12 @ 07:00-19:00
 0	120 @ (Mo-Fr 07:00-09:00)
 0	120 @ (Mo-Su 06:00-20:00)
-0	120 @ (weight<=3.5);  80 @ (weight>3.5)
 0	120 @ (weight<=3.5); 80 @ (weight>3.5)
-0	120 @ (weight<3.5);  80 @ (weight>3.5)
+0	120 @ (weight<=3.5); 80 @ (weight>3.5)
+0	120 @ (weight<3.5); 80 @ (weight>3.5)
 0	120 @ (weight<3.5); 80 @ (weight>3.5)
 0	120 @ wet
 0	12 @ (22:00-06:00)
 0	12 @ (Dec 15-Apr 30 Sa 07:00-12:00)
-0	12 @ hgv,bus ;  none @ psv
+0	12 @ hgv,bus; none @ psv
 0	12 @ hgv,bus; none @ psv
 0	130 @ (06:00-19:00)
 0	130 @ (06:00-19:00); 80 @ wet
 0	130 @ (06:00-20:00)
 0	130 @ wet
-0	130@ (wet)
+0	130 @ (wet)
 0	13 @ (bogie:axles = 2)
-0	140 @ (weight<=3.5);  80 @ (weight>3.5)
+0	140 @ (weight<=3.5); 80 @ (weight>3.5)
 0	140 @ (weight<=3.5); 80 @ (weight>3.5)
 0	15 @ (Mo-Fr 10:00-19:00)
-0	15 mph @ (05:30-07:30);  15 mph @ (13:00-15:00)
-0	15 mph @ (Mo-Fr 7:00-8:30);  15 mph @ (Mo-Fr 14:00-15:30)
+0	15 mph @ (05:30-07:30); 15 mph @ (13:00-15:00)
+0	15 mph @ (Mo-Fr 7:00-8:30); 15 mph @ (Mo-Fr 14:00-15:30)
 0	15 mph @ (When Flashing)
 0	16.5 @ delivery
-0	16@ (6:00-10:00, 16:00-20:00);  none@ permit
-0	16@ (6:00-10:00, 16:00-20:00); none@ permit
-0	16@ (6:00-22:00)
+0	16 @ (6:00-10:00, 16:00-20:00); none @ permit
+0	16 @ (6:00-10:00, 16:00-20:00); none @ permit
+0	16 @ (6:00-22:00)
 0	16 @ (7:00-11:00)
 0	16 @ hgv opposing traffic on the bridge
-0	18 @ (bogie:axles = 2);  24 @ (bogie:axles = 3)
+0	18 @ (bogie:axles = 2); 24 @ (bogie:axles = 3)
 0	1 @ (Mo-Fr 00:00-07:00;Mo-Fr 22:00-24:00)
 0	-1 @ (Mo-Fr 05:00-09:00)
 0	1 @ (Mo-Fr 05:00-10:00,14:00-20:00)
@@ -105,12 +105,12 @@
 0	1 @ (mo-fr 06:30-10:00)
 0	-1 @ (mo-fr 06:30-11:00)
 0	1 @ (Mo-Fr 07:00-09:00)
-0	1 @ (Mo - Fr 07:00 - 09:00);  0 @ (PH)
+0	1 @ (Mo - Fr 07:00 - 09:00); 0 @ (PH)
 0	1 @ (Mo - Fr 07:00 - 09:00); 0 @ (PH)
 0	1 @ (Mo-Fr 07:00-09:00, 15:00-18:00; Sa 09:00-15:00)
 0	1 @ (Mo-Fr 07:00-09:00; Mo-Fr 15:00-18:00)
 0	1 @ (Mo-Fr 07:00-09:00; Mo-Fr 15:00-18:00; Sa 09:00-15:00)
-0	-1 @ Mo-Fr 07:00-09:00;  yes @ Mo-Fr 16:00-18:00
+0	-1 @ Mo-Fr 07:00-09:00; yes @ Mo-Fr 16:00-18:00
 0	1 @ (Mo-Fr 07:00-17:00)
 0	1 @ (Mo-Fr 07:00-18:00)
 0	1 @ (Mo-Fr 07:00-18:00; Sa 09:00-15:00)
@@ -144,15 +144,15 @@
 0	20 @ (18:00-06:00)
 0	20 @ (20:00-06:00)
 0	20 @ (bogie:axles > 2)
-0	20 mph @ (05:00-07:00);  20 mph @ (13:00-15:00)
+0	20 mph @ (05:00-07:00); 20 mph @ (13:00-15:00)
 0	20mph @ (07:30-08:30)
 0	20 mph @ (7:00-17:00)
 0	20 mph @ (Aug-May Mo-Fr 06:30-08:30; 14:00-16:00)
 0	20 mph @ (children_present)
 0	20 mph @ (Mo-Fr 07:00-16:00)
 0	20 mph @ (Mo-Fr 07:00-17:00)
-0	20 mph@ (Mo-Fr 07:00-17:00)
-0	20 mph @ (Mo-Fr 08:30-09:30);  20 mph @ (Mo-Fr 14:45-15:45)
+0	20 mph @ (Mo-Fr 07:00-17:00)
+0	20 mph @ (Mo-Fr 08:30-09:30); 20 mph @ (Mo-Fr 14:45-15:45)
 0	20 mph @ (school_days 07:00-17:00)
 0	20 mph @ (school drop-off, school recess, school pick-up)
 0	20 mph @ (signal flashing)
@@ -191,7 +191,7 @@
 0	30 @ (06:00-16:00)
 0	30 @ (06:00 - 17:00)
 0	30 @ (06:00-17:00)
-0	30@ (06:00-17:00)
+0	30 @ (06:00-17:00)
 0	30 @ (06:00-18:00)
 0	30 @ (06:00-19:00)
 0	30 @ (06:00-20:00)
@@ -208,14 +208,14 @@
 0	30 @ (07:00-14:00)
 0	30 @ (07:00-16:00)
 0	30 @ (07:00-17:00)
-0	30@ (07:00-17:00)
-0	30 @ (07:00-17:00  AND  weekdays)
+0	30 @ (07:00-17:00)
+0	30 @ (07:00-17:00 AND weekdays)
 0	30 @ (07:00-18:00)
 0	30 @ 07:00-18:00
 0	30 @ (07:00 - 19:00)
 0	30 @ (07:00-19:00)
-0	30@ (07:00-19:00)
-0	30@ (07:00-19:00)
+0	30 @ (07:00-19:00)
+0	30 @ (07:00-19:00)
 0	30 @ (07:00-20:00)
 0	30 @ (07:00-21:00)
 0	30 @ (07:00-22:00)
@@ -236,17 +236,17 @@
 0	30 @ (18:00-07:00)
 0	30 @ (20:00-06:00)
 0	30 @ (20:00-07:00)
-0	30 @ (20:00-07:00  AND  weight>7.5)
+0	30 @ (20:00-07:00 AND weight>7.5)
 0	30 @ (2014 Aug 22-2014 Sep 07 00:00-24:00)
 0	30 @ (22:00-05:00)
 0	30 @ (22:00-05:30)
 0	30 @ (22:00 - 06:00)
 0	30 @ (22:00-06:00)
 0	30 @ 22:00-06:00
-0	30@ (22:00-06:00)
-0	30 @ (22:00-06:00  AND  weight>3.5)
-0	30 @ (22:00-06:00  AND  weight>3.5)
-0	30 @ (22:00-06:00  AND  weight>7.5)
+0	30 @ (22:00-06:00)
+0	30 @ (22:00-06:00 AND weight>3.5)
+0	30 @ (22:00-06:00 AND weight>3.5)
+0	30 @ (22:00-06:00 AND weight>7.5)
 0	30 @ 22:00-06:30
 0	30 @ (22:00-07:00)
 0	30 @ (22:00-08:00)
@@ -255,7 +255,7 @@
 0	30 @ (22:00-6:00)
 0	3 @ (05:00-09:00)
 0	30 @ (6:00-21:00)
-0	30@ (6:00-22:00)
+0	30 @ (6:00-22:00)
 0	30 @ (6:00-8:00,13:00-17:00)
 0	30 @ (7:00-16:00)
 0	30 @ (7:00-17:00)
@@ -287,7 +287,7 @@
 0	30 @ (Mo-Fr 06:00-15:00)
 0	30 @ (Mo-Fr 06:00-16:00)
 0	30 @ (Mo-Fr 06:00-17:00)
-0	30@ (Mo-Fr 06:00-17:00)
+0	30 @ (Mo-Fr 06:00-17:00)
 0	30 @ (Mo-Fr 06:00 - 18:00)
 0	30 @ (Mo-Fr 06:00-18:00)
 0	30 @ Mo-Fr 06:00-18:00
@@ -318,8 +318,8 @@
 0	30 @ (Mo-Fr 07:00-17:00; PH off; PH -1 day off)
 0	30 @ (Mo-Fr 07:00 - 18:00)
 0	30 @ (Mo-Fr 07:00-18:00)
-0	30@ Mo-Fr 07:00-18:00
-0	30@ (Mo-Fr 07:00-18:00)
+0	30 @ Mo-Fr 07:00-18:00
+0	30 @ (Mo-Fr 07:00-18:00)
 0	30 @ (Mo-Fr 07:00-19:00)
 0	30 @ (Mo-Fr 07:00-19:00; PH off)
 0	30 @ (Mo-Fr 07:00-19:00; SH off)
@@ -349,7 +349,7 @@
 0	30 @ (Mo-Fr 7:00-17:00)
 0	30 @ (Mo-Fr 7:00-19:00)
 0	30 @ (Mo-Fr 8:00-19:00)
-0	30 @ (Mo-Fr  AND  06:00-18:00)
+0	30 @ (Mo-Fr AND 06:00-18:00)
 0	30 @ (06:00-20:00) AND MO-FR)
 0	30 @ (Mo-Sa 06:00 -10:00,12:00 - 16:00)
 0	30 @ (Mo-Sa 06:00-17:00)
@@ -357,21 +357,21 @@
 0	30 @ (Mo-Sa 06:00-19:00)
 0	30 @ (Mo-Sa 06:00-19:00,PH off)
 0	30 @ (Mo-Sa 06:00-20:00)
-0	30@ (Mo-Sa 06:00-20:00)
+0	30 @ (Mo-Sa 06:00-20:00)
 0	30 @ (Mo-Sa 06:00-22:00)
-0	30 @ (Mo-Sa 06:00-22:00);  50 @ PH
-0	30@ (Mo-Sa 06:00-22:00); 50@ PH
+0	30 @ (Mo-Sa 06:00-22:00); 50 @ PH
+0	30 @ (Mo-Sa 06:00-22:00); 50 @ PH
 0	30 @ (Mo-Sa 06:00-22:00;PH off)
 0	30 @ (Mo-Sa 06:30-08:30;Mo-Sa 12:00-16:00)
 0	30 @ (Mo-Sa 07:00-07:30,14:00-16:30)
 0	30 @ (Mo-Sa 07:00-14:00)
-0	30@ (Mo-Sa 07:00-14:00)
+0	30 @ (Mo-Sa 07:00-14:00)
 0	30 @ (Mo-Sa 07:00-16:00)
 0	30 @ (Mo-Sa 07:00-16:00; SH off)
 0	30 @ (Mo-Sa 07:00-17:00)
 0	30 @ (Mo-Sa 07:00 - 18:00)
 0	30 @ (Mo-Sa 07:00-18:00)
-0	30@ (Mo-Sa 07:00-18:00)
+0	30 @ (Mo-Sa 07:00-18:00)
 0	30 @ (Mo-Sa 07:00-19:00)
 0	30 @ Mo-Sa 07:00-19:00
 0	30 @ (Mo-Sa 07:00-20:00)
@@ -400,7 +400,7 @@
 0	30 @ (weight>3,5)
 0	30 @ (weight>3.5)
 0	30 @ weight>3.5
-0	30@ (weight>3.5)
+0	30 @ (weight>3.5)
 0	30 @ (weight>3.8)
 0	30 @ (weight>5.0)
 0	30 @ (weight>5.5)
@@ -437,16 +437,16 @@
 0	40 @ (00:00-05:00)
 0	40 @ (00:00-06:00)
 0	40 @ (05:00-17:00)
-0	40 @ (05:00-23:00);  50 @ (23:00-05:00)
+0	40 @ (05:00-23:00); 50 @ (23:00-05:00)
 0	40 @ (06:00-19:00)
-0	40 @ (06:00-21:00);  RU:urban @ (21:00-6:00)
+0	40 @ (06:00-21:00); RU:urban @ (21:00-6:00)
 0	40 @ (07:00-18:00)
-0	40 @ (07:00-18:00);  60 @ (23:00-5:00)
+0	40 @ (07:00-18:00); 60 @ (23:00-5:00)
 0	40 @ (07:00-19:00)
 0	40 @ (07:00-21:00)
 0	40 @ (07:00-22:00)
 0	40 @ (07:30-00:00)
-0	40 @ ( 07:30-09:00,14:30-16:00)
+0	40 @ (07:30-09:00,14:30-16:00)
 0	40 @ (08:00-09:30,14:30-16:00)
 0	40 @ (08:00-18:00)
 0	40 @ (08:30-09:30,14:30-15:30)
@@ -470,9 +470,9 @@
 0	40 @ (Mo-Fr 08:00-09:30,14:30-16:00;PH off;SH off)
 0	40 @ (Mo-Fr 08:00-9:30,14:30-16:00)
 0	40 @ (Mo-Fr 08:30-09:30,14:30-15:30)
-0	40@ (Mo-Sa 08:00-19:00)
+0	40 @ (Mo-Sa 08:00-19:00)
 0	40 @ (Mo-Su 07:00-19:00)
-0	40 @ (Nov-Apr);  60 @ (May-Oct)
+0	40 @ (Nov-Apr); 60 @ (May-Oct)
 0	40 @ (Nov-Apr); 60 @ (May-Oct)
 0	40 @ snow; 40 @ rain
 0	40 @ (weight>3.5)
@@ -487,21 +487,21 @@
 0	45 mph @ (Nov 01-Apr 01)
 0	50 @ (00:00-07:00,14:00-24:00)
 0	50 @ (00:00-08:00,17:00-24:00;PH;SH)
-0	50 @ (05:00-07:00,19:00-23:00);  60 @ (23:00-05:00)
-0	50 @ (05:00-07:00,20:00-23:00);  60 @ (23:00-05:00)
+0	50 @ (05:00-07:00,19:00-23:00); 60 @ (23:00-05:00)
 0	50 @ (05:00-07:00,20:00-23:00); 60 @ (23:00-05:00)
-0	50 @ (05:00-07:00);  40 @ (7:00-17:00);  50 @ (17:00-23:00);  60 @ (23:00-05:00)
+0	50 @ (05:00-07:00,20:00-23:00); 60 @ (23:00-05:00)
+0	50 @ (05:00-07:00); 40 @ (7:00-17:00); 50 @ (17:00-23:00); 60 @ (23:00-05:00)
 0	50 @ (05:00-23:00)
-0	50 @ (05:00-23:00);  60 @ (23:00-05:00)
-0	50 @ (05:00-23:00);  60 @ (23:00-05:00)
 0	50 @ (05:00-23:00); 60 @ (23:00-05:00)
-0	50 @ (05:00-23:00);  60 @ (23:00-5:00)
+0	50 @ (05:00-23:00); 60 @ (23:00-05:00)
+0	50 @ (05:00-23:00); 60 @ (23:00-05:00)
+0	50 @ (05:00-23:00); 60 @ (23:00-5:00)
 0	50 @ (05:00-23:00); 60 @ (23:00-5:00)
 0	50 @ 06:00-20:00
 0	50 @ (06:00-22:00)
-0	50 @ (06:00-22:00);  60 @ (23:00-05:00)
 0	50 @ (06:00-22:00); 60 @ (23:00-05:00)
-0	50 @ (06:00-22:00);  70 @ (22:00-06:00)
+0	50 @ (06:00-22:00); 60 @ (23:00-05:00)
+0	50 @ (06:00-22:00); 70 @ (22:00-06:00)
 0	50 @ (07:00-16:00)
 0	50 @ (07:00-20:00)
 0	50 @ (08:00-22:00)
@@ -510,23 +510,23 @@
 0	50 @ (09:00-22:00)
 0	50 @ (17:00-07:00)
 0	50 @ (18:00-06:00)
-0	50 @ (18:00-07:00);  50 @ SH
+0	50 @ (18:00-07:00); 50 @ SH
 0	50 @ (19:00-06:00)
 0	50 @ (19:00-07:00)
 0	50 @ (19:00-07:00, Sa,Su,PH)
 0	50 @ (19:00-7:00)
 0	50 @ (20:00-06:00)
 0	50 @ (20:00-07:00)
-0	50@ (2015 June 01-2015 December 31)
+0	50 @ (2015 June 01-2015 December 31)
 0	50 @ (2016 Mar 08-2016 Dec 17)
 0	50 @ (21:00-06:00)
 0	50 @ (21:00-6:00)
 0	50 @ (22:00-06:00)
 0	50 @ (23:00-05:00)
 0	50 @ (5:00-23:00)
-0	50@ (fog)
+0	50 @ (fog)
 0	50 @ hazmat
-0	50 @ (hazmat  AND  forward)
+0	50 @ (hazmat AND forward)
 0	50 @ (Jun-Aug)
 0	50 @ (lanes=2)
 0	50 @ (maxweight > 7.5)
@@ -562,7 +562,7 @@
 0	50 @ (Mo-Sa 00:00-06:00,22:00-24:00; Su 00:00-24:00)
 0	50 @ (Mo-Sa 00:00-07:00,16:00-24:00; Su 00:00-24:00)
 0	50 mph @ (2014 Nov 1-2017 Jun 30)
-0	50 @ (Nov-Apr);  90 @ (May-Oct)
+0	50 @ (Nov-Apr); 90 @ (May-Oct)
 0	50 @ (Oct-Mar)
 0	50 @ peak_traffic
 0	50 @ (PH,Sa,Su,Mo-Fr 00:00-07:00,19:00-24:00)
@@ -573,16 +573,16 @@
 0	50 @ (weight>10)
 0	50 @ (weight>12)
 0	50 @ (weight>3.5)
-0	50@ (weight>3.5)
-0	50 @ (weight<=3.5);  50 @ (weight>3.5)
+0	50 @ (weight>3.5)
+0	50 @ (weight<=3.5); 50 @ (weight>3.5)
 0	50 @ (weight<=3.5); 70 @ (weight>3.5)
 0	50 @ (weight>5)
 0	50 @ (weight>7.5)
-0	50 @ (weight > 7.5 )
+0	50 @ (weight > 7.5)
 0	50 @ (weight > 7.5)
 0	50 @ wet
 0	50 @ (wet)
-0	50@ (wet); 50@ (snow)
+0	50 @ (wet); 50 @ (snow)
 0	50 @ wet,snow
 0	51 @ (Mo-We 00:00-23:59)
 0	5 @ (21:00-05:00)
@@ -606,22 +606,22 @@
 0	60 @ (20:00-06:00)
 0	60 @ (21:00-7:00)
 0	60 @ (22:00-05:00)
-0	60 @ (22:00-05:00  AND  weight>7.5)
+0	60 @ (22:00-05:00 AND weight>7.5)
 0	60 @ (22:00-06:00)
 1
 0	60 @ (23:00 - 05:00)
 1
 0	60 @ (23:00-05:00)
-0	60 @ (23:00-05:00);  40 @ (weight>3.5)
-0	60 @ (23:00-05:00);  50 @ (05:00-23:00)
+0	60 @ (23:00-05:00); 40 @ (weight>3.5)
 0	60 @ (23:00-05:00); 50 @ (05:00-23:00)
-0	60 @ (23:00-05:00);  50 @ (23:00-05:00)
+0	60 @ (23:00-05:00); 50 @ (05:00-23:00)
+0	60 @ (23:00-05:00); 50 @ (23:00-05:00)
 0	60 @ (23:00-06:00)
 1
 0	60 @ (23:0-05:00)
 0	60 @ (23:00 - 5:00)
 0	60 @ (23:00-5:00)
-0	60@ (23:00-5:00)
+0	60 @ (23:00-5:00)
 0	60 @ (5:00-23:00)
 0	60 @ hazmat:water
 0	60 @ hgv
@@ -636,7 +636,7 @@
 0	60 @ truck safety control by BAG
 0	60 @ (weight>12)
 0	60 @ (weight>3.5)
-0	60 @ (weight<=3.5);  70 @ (weight>3.5)
+0	60 @ (weight<=3.5); 70 @ (weight>3.5)
 0	60 @ (weight>7.5)
 0	60 @ weight>7.5
 0	60 @ wet
@@ -650,7 +650,7 @@
 0	70 @ (05:00-20:00)
 0	70 @ (06:00-07:00)
 0	70 @ (06:00-08:00)
-0	70 @ 06:00-21:00;  50 @ 21:00-06:00
+0	70 @ 06:00-21:00; 50 @ 21:00-06:00
 0	70 @ (06:00-22:00)
 0	70 @ (07:00-08:00)
 0	70 @ (07:00-22:00)
@@ -672,23 +672,23 @@
 0	70 @ (Jun-Aug)
 0	70 @ (Mo-Fr 07:00-14:00)
 0	70 @ (Mo-Fr 07:30-17:00)
-0	70 @ (Mo - Fr  AND  06:00-07:30  AND  12:00-17:00)
+0	70 @ (Mo - Fr AND 06:00-07:30 AND 12:00-17:00)
 0	70 @ (Mo-Sa 08:00-18:00)
-0	70@ (Nov 23-Dec 24)
+0	70 @ (Nov 23-Dec 24)
 0	70 @ Nov-Mar
 0	70 @ snow,wet
 0	70 @ (weight>12)
 0	70 @ (weight>3.5)
-0	70 @ (weight<=3.5);  70 @ (weight>3.5)
 0	70 @ (weight<=3.5); 70 @ (weight>3.5)
-0	70 @ (weight>3.5);  70 @ (wet)
+0	70 @ (weight<=3.5); 70 @ (weight>3.5)
+0	70 @ (weight>3.5); 70 @ (wet)
 0	70 @ (weight>7.5)
-0	70@ (weight>7.5)
+0	70 @ (weight>7.5)
 0	70 @ wet
 0	70 @ (wet)
-0	70@ wet
-0	70 @ wet;  70 @ ice
-0	70 @ wet;  70 @ snow
+0	70 @ wet
+0	70 @ wet; 70 @ ice
+0	70 @ wet; 70 @ snow
 0	7.5 @ 10:00-16:00
 0	7.5 @ (19:00-07:00)
 0	7.5 @ (20:00-05:00)
@@ -703,7 +703,7 @@
 0	7.5 @ (22:00-08:00)
 0	7.5 t @ (23:00-06:00)
 0	75 @ (weight>7.5)
-0	80 @ (05:00-22:00  AND  weight>7.5)
+0	80 @ (05:00-22:00 AND weight>7.5)
 0	80 @ (06:00-22:00)
 0	80 @ (07:00-19:00)
 0	80 @ (07:30-08:30)
@@ -713,9 +713,9 @@
 0	80 @ (2014 May 01-2015 Jun 22 00:00-24:00)
 0	80 @ (2014 May 01-2015 June 22 00:00-24:00)
 0	80 @ (2015 Oct 25-2015 Nov 30)
-0	80 @ (22:00-05:00  AND  weight>7.5)
+0	80 @ (22:00-05:00 AND weight>7.5)
 0	80 @ (22:00-06:00)
-0	80 @ (22:00-06:00  AND  weight>7.5)
+0	80 @ (22:00-06:00 AND weight>7.5)
 0	80 @ (22:00-08:00)
 0	80 @ (23:00-05:00)
 0	80 @ (Apr 26-Oct 31 00:00-23:59)
@@ -728,27 +728,27 @@
 0	80 @ weg
 0	80 @ (weight>12)
 0	80 @ (weight>3.5)
-0	80 @ (weight<=3.5);  70 @ (weight>3.5)
-0	80 @ (weight>7.5  AND  12:00-21:00)
-0	80 @ (weight>7.5  AND  22:00-05:00)
+0	80 @ (weight<=3.5); 70 @ (weight>3.5)
+0	80 @ (weight>7.5 AND 12:00-21:00)
+0	80 @ (weight>7.5 AND 22:00-05:00)
 0	80 @ wet
 0	80 @ (wet)
-0	80@ (wet)
-0	80 @ wet;  80 @ snow
+0	80 @ (wet)
+0	80 @ wet; 80 @ snow
 0	80 @ wet; 80 @ snow
 0	80 @ (winter)
 0	8 @ (Mo-Fr 08:30-09:00, 15-15:30; SH off)
 0	90 @ (22:00-05:00)
 0	90 @ (22:00-06:00)
-0	90 @ (22:00-06:00);  90 @ (22:00-06:00);  100 @ (22:00-06:00)
+0	90 @ (22:00-06:00); 90 @ (22:00-06:00); 100 @ (22:00-06:00)
 0	90 @ (23:00-04:00)
 0	90 @ (Mo-Fr 07:00-09:00,17:00-19:00)
 0	90 @ (Sep 01-Jun 30)
-0	90 @ (weight<=3.5);  70 @ (weight>3.5)
 0	90 @ (weight<=3.5); 70 @ (weight>3.5)
-0	90 @ (weight<3.5);  70 @ (weight>3.5)
-0	90 @ (weight <= 3.5);  70 @ (weight > 3.5)
-0	90 @ (weight<=3.5);  80 @ (weight>3.5)
+0	90 @ (weight<=3.5); 70 @ (weight>3.5)
+0	90 @ (weight<3.5); 70 @ (weight>3.5)
+0	90 @ (weight <= 3.5); 70 @ (weight > 3.5)
+0	90 @ (weight<=3.5); 80 @ (weight>3.5)
 0	90 @ (weight>7.5)
 0	90 @ wet
 0	(access>7.5) @ destination
@@ -792,7 +792,7 @@
 0	backward @ (winter)
 0	Boat to Koh Trong @ (wet_season)
 0	both @ (winter)
-0	bus@ Mo-Su 17:00+
+0	bus @ Mo-Su 17:00+
 1
 1
 0	closure @ (2014 Aug 22 18:00 - 2014 Aug 24 24:00)
@@ -816,34 +816,34 @@
 0	conditional=no @ (Mo-Sa 10:00-17:00;Su 10:30-17:00)
 0	conditional=no @ (Su 09:00-18:00)
 0	conditional=no @ winter
-0	conditional:@ (weight < 3)
+0	conditional: @ (weight < 3)
 0	conditional=yes @ (Mo-Sa 07:00-21:00)
 0	construction @ (2014 Jul 08-2014 Nov 30 00:00-24:00)
 0	construction @ (2014 May 01-2015 Jun 22 00:00-24:00)
 0	construction @ (2014 May 01-2015 June 22 00:00-24:00)
-0	customers @ (Mar-Sep);  yes @ (Oct-Mar)
+0	customers @ (Mar-Sep); yes @ (Oct-Mar)
 0	customers @ (Mar-Sep); yes @ (Oct-Mar)
 0	customers @ (tourists)
 0	customers @ (tourists, overnight visitors)
 1
 0	DE:242 @ (Jun-Aug)
-0	DE:260@ (Th-Su 20:00-06:00)
+0	DE:260 @ (Th-Su 20:00-06:00)
 1
 0	delivery @ (00:00-10:30,20:00-24:00)
-0	delivery @ (00:00-10:30,20:00-24:00);  no @ ""zu Marktzeiten""
+0	delivery @ (00:00-10:30,20:00-24:00); no @ ""zu Marktzeiten""
 0	delivery @ (00:00-11:00)
 0	delivery @ (0:00-10:00;19:00-24:00)
 0	delivery @ (04:00-11:00)
 0	delivery @ (05:00-09:00)
 0	delivery @ (05:00-10:00)
-0	delivery @ (05:00-10:00  AND  maxweight<7.5)
-0	delivery @ (05:00-10:00  AND  maxweight < 7.5)
-0	delivery @ (05:00-10:30,19:00-22:00; Sa 05:00-09:00,19:00-22:00  AND  maxweight < 7.5)
+0	delivery @ (05:00-10:00 AND maxweight<7.5)
+0	delivery @ (05:00-10:00 AND maxweight < 7.5)
+0	delivery @ (05:00-10:30,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND maxweight < 7.5)
 0	delivery @ (05:00-11:00)
 0	delivery @ 05:00-11:00
 0	delivery @ (05:00-13:00)
 0	delivery @ (05:00-19:00)
-0	delivery @ (05:00-22:00  AND  maxweight < 7.5)
+0	delivery @ (05:00-22:00 AND maxweight < 7.5)
 0	delivery @ (05:00-9:00)
 0	delivery @ (06:00-011:00)
 0	delivery @ (06:00-08:00,15:00-17:00)
@@ -852,11 +852,11 @@
 0	delivery @ (06:00-10:00,18:00-22:00)
 0	delivery @ (06:00-11:00)
 0	delivery @ (06:00-11:00, 18:00-21:00)
-0	delivery @ (06:00-11:00, 18:00-21:00);  none @ destination
-0	delivery @ (06:00-11:00, 18:00-21:00);  none @ destination;  none @ marked
+0	delivery @ (06:00-11:00, 18:00-21:00); none @ destination
+0	delivery @ (06:00-11:00, 18:00-21:00); none @ destination; none @ marked
 0	delivery @ (06:00-11:00, 18:00-21:00); none @ destination; none @ marked
 0	delivery @ (06:00-11:00,19:00-22:00)
-0	delivery @ (06:00-11:00);  yes @ disabled
+0	delivery @ (06:00-11:00); yes @ disabled
 0	delivery @ (06:00-12:00;19:00-22:00)
 0	delivery @ (06:00-14:00)
 0	delivery @ 06:00-18:00
@@ -865,7 +865,7 @@
 0	delivery @ (06:30-10:30,18:00-20:00)
 0	delivery @ (07:00 - 10:00)
 0	delivery @ (07:00-10:00)
-0	delivery@ (07:00-10:00)
+0	delivery @ (07:00-10:00)
 0	delivery @ (07:00-10:00,18:00-21:00)
 0	delivery @ (07:00-10:00, 19:00-21:00)
 0	delivery @ (07:00-10:00, 19:00-22:00)
@@ -876,7 +876,7 @@
 0	delivery @ (07:00-11:30)
 0	delivery @ (07:00-12:00)
 0	delivery @ (07:00-19:00)
-0	delivery @ (07:00-20:00  AND  maxweight < 7.5)
+0	delivery @ (07:00-20:00 AND maxweight < 7.5)
 0	delivery @ (07:30-09:30, 14:00-16:00)
 0	delivery @ (07:30-10:00,17:30-18:30)
 0	delivery @ (07:30-10:30)
@@ -887,15 +887,15 @@
 0	delivery @ (08:00-11:00,15:00-17:00)
 0	delivery @ (08:00-12:00)
 0	delivery @ (08:00-13:00)
-0	delivery@ (08:00-13:00)
-0	delivery@ (08.00-13.00)
-0	delivery@ (08.00-18.00)
-0	delivery @ (08:00-18:00  AND  weight<7.5)
+0	delivery @ (08:00-13:00)
+0	delivery @ (08.00-13.00)
+0	delivery @ (08.00-18.00)
+0	delivery @ (08:00-18:00 AND weight<7.5)
 0	delivery @ (08:00-20:00)
 0	delivery @ (09:00-10:30,14:15-16:00)
 0	delivery @ (09:00-11:00)
 0	delivery @ (09:00-12:00; 15:00-19:00)
-0	delivery @ (09:00-19:00);  destination @ (19:00-09:00)
+0	delivery @ (09:00-19:00); destination @ (19:00-09:00)
 0	delivery @ (10:30:00-12:30:00)
 0	delivery @ (10:30-12:30)
 0	delivery @ (11:00-19:00)
@@ -909,7 +909,7 @@
 0	delivery @ 17:00-11:00
 0	delivery @ (17:00-14:00)
 0	delivery @ (18:00-10:00)
-0	delivery @ (18:00-10:00  AND  weight<6)
+0	delivery @ (18:00-10:00 AND weight<6)
 0	delivery @ (18:00 - 11:00)
 0	delivery @ (18:00-11:00)
 0	delivery @ (18:00-12:00)
@@ -918,7 +918,7 @@
 0	delivery @ (18:30-10:00)
 0	delivery @ (18:30-10:30)
 0	delivery @ (19:00-10:00)
-0	delivery @ (19:00-10:00);  disabled @ (18:00-12:00)
+0	delivery @ (19:00-10:00); disabled @ (18:00-12:00)
 0	delivery @ (19:00 - 11:00)
 0	delivery @ (19:00-11:00)
 0	delivery @ (20:00-06:00)
@@ -926,9 +926,9 @@
 0	delivery @ (20:00-10:30)
 0	delivery @ (20:00-11:00)
 0	delivery @ (21:00-12:00)
-0	delivery @ (21.00 - 7.00  AND  weight>7.5)
+0	delivery @ (21.00 - 7.00 AND weight>7.5)
 0	delivery @ (22:00-06:00)
-0	delivery @ (23:00-10:00);  disabled @ (06:00-12:00,18:00-20:00)
+0	delivery @ (23:00-10:00); disabled @ (06:00-12:00,18:00-20:00)
 0	delivery @ (23:00-10:00); disabled @ (06:00-12:00,18:00-20:00)
 0	delivery @ (5:00--11:00,18:00-20:00)
 0	delivery @ (5:00-13:00,17:00-19:00)
@@ -946,15 +946,15 @@
 0	delivery @ (maxweight<7.5)
 0	delivery @ (maxweight > 7.5)
 0	delivery @ (06:00-10:00; 19:00-22:00 AND maxweight < 7.5)
-0	delivery @ (maxweight <= 7.5  AND  06:00-11:00)
-0	delivery @ (maxweight < 7.5  AND 07:00-11:00)
+0	delivery @ (maxweight <= 7.5 AND 06:00-11:00)
+0	delivery @ (maxweight < 7.5 AND 07:00-11:00)
 0	delivery @ (maxweight < 7.5t)
 0	delivery @ (Mo 06:00-13:00; Tu-Sa 06:00-12:00)
-0	delivery @ (Mo-Fr 00:00-10:30,19:00-24:00;Sa 00:00-10:00,18:00-24:00;Su 00:00-10:30,19:00-24:00  AND  weight < 7.5)
+0	delivery @ (Mo-Fr 00:00-10:30,19:00-24:00;Sa 00:00-10:00,18:00-24:00;Su 00:00-10:30,19:00-24:00 AND weight < 7.5)
 0	delivery @ (Mo-Fr 05:00-11:30; Sa 06:00-11:30)
-0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00; Sa 05:00-09:00,19:00-22:00  AND  maxweight<7.5)
-0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00; Sa 05:00-09:00,19:00-22:00  AND  weight<7.5t)
-0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00;Sa 05:00-09:00,19:00-22:00  AND  weight<7.5t)
+0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND maxweight<7.5)
+0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND weight<7.5t)
+0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00;Sa 05:00-09:00,19:00-22:00 AND weight<7.5t)
 0	delivery @ (Mo-Fr 05:00-14:00)
 0	delivery @ (Mo-Fr 06:00-10:00,18:00-20:00; Sa 06:00-09:00)
 0	delivery @ (Mo-Fr 06:00-10:00,18:00-22:00)
@@ -963,7 +963,7 @@
 0	delivery @ (Mo-Fr 06:00-11:00, 17:00-19:00,Sa 03:30-19:00)
 0	delivery @ (Mo-Fr 06:00-11:00, 17:00-19:00; Sa 03:30-19:00)
 0	delivery @ (Mo-Fr 06:00-11:00; Sa 06:00-10:00)
-0	delivery@ (Mo-Fr 06:00-11:00;Sa 06:00-13:00)
+0	delivery @ (Mo-Fr 06:00-11:00;Sa 06:00-13:00)
 0	delivery @ (Mo-Fr 06:00-11:00;Sa 07:00-10:00)
 0	delivery @ (Mo-Fr 06:00-12:00)
 0	delivery @ (Mo-Fr 06:00-19:00)
@@ -987,7 +987,7 @@
 0	delivery @ (Mo-Sa 05:00-11:00)
 0	delivery @ (Mo-Sa 05:00-22:00)
 0	delivery @ (Mo-Sa 06:00-10:00)
-0	delivery@ (Mo-Sa 06:00-10:00)
+0	delivery @ (Mo-Sa 06:00-10:00)
 0	delivery @ (Mo-Sa 06:00-10:00,18:30-19:30)
 0	delivery @ (Mo-Sa 06:00-10:00, 18:30-20:00)
 1
@@ -1005,7 +1005,7 @@
 0	delivery @ (Mo-Sa 08:00-18:00); private @ (Mo-Sa 09:00-10:00)
 0	delivery @ (Mo-Sa 08:00-20:00)
 0	delivery @ (Mo-Sa 09:00-11:00)
-0	delivery @ (Mo-Sa 10:00-15:00  AND  maxweight < 7.5t)
+0	delivery @ (Mo-Sa 10:00-15:00 AND maxweight < 7.5t)
 0	delivery @ (Mo-Sa 10:00-18:00)
 0	delivery @ (Mo-Sa 12:00-14:30,18:30-19:30)
 0	delivery @ (Mo-Sa 16:00-10:00,Su 00:00-24:00); disabled @ (Mo-Sa 16:00-10:00,Su 00:00-24:00)
@@ -1022,7 +1022,7 @@
 0	delivery @ (Mo-Su 06:00-12:00)
 0	delivery @ (Mo-Su 07:00-18:00)
 0	delivery @ (Mo-Su 08:00-11:00)
-0	delivery@ (Mo-Su 08:00-11:00)
+0	delivery @ (Mo-Su 08:00-11:00)
 0	delivery @ (Mo-Su 08:00-11:00, 19:00-21:00)
 0	delivery @ (Mo-Su 08:00-12:00)
 0	delivery @ (Mo-Su 13:00-15:00,18:00-11:00)
@@ -1055,8 +1055,8 @@
 0	delivery @ (weight>7,5)
 0	delivery @ (weight>7.5)
 0	delivery @ (weight > 7.5)
-0	delivery @ (weight<7.5  AND  22:00-11:00)
-0	delivery @ (weight<7.5  AND  5:00-11:00, 19:00-22:00)
+0	delivery @ (weight<7.5 AND 22:00-11:00)
+0	delivery @ (weight<7.5 AND 5:00-11:00, 19:00-22:00)
 0	delivery @ (weight > 7.5t)
 0	delivery @ (weigth>3.5)
 0	delivery @ (weigth>7.5)
@@ -1068,7 +1068,7 @@
 0	designated @ (05:00-23:00)
 0	designated @ (Aug Su[1] 9:00-19:00)
 0	designated @ (Dec 1-Mar 31)
-0	designated @ (disabled  AND  customer)
+0	designated @ (disabled AND customer)
 0	designated @ (Jun-Aug)
 0	designated @ (May-Oct)
 0	designated @ (Mo-Fr 05:30-08:00)
@@ -1086,21 +1086,21 @@
 0	destination @ (00:00-05:00,18:00-00:00)
 0	destination @ (00:00 - 06:00)
 0	destination @ (00:00-06:00; 18:00-24:00)
-0	destination @ (02:00-06:00  AND  weight>=7.5)
+0	destination @ (02:00-06:00 AND weight>=7.5)
 0	destination @ (06:00-08:00, 11:00-15:00, 17:00-22:00)
 0	destination @ (06:00-08:00,16:00-18:00)
 0	destination @ (06:00-08:30)
 0	destination @ (06:00-10:00;15:00-19:00)
-0	destination @ (06:00-20:00  AND  delivery)
-0	destination @ (06:00-20:00);  no @ (20:00-06:00)
+0	destination @ (06:00-20:00 AND delivery)
+0	destination @ (06:00-20:00); no @ (20:00-06:00)
 0	destination @ (06:00-22:00)
-0	destination@ (06:00-22:00)
-0	destination @ (06:00-22:00); yes@ (weight>6t)
+0	destination @ (06:00-22:00)
+0	destination @ (06:00-22:00); yes @ (weight>6t)
 0	destination @ (06:00-23:00); private @ (23:00-06:00)
 0	destination @ (06:30-08:30); destination @ (16:30-18:30)
-0	destination @ (06:30-09:00  AND  15:30-18:30)
+0	destination @ (06:30-09:00 AND 15:30-18:30)
 0	destination @ (07:00-09:00)
-0	destination@ (07:00 - 10:00)
+0	destination @ (07:00 - 10:00)
 0	destination @ (07:00-11:00)
 0	destination @ (07:00-13:00, 15:00-19:00)
 0	destination @ (07:00-13:00,15:00-19:00)
@@ -1108,7 +1108,7 @@
 0	destination @ 07:00-20:00
 0	destination @ (07:00-22:00)
 0	destination @ (08:00-17:00)
-0	destination@ (08.00-18.00)
+0	destination @ (08.00-18.00)
 0	destination @ (08:00-sunset)
 0	destination @ (09:00-17:00)
 0	destination @ (09:00-21:00)
@@ -1118,7 +1118,7 @@
 0	destination @ (11:00-19:00)
 0	destination @ (12:00-01:00)
 0	destination @ (16:00-10:00)
-0	destination@ (18:00-06:00); delivery@ (06:00-18:00); taxi@ (06:00-18:00); private@ (06:00-18:00)
+0	destination @ (18:00-06:00); delivery @ (06:00-18:00); taxi @ (06:00-18:00); private @ (06:00-18:00)
 0	destination @ 18:00-08:30
 0	destination @ (18:00-10:00)
 0	destination @ (18:00-9:30)
@@ -1129,23 +1129,23 @@
 0	destination @ (20:00 - 06:00)
 0	destination @ (20:00-06:00)
 0	destination @ 20:00-06:00
-0	destination@ (20:00-06:00)
+0	destination @ (20:00-06:00)
 0	destination @ (20:00-08:00)
 0	destination @ (20:00-6:00)
 0	destination @ (2014 Dec 1-2016 Dec 31)
-0	destination @ (2014 Jul 1-2014 Sep 30  AND  weight>12)
+0	destination @ (2014 Jul 1-2014 Sep 30 AND weight>12)
 0	destination @ (2014 Jul 23-2014 Nov 14)
 0	destination @ (2014 Jul 4-2014 Nov 30)
 0	destination @ (2014 Jul 7-2014 Sep 7)
 0	destination @ (2014 Jul 8-2014 Aug 31)
 0	destination @ (2014 Jun 16-2014 Aug 31)
 0	destination @ (2014 Jun 16-2014 Oct 31)
-0	destination @ (2014 Jun 16-2114 Jun 30  AND  weight>12)
+0	destination @ (2014 Jun 16-2114 Jun 30 AND weight>12)
 0	destination @ (2014 Jun 27-2014 Sep 30)
-0	destination @ (2014 Jun 30-2014 Nov 30  AND  weight>7.5)
+0	destination @ (2014 Jun 30-2014 Nov 30 AND weight>7.5)
 0	destination @ (2014 Jun 30-2014 Oct 31)
 0	destination @ (2014 Nov 24-2015 Feb 15)
-0	destination @ (2014 Nov 30-2100 Nov 30  AND  maxweight>3.5)
+0	destination @ (2014 Nov 30-2100 Nov 30 AND maxweight>3.5)
 0	destination @ (2014 Nov 5-2014 Nov 10)
 0	destination @ (2014 Oct 13-2014 Dec 19)
 0	destination @ (2014 Oct 13-2014 Dec 19)
@@ -1162,14 +1162,14 @@
 0	destination @ (2014 Oct 27-2014 Nov 30)
 0	destination @ (2015 Apr 1-2015 Jun 30)
 0	destination @ (2015 Apr 13-2015 Apr 26)
-0	destination @ (2015 Apr 13-2015 Jul 15  AND  weight>2.5)
+0	destination @ (2015 Apr 13-2015 Jul 15 AND weight>2.5)
 0	destination @ (2015 Apr 13-2015 Jun 30)
 0	destination @ (2015 Apr 13-2015 May 17)
 0	destination @ (2015 Apr 13-2015 May 4)
 0	destination @ (2015 Apr 27-2015 Jun 30)
 0	destination @ (2015 Apr 27-2015 May 17)
 0	destination @ (2015 Aug 31-2015 Oct 20)
-0	destination @ (2015 Feb 1-2016 Feb 1  AND  weight>16)
+0	destination @ (2015 Feb 1-2016 Feb 1 AND weight>16)
 0	destination @ (2015 Feb 16-2015 Mar 20)
 0	destination @ (2015 Feb 16-2015 May 15)
 0	destination @ (2015 Feb 16-2015 May 31)
@@ -1182,8 +1182,8 @@
 0	destination @ (2015 Feb 23- 2015 Mar 29)
 0	destination @ (2015 Feb 23- 2015 May 31)
 0	destination @ (2015 Feb 23-2015 Sep 30)
-0	destination @ (2015 Jan 10-2115 Dec 30  AND  weight>13)
-0	destination @ (2015 Jan 10-2150 Jan 10  AND  weight>10)
+0	destination @ (2015 Jan 10-2115 Dec 30 AND weight>13)
+0	destination @ (2015 Jan 10-2150 Jan 10 AND weight>10)
 0	destination @ (2015 Jan 1-2015 Apr 15)
 0	destination @ (2015 Jan 12-2015 Mar 31)
 0	destination @ (2015 Jan 18-2015 Mar 1)
@@ -1213,7 +1213,7 @@
 0	destination @ (2015 Mar 10-2015 Aug 15)
 0	destination @ (2015 Mar 10-2015 Aug 4)
 0	destination @ (2015 Mar 10-2015 Jul 31)
-0	destination @ (2015 Mar 10-2150 Mar 10  AND  weight>10)
+0	destination @ (2015 Mar 10-2150 Mar 10 AND weight>10)
 0	destination @ (2015 Mar 1-2015 Sep 30)
 0	destination @ (2015 Mar 13-2015 Mar 23)
 0	destination @ (2015 Mar 13-2015 Mar 23); no @ (2015 Mar 6-2015 Mar 9)
@@ -1229,7 +1229,7 @@
 0	destination @ (2015 Mar 18-2015 Apr 15)
 0	destination @ (2015 Mar 2-2015 Jul 14)
 0	destination @ (2015 Mar 2-2015 Jun 15)
-0	destination @ (2015 Mar 2-2015 Mar 16  AND  weight>3.5)
+0	destination @ (2015 Mar 2-2015 Mar 16 AND weight>3.5)
 0	destination @ (2015 Mar 22-2015 Mar 29)
 0	destination @ (2015 Mar 23-2015 Nov 15)
 0	destination @ (2015 Mar 3-2015 Jun 30)
@@ -1265,32 +1265,32 @@
 0	destination @ (2015 May 4-2015 May 12)
 0	destination @ (2015 May 4-2015 May 13)
 0	destination @ (2015 May 4-2015 May 17)
-0	destination @ (2015 May 6-2015 Jul 31  AND  weight>9)
+0	destination @ (2015 May 6-2015 Jul 31 AND weight>9)
 0	destination @ (2015 May 6-2015 Jun 30)
 0	destination @ (2015 May 6-2015 Sep 30)
 0	destination @ (2015 May 7-2015 Jun 30)
 0	destination @ (2015 May 7-2015 May 20)
 0	destination @ (21:00-05:00)
 0	destination @ (21:00-06:00)
-0	destination @ ( 21:00-06:00); delivery @ 24/7
+0	destination @ (21:00-06:00); delivery @ 24/7
 0	destination @ (21:00 - 07:00)
 0	destination @ (21:00-07:00)
 0	destination @ (22:00-05:00)
 0	destination @ (22:00 - 06:00)
 0	destination @ (22:00-06:00)
 0	destination @ 22:00-06:00
-0	destination @ (22:00-06:00  AND  weight>12)
-0	destination @ (22:00-06:00  AND  weight > 5.5)
-0	destination @ ( 22:00-06:00  AND  weight>7.5)
-0	destination @ (22:00-06:00  AND  weight>=7.5 t)
-0	destination @ (22:00-06:00);  yes @ (22:00-06:00  AND  fi:service_traffic);  yes @ (22:00-06:00  AND  parking_permit:F)
+0	destination @ (22:00-06:00 AND weight>12)
+0	destination @ (22:00-06:00 AND weight > 5.5)
+0	destination @ (22:00-06:00 AND weight>7.5)
+0	destination @ (22:00-06:00 AND weight>=7.5 t)
+0	destination @ (22:00-06:00); yes @ (22:00-06:00 AND fi:service_traffic); yes @ (22:00-06:00 AND parking_permit:F)
 0	destination @ (22:00-07:00)
 0	destination @ (22:00-08:00)
 0	destination @ (22:00 - 6:00)
 0	destination @ (23:00-01:00)
 0	destination @ (23:00-06:00)
-0	destination@ (23:00-6:00)
-0	destination@ (6:00-10:00)
+0	destination @ (23:00-6:00)
+0	destination @ (6:00-10:00)
 0	destination @ (6:00-11:00)
 0	destination @ (actualweight<2)
 0	destination @ agricultural
@@ -1315,16 +1315,16 @@
 0	destination @ (Mar-Oct)
 0	destination @ (maxweight>10)
 0	destination @ (maxweight > 12)
-0	destination @ (maxweight > 12);  agricultural @ (maxweight > 12)
+0	destination @ (maxweight > 12); agricultural @ (maxweight > 12)
 0	destination @ (maxweight > 2.5)
 0	destination @ (maxweight > 3)
 0	destination @ (maxweight > 3.5)
-0	destination@ (maxweight>3.5)
-0	destination@ (maxweight > 3.5)
+0	destination @ (maxweight>3.5)
+0	destination @ (maxweight > 3.5)
 0	destination @ (maxweight>5)
 0	destination @ (maxweight > 5)
-0	destination @ (maxweight>7.5  AND  22:00-06:00)
-0	destination @ (maxweight=none  AND  maxweight=none)
+0	destination @ (maxweight>7.5 AND 22:00-06:00)
+0	destination @ (maxweight=none AND maxweight=none)
 0	destination @ (May 01-Oct 09 Su,PH 08:00-21:00)
 0	destination @ (May-Sep)
 0	destination @ (Mo 7:00-14:00)
@@ -1332,10 +1332,10 @@
 0	destination @ (Mo-Fr 00:00-07:00, 09:00-15:00, 18:00-24:00; Sa-Su 24h)
 0	destination @ (Mo-Fr 06:00 -09:00, 15:00 - 19:00)
 0	destination @ (Mo-Fr 06:00-09:00,15:00-19:00)
-0	destination@ (Mo-Fr 06:00-09:00, 15:00-19:00)
+0	destination @ (Mo-Fr 06:00-09:00, 15:00-19:00)
 0	destination @ (Mo-Fr 06:00-09:00, 16:00-19:00)
 0	destination @ (Mo-Fr 06:00-09:00,16:00-19:00)
-0	destination@ (Mo,Fr 06:00-10:30, 15:00-24:00)
+0	destination @ (Mo,Fr 06:00-10:30, 15:00-24:00)
 0	destination @ (Mo-Fr 06:00-18:00; Sa 06:00-13:00)
 0	destination @ (Mo-Fr 06:30-08:30,16:00-19:00)
 0	destination @ (Mo-Fr 06:30-08:30); delivery @ (Mo-Fr 06:30-08:30)
@@ -1375,12 +1375,12 @@
 0	destination @ (Mo-Sa 08:00-20:00; PH off)
 0	destination @ (Mo-Sa 09:00-19:00)
 0	destination @ (Mo-Sa 16:00-10:00)
-0	destination @ (Mo-Sa 16:00-10:00; Su);  no @ (Mo-Sa 10:00-16:00)
+0	destination @ (Mo-Sa 16:00-10:00; Su); no @ (Mo-Sa 10:00-16:00)
 0	destination @ (Mo-Sa 16:00-10:00;Su); no @ (Mo-Sa 10:00-16:00)
 0	destination @ (Mo-Sa 22:00-06:00)
 0	destination @ (Mo-Su 00:00-06:00,19:00-24:00)
-0	destination @ (Mo-Su 00:00-08:00,22:00-24:00  AND  weight>12)
-0	destination @ (Mo-Su 00:00-18:00);  yes @ (Mo-Su 18:00-00:00)
+0	destination @ (Mo-Su 00:00-08:00,22:00-24:00 AND weight>12)
+0	destination @ (Mo-Su 00:00-18:00); yes @ (Mo-Su 18:00-00:00)
 0	destination @ (Mo-Su 05:00-22:00)
 0	destination @ (Mo-Su 05:00-23:00)
 0	destination @ (Mo-Su 06:00-09:00,16:00-19:00)
@@ -1390,21 +1390,21 @@
 0	destination @ (Mo-Su 16:00-09:00)
 0	destination @ (Mo-Su 20:00-08:00)
 0	destination @ (Mo-Su 20-08)
-0	destination @ (Mo-Su 22:00-00:00,00:00-06:00  AND  weight>7)
-0	destination @ (Mo-Su 22:00-06:00  AND  maxweight>12)
+0	destination @ (Mo-Su 22:00-00:00,00:00-06:00 AND weight>7)
+0	destination @ (Mo-Su 22:00-06:00 AND maxweight>12)
 0	destination @ (Mo-Su 23:00-06:00)
 0	destination @ (Mo-Su 8:00-11:00)
 0	destination @ (Mo-Th 08:15-12:30,13:15-17:45;Fr 08:15-12:30,13:15-17:30)
 0	destination @ (Oct-Mar Su,PH 10:00-18:00;Apr-Sep Su,PH 10:00-20:00;Jul 23-Aug 21 Sa 14:00-20:00)
 0	destination @ (PH, Sa-Su 10:00-22:00)
-0	destination@ (PH, Sa-Su 10:00-22:00)
+0	destination @ (PH, Sa-Su 10:00-22:00)
 0	destination @ (PH;Sa-Su;Fr 20:00-24:00)
 0	destination @ (private; emergency)
 0	destination @ (Sa 08:00-18:00)
 0	destination @ (Sa 10:00-14:00)
 0	destination @ (Sa 13:00-23:59;Su;PH)
 0	destination @ (Sa 13:00-24:00;Su 00:00-24:00;PH 00:00-24:00)
-0	destination@ (Sa 14:00-16:00)
+0	destination @ (Sa 14:00-16:00)
 0	destination @ (Sa 14:00-24:00; Su 00:00-24:00)
 0	destination @ (Sa 14:00-24:00; Su,PH 00:00-24:00)
 0	destination @ (Sa-Su)
@@ -1427,15 +1427,15 @@
 0	destination @ (Su;PH)
 0	destination @ Su,PH
 0	destination @ (Su,PH 0:00-24:00)
-0	destination@ (Su,Th 4:00-13:00)
+0	destination @ (Su,Th 4:00-13:00)
 0	destination @ teacher
 0	destination @ (Tu,Th,Su 05:00-15:00)
 0	destination @ (weight>10)
 0	destination @ (weight > 10)
 0	destination @ (weight>12)
-0	destination @ (weight>12  AND  06:00-22:00)
-0	destination @ (weight<12  AND  axle<3  AND  00:00-11:00,18:00-24:00)
-0	destination @ weight>12;  yes @ bus
+0	destination @ (weight>12 AND 06:00-22:00)
+0	destination @ (weight<12 AND axle<3 AND 00:00-11:00,18:00-24:00)
+0	destination @ weight>12; yes @ bus
 0	destination @ weight < 2
 0	destination @ (weight>2.8)
 0	destination @ (weight > 3)
@@ -1443,17 +1443,17 @@
 0	destination @ (weight>3.5)
 0	destination @ (weight > 3.5)
 0	destination @ weight>3.5
-0	destination@ (weight<3.5)
+0	destination @ (weight<3.5)
 0	destination @ (weight>5)
 0	destination @ (weight < 5)
 0	destination @ (weight>5.5)
 0	destination @ (weight > 6)
-0	destination @ ( weight > 7.5 )
+0	destination @ (weight > 7.5)
 0	destination @ (weight>7.5)
 0	destination @ (weight < 7.5)
 0	destination @ (weight > 7.5)
 0	destination @ weight > 7.5
-0	destination@ (weight>7.5)
+0	destination @ (weight>7.5)
 1
 0	destination @ (weight > 7.5); delivery @ (weight > 7.5)
 0	destination @ (weight>=7.5 t)
@@ -1528,7 +1528,7 @@
 1
 1
 1
-0	motorcar:conditional=User group@ disabled
+0	motorcar:conditional=User group @ disabled
 0	motor_vehicle @ (19:00-07:00)
 0	motor_vehicle:conditional=no @ (Mo-Fr)
 1
@@ -1547,20 +1547,20 @@
 0	no @ (03:00-19:00)
 0	no @ (05:00-08:00)
 0	no @ (05:00-21:00)
-0	no @ (05:00-22:00  AND  weight>7.5)
+0	no @ (05:00-22:00 AND weight>7.5)
 0	no @ (05:30-07:00,15:30-17:30)
-0	no @ (06:00-09:00,14:00-17:00  AND  weight > 7.5)
+0	no @ (06:00-09:00,14:00-17:00 AND weight > 7.5)
 0	no @ (06:00-09:00,15:00-19:00)
 0	no @ (06:00-18:00)
 0	no @ (06:00-19:00)
-0	no @ (06:00-19:00  AND  maxweight > 7.5)
-0	no @ (06:00-19:00  AND  maxweight > 7.5)
-0	no @ (06:00-19:00  AND  weight>7.5)
-0	no @ (06:00-19:00  AND  weight>7.5)
-0	no@ (06:00-19:00  AND  weight>7.5)
+0	no @ (06:00-19:00 AND maxweight > 7.5)
+0	no @ (06:00-19:00 AND maxweight > 7.5)
+0	no @ (06:00-19:00 AND weight>7.5)
+0	no @ (06:00-19:00 AND weight>7.5)
+0	no @ (06:00-19:00 AND weight>7.5)
 0	no @ (06:00-20:00)
 0	no @ (06:00-21:00)
-0	no @ (06:00-22:00  AND  weight>7.5)
+0	no @ (06:00-22:00 AND weight>7.5)
 0	no @ (06:00 - 23:00)
 0	no @ (06:00-9:00)
 0	no @ (06:30-08:30;14:30-16:30)
@@ -1572,11 +1572,11 @@
 0	no @ (07:00-09:00,16:00-18:00)
 0	no @ (07:00-09:00,16:00-19:00)
 0	no @ (07:00-09:00;16:00-19:00)
-0	no @ (07:00-09:00  AND  16:00-19:00)
+0	no @ (07:00-09:00 AND 16:00-19:00)
 0	no @ (07:00-09:00); no @ (12:00-18:00)
 0	no @ (07:00-10:00)
 0	no @ (07:00-10:00,18:00-20:00)
-0	no @ (07:00-10:00);  no @ (15:00-18:00)
+0	no @ (07:00-10:00); no @ (15:00-18:00)
 0	no @ 07:00-12:00
 0	no @ 07:00 - 15:00
 0	no @ (07:00-16:00)
@@ -1585,7 +1585,7 @@
 0	no @ 07:00-20:00
 0	no @ (07:00 - 21:00)
 0	no @ (07:00-21:00)
-0	no @ (07:00-21:00  AND  weight>10)
+0	no @ (07:00-21:00 AND weight>10)
 0	no @ (07:00-9:00;16:00-18:00)
 0	no @ (07:15-21:15)
 0	no @ (07:30-08:15;12:45-13:30)
@@ -1598,7 +1598,7 @@
 0	no @ (08:00-18:00)
 0	no @ (08:00-20:00)
 0	no @ (08:15-3:45)
-0	no @ (08-18  AND  weight>4)
+0	no @ (08-18 AND weight>4)
 0	no @ (08:30-11:00)
 0	no @ (09:00-01:00)
 0	no @ (09:00-16:00)
@@ -1610,24 +1610,24 @@
 0	no @ (09:00-24:00)
 0	no @ (09:30-16:00)
 0	no @ (09:45-10:30,11:30-13:15)
-0	no@ (10:00-13:00  AND  16:30-02:00  AND  weight>7t)
+0	no @ (10:00-13:00 AND 16:30-02:00 AND weight>7t)
 0	no @ (10:00-16:00)
 0	no @ (10:00-17:00)
 0	no @ (10:00-18:00)
-0	no @ (10:00-18:00  AND  occupants>8)
+0	no @ (10:00-18:00 AND occupants>8)
 0	no @ (10:00-18:30)
-0	no @ ( 10:00-19:00)
+0	no @ (10:00-19:00)
 0	no @ (10:00 - 19:00)
-0	no @ ( 10:00-20:00)
 0	no @ (10:00-20:00)
-0	no @ ( 10:00-21:00)
+0	no @ (10:00-20:00)
+0	no @ (10:00-21:00)
 0	no @ (10:00-22:00)
 0	no @ (10:00-6:00)
 0	no @ (11:00-06:00)
 0	no @ (11:00-06:30 - SIGN HARD TO READ NEEDS DOUBLE CHECKING)
 0	no @ (11:00-15:00)
 0	no @ (11:00-17:00)
-0	no@ (11:00-17:00)
+0	no @ (11:00-17:00)
 0	no @ (11:00-18:00)
 0	no @ (11:00-18:00;Th 11:00-21:00)
 0	no @ (11:00-19:00)
@@ -1635,7 +1635,7 @@
 0	no @ (12:00-01:00)
 0	no @ (12:00-18:00)
 0	no @ (12:00-20:00)
-0	no@ (12:00-20:00)
+0	no @ (12:00-20:00)
 0	no @ (13:00-06:00)
 0	no @ (13:00-15:00, 21:00-07:00)
 0	no @ (13:00-15:00,22:00-07:00)
@@ -1645,7 +1645,7 @@
 0	no @ (15. Mar-31.Jul)
 0	no @ (16:00-19:00)
 0	no @ (16:00-24:00)
-0	no@ (16:00-24:00; PH 12:00-24:00)
+0	no @ (16:00-24:00; PH 12:00-24:00)
 0	no @ (16:30-07:00)
 0	no @ (17:00-07:00)
 0	no @ 17:00-07:00
@@ -1657,7 +1657,7 @@
 0	no @ (17:00-9:00)
 0	no @ 17:30-05:30
 0	no @ (18:00-02:00)
-0	no @ (18:00 - 03:00  AND  May - Sep)
+0	no @ (18:00 - 03:00 AND May - Sep)
 0	no @ (18:00-06:00)
 0	no @ (18:00-07:00)
 0	no @ (18:00-08:00)
@@ -1668,10 +1668,10 @@
 0	no @ (19:00-05:00)
 0	no @ (19:00 - 06:00)
 0	no @ (19:00-06:00)
-0	no@ (19:00-06:00)
+0	no @ (19:00-06:00)
 0	no @ (19:00 - 07:00)
 0	no @ (19:00-07:00)
-0	no@ (19:00-07:00)
+0	no @ (19:00-07:00)
 0	no @ (19:00-11:00)
 0	no @ (19:00-24:00,00:00-06:00)
 0	no @ (19:00-6:00)
@@ -1685,16 +1685,16 @@
 0	no @ (20:00-05:00)
 0	no @ (20:00 - 06:00)
 0	no @ (20:00-06:00)
-0	no@ (20:00-06:00)
+0	no @ (20:00-06:00)
 0	no @ (20:00 - 07:00)
 0	no @ (20:00-07:00)
-0	no @ (20:00-07:00);  no @ (Nov-Jun)
+0	no @ (20:00-07:00); no @ (Nov-Jun)
 0	no @ (20:00-07:00); no @ (Nov-Jun)
 0	no @ (20:00-08:00)
-0	no @ (20:00-08:00  AND  weight>7.5)
-0	no @ (20:00-08:00);  yes @ destination
+0	no @ (20:00-08:00 AND weight>7.5)
+0	no @ (20:00-08:00); yes @ destination
 0	no @ (20:00-24:00)
-0	no @ (20:00-24:00,00:00-06:00  AND  weight>7)
+0	no @ (20:00-24:00,00:00-06:00 AND weight>7)
 0	no @ (20:00-6:00)
 0	no @ (2009 Jun 20-2019 Oct 31)
 0	no @ (2011 May 1-2015 Aug 31)
@@ -1976,7 +1976,7 @@
 0	no @ (2014 Dec 16-2015 Jan 31)
 0	no @ (2014 Dec 18-2014 Dec 21)
 0	no @ (2014 Dec 19-2015 Jun 15)
-0	no @ (2014 Dec 19-2015 Jun 30 )
+0	no @ (2014 Dec 19-2015 Jun 30)
 0	no @ (2014 Dec 19-2015 Jun 30)
 0	no @ (2014 Dec 21-2015 Jan 31)
 0	no @ (2014 Dec 21-2015 May 31)
@@ -2177,11 +2177,11 @@
 0	no @ (2014 Jul 9-2014 Oct 14)
 0	no @ (2014 Jul 9-2014 Oct 31)
 0	no @ (2014 Jul 9-2014 Sep 30)
-0	no @ (2014 Jun 1-2014 Nov 15  AND  weight>7.5)
+0	no @ (2014 Jun 1-2014 Nov 15 AND weight>7.5)
 0	no @ (2014 Jun 16-2014 Aug 17)
 0	no @ (2014 Jun 16-2014 Aug 23)
 0	no @ (2014 Jun 16-2014 Aug 31)
-0	no @ (2014 Jun 16-2014 Aug 31  AND  Mon-Fri 8:00-15:00)
+0	no @ (2014 Jun 16-2014 Aug 31 AND Mon-Fri 8:00-15:00)
 0	no @ (2014 Jun 16-2014 Aug 8)
 0	no @ (2014 Jun 16-2014 Dec 10)
 0	no @ (2014 Jun 16-2014 Jul 19)
@@ -2700,7 +2700,7 @@
 0	no @ (2014 Sep 9-2014 Oct 10)
 0	no @ (2014 Sep 9-2014 Sep 16)
 0	no @ (2014 Sep 9-2015 Jun 27)
-0	no@ (2015-08-10 - 2015-09-13)
+0	no @ (2015-08-10 - 2015-09-13)
 0	no @ (2015 Apr 01-2015 Jun 15)
 0	no @ (2015 Apr 10-2015 Apr 16)
 0	no @ (2015 Apr 10-2015 Apr 17)
@@ -2848,7 +2848,7 @@
 0	no @ (2015 Apr 20-2015 May 3)
 0	no @ (2015 Apr 20-2015 May 31)
 0	no @ (2015 Apr 20-2015 May 5)
-0	no @ (2015 Apr 20-2015 Nov 30);  no @ (2015 Apr 20-2015 Nov 31)
+0	no @ (2015 Apr 20-2015 Nov 30); no @ (2015 Apr 20-2015 Nov 31)
 0	no @ (2015 Apr 20-2015 Sep 15)
 0	no @ (2015 Apr 20-2016 Apr 19)
 0	no @ (2015 Apr 21-2015 Apr 24)
@@ -3315,8 +3315,8 @@
 0	no @ (2015 Feb 1-2015 Jul 31)
 0	no @ (2015 Feb 1-2015 Mar 31)
 0	no @ (2015 Feb 1-2015 Nov 17)
-0	no @ (2015 Feb 1-2016 Feb 1  AND  weight>16 )
-0	no @ (2015 Feb 1-2016 Febl 1  AND  weight>16)
+0	no @ (2015 Feb 1-2016 Feb 1 AND weight>16)
+0	no @ (2015 Feb 1-2016 Febl 1 AND weight>16)
 0	no @ (2015 Feb 14-2015 Feb 22)
 0	no @ (2015 Feb 16-2015 Apr 10)
 0	no @ (2015 Feb 16-2015 Apr 30)
@@ -3396,7 +3396,7 @@
 0	no @ (2015 Jan 05-2017 Jan 31)
 0	no @ (2015 Jan 1-2015 Apr 30)
 0	no @ (2015 Jan 1-2015 Dec 31)
-0	no @ (2015 Jan 1-2017 Dec 31  AND  weight>7.5)
+0	no @ (2015 Jan 1-2017 Dec 31 AND weight>7.5)
 0	no @ (2015 Jan 12-2015 Apr 30)
 0	no @ (2015 Jan 12-2015 Feb 2)
 0	no @ (2015 Jan 12-2015 Jun 30)
@@ -3581,7 +3581,7 @@
 0	no @ (2015 Jul 20-2015 Sep 20)
 0	no @ (2015 Jul 20-2015 Sep 30)
 0	no @ (2015 Jul 20-2016 Jul 13)
-0	no @ (2015 Jul 20-2016 Jul 30  AND  weight>7.5)
+0	no @ (2015 Jul 20-2016 Jul 30 AND weight>7.5)
 0	no @ (2015 Jul 21-2015 Aug 31)
 0	no @ (2015 Jul 21-2015 Aug 9)
 0	no @ (2015 Jul 21-2015 Dec 18)
@@ -3836,7 +3836,7 @@
 0	no @ (2015 Jun 15-2015 Sep 15)
 0	no @ (2015 Jun 15-2015 Sep 3)
 0	no @ (2015 Jun 15-2015 Sep 30)
-0	no @ (2015 Jun 15-2016 Jun 14  AND  weight>9)
+0	no @ (2015 Jun 15-2016 Jun 14 AND weight>9)
 0	no @ (2015 Jun 16-2015 Aug 31)
 0	no @ (2015 Jun 16-2015 Jul 25)
 0	no @ (2015 Jun 16-2015 Jul 27)
@@ -4253,7 +4253,7 @@
 0	no @ (2015 Mar 9-2015 May 15)
 0	no @ (2015 Mar 9-2015 May 31)
 0	no @ (2015 Mar 9-2015 Oct 31)
-0	no@ 2015 March 01 - 2016 January 01
+0	no @ 2015 March 01 - 2016 January 01
 0	no @ (2015 May 10-2015 Jul 31)
 0	no @ (2015 May 10-2015 Jul 7)
 0	no @ (2015 May 11-2015 Aug 15)
@@ -4317,7 +4317,7 @@
 0	no @ (2015 May 14-2015 May 29)
 0	no @ (2015 May 14-2015 Sep 30)
 0	no @ (2015 May 15-2015 Aug 1)
-0	no @ (2015 May 15-2015 Aug 23  AND  weight>7.5)
+0	no @ (2015 May 15-2015 Aug 23 AND weight>7.5)
 0	no @ (2015 May 15-2015 Jun 12)
 0	no @ (2015 May 15-2015 Jun 30)
 0	no @ (2015 May 15-2015 May 17)
@@ -4592,7 +4592,7 @@
 0	no @ (2015 Nov 26-2015 Dec 1)
 0	no @ (2015 Nov 26-2015 Dec 15)
 0	no @ (2015 Nov 27-2015 Dec 10)
-0	no @ (2015 Nov 27-2015 Dec 12  AND  weight>12)
+0	no @ (2015 Nov 27-2015 Dec 12 AND weight>12)
 0	no @ (2015 Nov 27-2015 Dec 20)
 0	no @ (2015 Nov 27-2015 Nov 30)
 0	no @ (2015 Nov 28-2016 Jan 21)
@@ -4778,7 +4778,7 @@
 0	no @ (2015 Oct 24-2015 Nov 27)
 0	no @ (2015 Oct 24-2015 Oct 30)
 0	no @ (2015 Oct 24-2015 Oct 31)
-0	no @ (2015 Oct 24-2016 Dec 31  AND  weight>12)
+0	no @ (2015 Oct 24-2016 Dec 31 AND weight>12)
 0	no @ (2015 Oct 26-2015 Dec 15)
 0	no @ (2015 Oct 26-2015 Dec 19)
 0	no @ (2015 Oct 26-2015 Dec 23)
@@ -5248,7 +5248,7 @@
 0	no @ (2016 Apr 22-2016 Apr 28)
 0	no @ (2016 Apr 22-2016 Apr 29)
 0	no @ (2016 Apr 22-2016 Dec 18)
-0	no @ (2016 Apr 22-2016 Dec 18  AND  weight>12)
+0	no @ (2016 Apr 22-2016 Dec 18 AND weight>12)
 0	no @ (2016 Apr 23-2016 Jun 15)
 0	no @ (2016 Apr 23-2016 May 31)
 0	no @ (2016 Apr 25-2016 Apr 29)
@@ -5347,7 +5347,7 @@
 0	no @ (2016 Jan 1-2016 Dec 1)
 0	no @ (2016 Jan 15-2016 Feb 12)
 0	no @ (2016 Jan 15-2016 Mar 31)
-0	no @ (2016 Jan 15-2050 Dec 31  AND  weight>12)
+0	no @ (2016 Jan 15-2050 Dec 31 AND weight>12)
 0	no @ (2016 Jan 16-2016 Jan 27)
 0	no @ (2016 Jan 17-2016 Mar 22)
 0	no @ (2016 Jan 19-2016 Apr 6)
@@ -5512,7 +5512,7 @@
 0	no @ (2016 Jun 24-2016 Jun 29)
 0	no @ (2016 Jun 24-2016 Oct 31)
 0	no @ (2016 Jun 25-2016 Aug 5)
-0	no @ (2016 Jun 25-2016 Nov 30  AND  weight>7.5)
+0	no @ (2016 Jun 25-2016 Nov 30 AND weight>7.5)
 0	no @ (2016 Jun 26-2016 Jul 17)
 0	no @ (2016 Jun 27-2016 Aug 15)
 0	no @ (2016 Jun 27-2016 Aug 31)
@@ -5600,7 +5600,7 @@
 0	no @ (2016 Jun 9-2016 Jun 18)
 0	no @ (2016 Jun 9-2016 Jun 19)
 0	no @ (2016 Jun-Aug)
-0	no@ (2016 Jun-Aug)
+0	no @ (2016 Jun-Aug)
 0	no @ (2016 Mar 08-2016 Dec 17)
 0	no @ (2016 Mar 1-2016 Apr 21)
 0	no @ (2016 Mar 1-2016 Apr 30)
@@ -5880,16 +5880,16 @@
 0	no @ (22:00-04:00)
 0	no @ (22:00-05:00)
 0	no @ 22:00-05:00
-0	no  @ (22:00-06:00)
+0	no @ (22:00-06:00)
 0	no @ (22:00 - 06:00)
 0	no @ (22:00- 06:00)
 0	no @ (22:00-06:00)
 0	no @ 22:00-06:00
-0	no@ (22:00-06:00)
-0	no @ (22:00-06:00  AND  weight > 5.5)
-0	no @ (22:00-06:00  AND  weight>7.5)
-0	no @ (22:00-06:00);  yes @ destination
-0	no @ 22:00-06:00;  yes @ destination
+0	no @ (22:00-06:00)
+0	no @ (22:00-06:00 AND weight > 5.5)
+0	no @ (22:00-06:00 AND weight>7.5)
+0	no @ (22:00-06:00); yes @ destination
+0	no @ 22:00-06:00; yes @ destination
 0	no @ (22:00-07:00)
 0	no @ 22:00-07:00
 0	no @ (22:00-07:30)
@@ -5898,9 +5898,9 @@
 0	no @ (22:00-12:00)
 0	no @ 22:00-16:00
 0	no @ (22:00-24:00,00:00-06:00)
-0	no @ 22:00-24:00;  no @ 00:00-06:00
+0	no @ 22:00-24:00; no @ 00:00-06:00
 0	no @ (22:00-6:00)
-0	no@ (22:00-6:00)
+0	no @ (22:00-6:00)
 0	no @ (22:00-7:00)
 0	no @ 22:30-05:00
 0	no @ (23:00-05:00)
@@ -5911,9 +5911,9 @@
 0	no @ (31.03. - 31.07.)
 0	no @ (6:00-10:00)
 0	no @ (6:00 - 16:00)
-0	no @ (6:00-19:00  AND  maxweight > 7.5)
-0	no @ (6:00-19:00  AND  weight > 7.5)
-0	no @ (6:00-19:00  AND  weight > 7.5)
+0	no @ (6:00-19:00 AND maxweight > 7.5)
+0	no @ (6:00-19:00 AND weight > 7.5)
+0	no @ (6:00-19:00 AND weight > 7.5)
 0	no @ 6:00-22:00
 0	no @ 6:00 - 830am
 0	no @ (6:00-9:00)
@@ -5922,14 +5922,14 @@
 0	no @ (7:00-9:00)
 0	no @ (7:00-9:00, 15:00-18:00)
 0	no @ (7:00-9:00;16:00-18:00)
-0	no @ (7:30-19:00  AND  weight>7.5)
+0	no @ (7:30-19:00 AND weight>7.5)
 0	no @ 8:00 - 20:00
-0	no @ (8:30-14:30  AND  17:30-22:30)
+0	no @ (8:30-14:30 AND 17:30-22:30)
 0	no @ (9:00-20:00)
 0	no @ access for loading
 0	no @ agricultural
-0	no @ agricultural  AND forestry
-0	no @ agricultural  AND destination AND forestry 
+0	no @ agricultural AND forestry
+0	no @ agricultural AND destination AND forestry
 0	no @ (agricultural;forestry;psv;destination)
 0	no @ (agricultural OR forestry)
 0	no @ (air_traffic)
@@ -5940,7 +5940,7 @@
 0	no @ (Apr 11 - Dec 31)
 0	no @ (Apr 15-Oct 14 00:00-06:30,22:30-24:00 ; Oct 15-Apr 14 00:00-06:30,20:30-24:00)
 0	no @ (Apr 15-Oct 14 00:00-06:30,22:30-24:00;Oct 15-Apr 14 00:00-06:30,20:30-24:00)
-0	no@ (Apr 15-Oct 15)
+0	no @ (Apr 15-Oct 15)
 0	no @ (Apr 1-Aug 31)
 0	no @ Apr 1 - Jun 30
 0	no @ (Apr-Aug)
@@ -5949,12 +5949,12 @@
 0	no @ (Apr-Nov Sa 08:00-14:00; May-Sep We 16:00-20:00)
 0	no @ (Apr-Oct)
 0	no @ (Apr-Oct Sa,Su,PH)
-0	no @ (Apr-Sep Su 08:00-21:00);  no @ (Mo-Fr 06:00-20:00);  no @ (Sa 07:00-20:00)
+0	no @ (Apr-Sep Su 08:00-21:00); no @ (Mo-Fr 06:00-20:00); no @ (Sa 07:00-20:00)
 0	no @ (Aug 23-Sep 1)
 0	no @ (Aug 6 22:00-05:00, Sep 10 21:00-08:00, Sep 24 21:00-08:00, Oct 1 22:00-05:30, Oct 22 21:00-08:00, Dec 10 21:00-08:00, Dec 17 21:00-08:00, Jan 7 22:00-05:00, Jan 21 22:00-05:00, Jan 28 22:00-05:00)
 0	no @ (Aug Su[1] 9:00-19:00)
 0	no @ Avr-Mai
-0	no @ bus;  no @ psv;  no @ customers
+0	no @ bus; no @ psv; no @ customers
 0	no @ date < Sept 2015
 0	no @ (Dec 01-May 15)
 0	no @ (Dec 01-May 16)
@@ -5972,11 +5972,11 @@
 0	no @ Dec-Mar
 0	no @ (Dec-May)
 0	no @ Dec-May
-0	no @ (Dec-May);  no @ (Nov 20:00-08:00)
+0	no @ (Dec-May); no @ (Nov 20:00-08:00)
 0	no @ (Dec-May); no @ (Nov 20:00-08:00)
 0	no @ delivery
 0	no @ (delivery)
-0	no @ (delivery  AND  bus)
+0	no @ (delivery AND bus)
 1
 0	no @ destination
 0	no @ (destination)
@@ -5989,10 +5989,10 @@
 0	no @ (easter -49 days 13:00-17:00)
 0	no @ (easter -49 days 13:00-17:00); no @ (Dec 25 - Su -21 days 10:00-24:00; Dec 25 -Su -22 days 00:00-20:00)
 0	no @ (easter -49 days 13:00-18:00)
-0	no@ (FEB 01-JUN 30)
+0	no @ (FEB 01-JUN 30)
 0	no @ (Feb 11 - Apr 4)
-0	no@ (FEB 15-APR 01)
-0	no@ (FEB 15-JUL 15)
+0	no @ (FEB 15-APR 01)
+0	no @ (FEB 15-JUL 15)
 0	no @ (Feb-Apr 19:00-08:00)
 0	no @ FI:huoltoajo
 0	no @ FI:valtion_virka-auto
@@ -6018,7 +6018,7 @@
 0	no @ (Fr 21:00-03:00;Sa 16:00-02:00;Su 11:00-02:00)
 0	no @ (Fr 23:00-24:00; Sa-Su 00:00-24:00; Mo 00:00-06:00)
 0	no @ frozen
-0	no @ ( Fr-Sa 22:00-24:00; Sa-Su 00:00-03:00)
+0	no @ (Fr-Sa 22:00-24:00; Sa-Su 00:00-03:00)
 0	no @ (Fr-Sa 23:00-06:00)
 0	no @ (Fr, Sa, PH 21:00-06:00)
 0	no @ (Fr-Su)
@@ -6028,15 +6028,15 @@
 0	no @ (grossweight>5.0)
 0	no @ (gross_weight>7.5)
 0	no @ (grossweight > 7.5)
-0	no @ (hazmat  AND  Mo-Su 05:00-22:00)
-0	no @ (hazmat:E  AND  Mo-Su 05:00-23:00); no @ (hazmat:C  AND  Mo-Su 23:00-05:00)
-0	no @ (hazmat:E  AND  Mo-Su 06:00-21:00); no @ (hazmat:C  AND  Mo-Su 21:00-06:00)
-0	no @ (hazmat:water  AND  weight>3.5)
+0	no @ (hazmat AND Mo-Su 05:00-22:00)
+0	no @ (hazmat:E AND Mo-Su 05:00-23:00); no @ (hazmat:C AND Mo-Su 23:00-05:00)
+0	no @ (hazmat:E AND Mo-Su 06:00-21:00); no @ (hazmat:C AND Mo-Su 21:00-06:00)
+0	no @ (hazmat:water AND weight>3.5)
 0	no @ height < 3.6
 0	no @ hgv
-0	no@ hgv
-0	no @ (ice  AND  snow)
-0	no @ ( ice or snow )
+0	no @ hgv
+0	no @ (ice AND snow)
+0	no @ (ice or snow)
 0	no @ Jan 15-Jun 15
 0	no @ (Jan 1-May 30)
 0	no @ Jan-Apr
@@ -6071,17 +6071,17 @@
 0	no @ (mar 15 - jul 15)
 0	no @ (Mar 15 - Jul 15)
 0	no @ (Mar 15-Jul 15)
-0	no@ (mar 15-jun 15)
+0	no @ (mar 15-jun 15)
 0	no @ (Mar 15-Jun 15)
 0	no @ (Mar 15-Jun 30)
-0	no@ (Mar 18:30-07:00; Apr 20:00-07:00; May 20:30-07:00; Jun 21:30-07:00; Aug 15-Aug 31 20:30-07:00; Sep 20:00-07:00; Oct 01-Nov 15 18:30-07:00)
+0	no @ (Mar 18:30-07:00; Apr 20:00-07:00; May 20:30-07:00; Jun 21:30-07:00; Aug 15-Aug 31 20:30-07:00; Sep 20:00-07:00; Oct 01-Nov 15 18:30-07:00)
 0	no @ (Mar-Aug)
 0	no @ (March)
 0	no @ (March 15-June 15)
 0	no @ (Mar-Dec)
 0	no @ Mar - Dec
 0	no @ Mar-Dec
-0	no@ (Mar-Jul)
+0	no @ (Mar-Jul)
 0	no @ (Mar-Jun)
 0	no @ (Mar-Sep)
 0	no @ (maxgcweightrating:goods > 2.5)
@@ -6091,8 +6091,8 @@
 0	no @ (maxweight > 3.5)
 0	no @ (maxweight > 7.5)
 0	no @ maxweight > 7.5
-0	no @ (maxweight > 7.5  AND  11:00-07:00)
-0	no @ (maxweight>7.5  AND  22:00-06:00)
+0	no @ (maxweight > 7.5 AND 11:00-07:00)
+0	no @ (maxweight>7.5 AND 22:00-06:00)
 1
 1
 0	no @ (May 01-Jun 30)
@@ -6101,13 +6101,13 @@
 0	no @ (May 15-Nov 01: 09:00-16:00)
 0	no @ (May 15-Nov 08 08:00-18:00)
 0	no @ (May 15-Oct 15)
-0	no @ (May 1-Sep 30  AND  Fr-Su  AND  16:00-24:00)
+0	no @ (May 1-Sep 30 AND Fr-Su AND 16:00-24:00)
 0	no @ (May 21 21:00-08:00, Jun 04 22:00-05:30, Jun 25 21:00-08:00, Aug 13 21:00-08:00, Aug 20 21:00-08:00, Sep 3 22:00-05:00, Sep 9 21:00-08:00, Sep 17 21:00-08:00)
 0	no @ (May 2-Jun 17)
 0	no @ (May 4-Sep 30 Sa-Su 12:00-17:00; Jul 25-Aug 30 Tu 17:00-20:00)
 0	no @ May-Oct
 0	no @ (May-Sep)
-0	no@ (May-Sep: 08:00-08:15, 13:00-13:15, 15:00-15:15, 19:00-19:15, Sa,Su,PH 10:00-10:15, 17:00-17:15)
+0	no @ (May-Sep: 08:00-08:15, 13:00-13:15, 15:00-15:15, 19:00-19:15, Sa,Su,PH 10:00-10:15, 17:00-17:15)
 1
 0	no @ (Mo 06:00-15:00)
 0	no @ (Mo 06:00-17:00)
@@ -6151,7 +6151,7 @@
 0	no @ Mo-Fr 07:00-09:00,16:30-18:30
 0	no @ (Mo-Fr 07:00-09:00;17:00-19:00)
 0	no @ (Mo-Fr 07:00-09:00, Mo-Fr 15:00-18:00)
-0	No @ (Mo - Fr 07:00 - 09:00);  Yes @ (PH)
+0	No @ (Mo - Fr 07:00 - 09:00); Yes @ (PH)
 0	No @ (Mo - Fr 07:00 - 09:00); Yes @ (PH)
 0	no @ (Mo-Fr 07:00-09:30, 15:30-18:30)
 0	no @ (Mo-Fr 07:00-10:00,16:00-19:00)
@@ -6168,7 +6168,7 @@
 0	no @ Mo-Fr 07:00-18:00
 0	no @ (Mo-Fr 07:00-19:00)
 0	no @ (Mo-Fr 07:00-20:00)
-0	no @ (Mo-Fr 07:00-20:00; Sa 07:00-13:00  AND  weight>4)
+0	no @ (Mo-Fr 07:00-20:00; Sa 07:00-13:00 AND weight>4)
 0	no @ (Mo-Fr 07:15-07:45,12:30-12:45)
 0	no @ (Mo-Fr 07:30-07:45, 13:00-13:15, 15:30-15:45)
 0	no @ (Mo-Fr 07:30-08:00,13:00-16:30)
@@ -6182,7 +6182,7 @@
 0	no @ Mo-Fr 07:30-16:00
 0	no @ (Mo-Fr 07:30-16:30)
 0	no @ (Mo-Fr 07:45-08:30, 12:00-12:30)
-0	no @ (Mo-Fr 07:45-09:30);  no @ (Mo-Th 15:30-18:00);  no @ (Fr 14:30-18:00); yes @ PH
+0	no @ (Mo-Fr 07:45-09:30); no @ (Mo-Th 15:30-18:00); no @ (Fr 14:30-18:00); yes @ PH
 0	no @ (Mo-Fr 08:00-09:00, 12:00-15:00)
 0	no @ (Mo-Fr 08:00-09:45)
 0	no @ (mo-fr 08:00-16:00)
@@ -6191,11 +6191,11 @@
 0	no @ (Mo-Fr 08:15-08:30,15:30-15:45)
 0	no @ (Mo-Fr 08:15-08:45,15:00-15:30)
 0	no @ (Mo-Fr 08:15-09:05,11:50-12:15,13:15-13:45,16:30-17:15)
-0	no@ (Mo-Fr 09:00-17:00)
+0	no @ (Mo-Fr 09:00-17:00)
 0	no @ (Mo-Fr 09:00-18:00; Th 09:00-21:00; Sa 09:00-17:00)
 0	no @ (Mo-Fr 09:00-20:00; Sa 09:00-18:00)
-0	no @ (Mo-Fr 09:20-09:35, 11:10-11:20);  yes @ SH
-0	no@ (Mo-Fr 09:30-09:50; SH off; PH off)
+0	no @ (Mo-Fr 09:20-09:35, 11:10-11:20); yes @ SH
+0	no @ (Mo-Fr 09:30-09:50; SH off; PH off)
 0	no @ (Mo-Fr 10:00-14:00; Su 08:30-14:00)
 0	no @ (Mo-Fr 10:00-14:00;Su 08:30-14:00)
 0	no @ (Mo-Fr 10:00-18:00)
@@ -6207,11 +6207,11 @@
 0	no @ (Mo-Fr 11:00-16:00, Sa-Su 10:00-17:00)
 0	no @ (Mo-Fr 11:30-12:30; SH on)
 0	no @ (Mo-Fr 14:00-19:00)
-0	no @ (Mo-Fr 14:05-16:05  AND  Jan-Jun  AND  Aug-Dec)
+0	no @ (Mo-Fr 14:05-16:05 AND Jan-Jun AND Aug-Dec)
 0	no @ (Mo-Fr 15:00-18:00)
 0	no @ (Mo-Fr 16:00-18:00)
 0	no @ Mo-Fr 16:00-18:00
-0	no@ (Mo-Fr 16:00-18:00)
+0	no @ (Mo-Fr 16:00-18:00)
 0	no @ (Mo-Fr 16:00-19:00)
 0	no @ (Mo-Fr 16:00-7:00, Sa, Su)
 0	no @ (mo-fr 16:30-20:30)
@@ -6236,10 +6236,10 @@
 0	no @ (Mo-Fr 7:30-9:30,16:30-18:30)
 0	no @ Mo-Fr 8:00-15:00
 1
-0	no@ (Mo-Fr); no @ (Nov-May)
+0	no @ (Mo-Fr); no @ (Nov-May)
 0	no @ (Mo-Sa 00:00-07:00, 22:00-24:00; Su,PH 00:00-24:00)
 0	no @ (Mo-Sa 00:00-10:00,12:30-24:00; Su 00:00-24:00)
-0	no @ (Mo-Sa 00:00-10:00,12:30-24:00; Su 00:00-24:00; PH 00:00-24:00);  yes @ disabled @;  yes @ emergency;  yes @ permit_holder
+0	no @ (Mo-Sa 00:00-10:00,12:30-24:00; Su 00:00-24:00; PH 00:00-24:00); yes @ disabled @; yes @ emergency; yes @ permit_holder
 0	no @ (Mo-Sa 05:30-08:30, 16:00-19:00)
 0	no @ (Mo-Sa 06:00-08:00; PH off)
 0	no @ (Mo-Sa 06:00-17:00)
@@ -6249,7 +6249,7 @@
 0	no @ (Mo-Sa 07:30-09:00, 17:00-19:30; PH off)
 0	no @ (Mo-Sa 07:30-14:00)
 0	no @ (Mo-Sa 07:30-18:30; PH off)
-0	no@ (Mo-Sa 07:30-8:30; 11:30-12:30; 13:45-14:30; 15:45-16:30)
+0	no @ (Mo-Sa 07:30-8:30; 11:30-12:30; 13:45-14:30; 15:45-16:30)
 0	no @ (Mo-Sa 07:45-08:45,12:45-13:30; PH off)
 0	no @ (Mo-Sa 08:00-09:00,16:00-17:00)
 0	no @ (Mo-Sa 08:00-20:00)
@@ -6264,7 +6264,7 @@
 0	no @ Mo-Sa 11:00-18:00
 0	no @ (Mo-Sa 11:00-18:00, Th 11:00-21:00)
 0	no @ (Mo-Sa 12:00-19:00)
-0	no @ (Mo-Sa 14:00-19:00);  no @ destination
+0	no @ (Mo-Sa 14:00-19:00); no @ destination
 0	no @ (Mo-Sa 19:00-03:00)
 0	no @ (Mo-Sa 19:00-07:00; Su)
 0	no @ (Mo-Sa 19:00-7:00; Su)
@@ -6277,11 +6277,11 @@
 0	no @ (Mo-Sa); yes @ (Su)
 0	no @ (Mo-Su 00:00-02:00,20:00-24:00)
 0	no @ (Mo-Su 00:00-06:00)
-0	no @ (Mo-Su 00:00-06:00,11:00-18:00,20:00-24:00; Sa 00:00-06:00,10:00-18:00,20:00-24:00);  yes @ disabled
+0	no @ (Mo-Su 00:00-06:00,11:00-18:00,20:00-24:00; Sa 00:00-06:00,10:00-18:00,20:00-24:00); yes @ disabled
 0	no @ (Mo-Su 00:00-06:00,19:30-24:00;Th 00:00-06:00,21:00-24:00)
-0	no@ (Mo-Su 00:00-08:00,17:30-24:00)
+0	no @ (Mo-Su 00:00-08:00,17:30-24:00)
 0	no @ (Mo-Su 01:00-04:30)
-0	no@ Mo-Su 01:00-07:00
+0	no @ Mo-Su 01:00-07:00
 0	no @ (Mo-Su 06:00-12:00; Tu 17:30-21:00)
 0	no @ (Mo- Su 06:00-19:00)
 0	no @ (Mo-Su 06:00-20:00)
@@ -6292,7 +6292,7 @@
 0	no @ (Mo-Su 17:00-20:00)
 0	no @ (Mo-Su 20:00-02:00)
 0	no @ Mo-Su 20:00-06:00
-0	no @ (Mo-Su 22:00-00:00,00:00-06:00  AND  weight>7)
+0	no @ (Mo-Su 22:00-00:00,00:00-06:00 AND weight>7)
 0	no @ (Mo-Su 22:00-07:00)
 0	no @ Mo-Su 22:00-07:30
 0	no @ (Mo-Su 23:00-05:00)
@@ -6304,41 +6304,41 @@
 0	none @ (00:00-05:00, 22:00-24:00)
 0	none @ (00:00-06:00; 09:00-13:00; 19:00-24:00)
 0	none @ (00:00-06:00;09:00-13:00;19:00-24:00)
-0	none @ (04:00-06:00,09:00-13:00,19:00-22:00);  none @ permit;  none @ marked
+0	none @ (04:00-06:00,09:00-13:00,19:00-22:00); none @ permit; none @ marked
 0	none @ (04:30-23:00)
 0	none @ (05:30-10:00)
-0	none @ (06:00-09:00,18:00-22:00);  none @ marked
+0	none @ (06:00-09:00,18:00-22:00); none @ marked
 0	none @ (06:00-09:00,18:00-22:00); none @ marked
 0	none @ (06:00-22:00)
-0	none @ (06:00-22:00);  none @ destination
-0	none@ (12:00-20:00)
+0	none @ (06:00-22:00); none @ destination
+0	none @ (12:00-20:00)
 0	none @ (20:00-06:00)
 0	none @ access
 0	none @ aggricultural
 0	none @ agrcultural; none @ forestry
-0	none @ (agricultura  AND  forestry)
+0	none @ (agricultura AND forestry)
 0	none @ agricultural
 0	none @ (agricultural)
-0	none @ (agricultural  AND  destination)
-0	none @ (agricultural  AND  forestry)
+0	none @ (agricultural AND destination)
+0	none @ (agricultural AND forestry)
 1
 1
 0	none @ (agricultural;forestry)
 0	none @ agricultural, forestry
 1
 0	none @ (agricultural;forestry;psv)
-0	none @ agricultural;  none @ bus
-0	none @ agricultural;  none @ delivery
-0	none @ agricultural;  none @ deliviery
-0	none @ agricultural;  none @ destination
+0	none @ agricultural; none @ bus
+0	none @ agricultural; none @ delivery
+0	none @ agricultural; none @ deliviery
+0	none @ agricultural; none @ destination
 0	none @ agricultural; none @ destination
 0	none @ (agricultural); none @ (forestry)
-0	none @ agricultural;  none @ forestry
+0	none @ agricultural; none @ forestry
 0	none @ agricultural; none @ forestry
 0	none @ agricultural; none @ forestry; none @ destination
 0	none @ (agricultural); none @ (forestry); none @ (psv)
 0	none @ agricultural; none @ forestry; none @ psv
-0	none @ agricultural;  none @ psv
+0	none @ agricultural; none @ psv
 0	none @ (agricultural OR forestry)
 0	none @ agricultural,PSV
 1
@@ -6349,85 +6349,85 @@
 0	none @ bus
 0	none @ (bus)
 0	none @ (bus, marked)
-0	none @ bus;  none @ agriculture
+0	none @ bus; none @ agriculture
 0	none @ delivery
 0	none @ (delivery)
-0	none@ delivery
+0	none @ delivery
 1
-0	none@ (delivery  AND  05:00-11:00)
-0	none@ (delivery  AND  06:00-09:00,18:00-20:00)
+0	none @ (delivery AND 05:00-11:00)
+0	none @ (delivery AND 06:00-09:00,18:00-20:00)
 0	none @ (delivery, designated, marked)
 0	none @ delivery, destination
 1
 0	none @ (delivery, marked)
 0	none @ delivery; none @ agricultural
-0	none@ delivery;  none@ designated;  none@ marked
-0	none @ delivery;  none @ emergency;  none @ marked
-0	none @ delivery;  none @ marked
-0	none @ delivery;  none @ marked;  none @ bus
-0	none @ delivery;  none @ marked;  none @ psv
-0	none @ delivery;  none @ private
+0	none @ delivery; none @ designated; none @ marked
+0	none @ delivery; none @ emergency; none @ marked
+0	none @ delivery; none @ marked
+0	none @ delivery; none @ marked; none @ bus
+0	none @ delivery; none @ marked; none @ psv
+0	none @ delivery; none @ private
 0	none @ (delivery OR psv)
 0	none @ designated
-0	 none @ destination
+0	none @ destination
 0	none @ destination
 0	none @ (destination)
-0	none @ (destination  AND  10:00-16:00)
-0	none @ (destination  AND  22:00-06:00)
-0	none @ (destination  AND  agricultural)
-0	none @ destination;  none @ agricultural
+0	none @ (destination AND 10:00-16:00)
+0	none @ (destination AND 22:00-06:00)
+0	none @ (destination AND agricultural)
 0	none @ destination; none @ agricultural
-0	none @ destination;  none @ bus
+0	none @ destination; none @ agricultural
 0	none @ destination; none @ bus
-0	none @ destination;  none @ delivery
+0	none @ destination; none @ bus
+0	none @ destination; none @ delivery
 0	none @ destination; none @ delivery
 0	none @ destination; none @ delivery; none @ agricultural
 0	none @ destination; none @ forestry
 0	none @ destination; none @ private
-0	none @ destination ;  none @ psv
-0	none @ destination;  none @ psv
-0	none @ destination;  none @ psv
+0	none @ destination; none @ psv
+0	none @ destination; none @ psv
+0	none @ destination; none @ psv
 0	none @ destination; none @ PSV
-0	none @ destination;  none @ Su
+0	none @ destination; none @ Su
 0	none @ (destination OR psv)
 0	none @ (destination, psv)
-0	none @ disabled;  none @ emergency;  none @ permit_holder
+0	none @ disabled; none @ emergency; none @ permit_holder
 0	none @ emergency
 0	none @ (emergency)
 0	none @ forestry
-0	none @ forestry ;  none @ agricultural
+0	none @ forestry; none @ agricultural
 0	none @ forestry; none @ agricultural
 0	(none @ hgv, trailer)
 0	none @ loading
-0	none @ loading;  none @ permit_holders
+0	none @ loading; none @ permit_holders
 0	none @ marked
-0	none @ ( marked; bus )
-0	none @ marked ;  none @ bus
-0	none @ marked;  none @ bus
-0	none @ marked;  none @ bus ;  none @ delivery;  none @ designated
+0	none @ (marked; bus)
+0	none @ marked; none @ bus
+0	none @ marked; none @ bus
+0	none @ marked; none @ bus; none @ delivery; none @ designated
 0	none @ marked; none @ delivery
 0	none @ marked; none @ delivery; none @ military
-0	none @ marked;  none @ psv
+0	none @ marked; none @ psv
 0	none @ marked; none @ psv
 0	none @ marked, psv
-0	none@ (May-Sep: 08:00-08:15, 13:00-13:15, 15:00-15:15, 19:00-19:15, Sa,Su,PH 10:00-10:15 17:00-17:15)
+0	none @ (May-Sep: 08:00-08:15, 13:00-13:15, 15:00-15:15, 19:00-19:15, Sa,Su,PH 10:00-10:15 17:00-17:15)
 0	none @ (Mo-Fr 07:00-21:00; Sa 07:00-13:00)
-0	none @ (Mo-Fr 07:00-21:00; Sa 07:00-13:00  AND  permit_holder)
+0	none @ (Mo-Fr 07:00-21:00; Sa 07:00-13:00 AND permit_holder)
 0	none|no @ (weight>15)
-0	none @ permit_holders;  none @ loading
+0	none @ permit_holders; none @ loading
 0	none @ private
 0	none @ psv
 0	none @ (psv)
-0	none@ psv
+0	none @ psv
 0	none @ psv, agricultural
-0	none @ (psv  AND  bus)
+0	none @ (psv AND bus)
 0	none @ psv; none @ agricultural
 0	none @ psv; none @ agricultural; none @ forestry
-0	none @ psv;  none @ delivery
-0	none @ psv ;  none @ destination
+0	none @ psv; none @ delivery
+0	none @ psv; none @ destination
 0	none @ service
 1
-0	none@ trailer,hgv
+0	none @ trailer,hgv
 0	non @ loading
 0	no|no|no|designated @ (Su 7:00-15:00)
 0	no @ (Nov01-Mar31)
@@ -6474,7 +6474,7 @@
 0	no @ Oct-Jun
 0	no @ (Oct-Mar)
 0	no @ Oct-Mar
-0	no @ (Oct Mar  AND  sunset-sunrise)
+0	no @ (Oct Mar AND sunset-sunrise)
 0	no @ (Oct-May)
 0	no @ Oct-May
 0	no @ (Oct Mo[2]-Jan 01)
@@ -6484,7 +6484,7 @@
 0	no_parking @ (Tu 07:00-12:00)
 0	no @ permissive
 0	no @ permit_holder
-0	no@ (PH 12:00-22:00; Sa 16:00-22:00)
+0	no @ (PH 12:00-22:00; Sa 16:00-22:00)
 0	no @ (PH,SH)
 0	no @ (PH Su)
 0	no @ PH,Su
@@ -6522,8 +6522,8 @@
 0	no @ (Sa-So 00:00-24:00)
 0	no @ (Sa-So,PH)
 0	no @ Sa-So, PH
-0	no@ (Sa-So;PH)
-0	no@ (sa-su)
+0	no @ (Sa-So;PH)
+0	no @ (sa-su)
 0	no @ (Sa-Su)
 0	no @ (Sa,Su)
 0	no @ Sa-Su
@@ -6540,7 +6540,7 @@
 0	no @ (Sa-Su 12:00-22:00;PH 12:00-22:00)
 0	no @ (Sa-Su 13:30-18:30)
 0	no @ (Sa-Su 14:00-06:00, Su 06:00-14:00)
-0	no@ (Sa-Su 15:00-20:00)
+0	no @ (Sa-Su 15:00-20:00)
 0	no @ (Sa-Su 15:00-21:00)
 0	no @ (Sa-Su;PH)
 0	no @ (Sa,Su,PH)
@@ -6553,7 +6553,7 @@
 0	no @ (Sep15-Oct15)
 0	no @ (Sep15-Oct15 17:00-10:00)
 0	no @ (Sep 1-May 1)
-0	no@ (Sep 1-Oct 20 16:00-08:00)
+0	no @ (Sep 1-Oct 20 16:00-08:00)
 1
 0	no @ (Sep-Apr)
 0	no|||| @ Sep-Jun Mo-Fr 06:30-10:00
@@ -6565,34 +6565,34 @@
 0	no @ snow
 0	no @ (snow)
 0	no @ (snow,ice)
-0	no @ snow;  no @ ice
-0	no @ snow;  no @ ice;  no @ winter
+0	no @ snow; no @ ice
+0	no @ snow; no @ ice; no @ winter
 0	no_stopping @ (Mo-Fr 07:00-14:00)
 0	no @ su
 0	no @ Su
 0	no @ (Su)
 0	no @ (Su 00:00-05:00)
 0	no @ (Su 00:00-24:00)
-0	no@ (Su 00:00 - 24:00)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (06:30)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (07:00; 8:30; 12:56; 18:34)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (07:45; 17:53)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (09:13; 13:39; 19:14)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (09:48; 10:42; 14:14; 16:20)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (10:16; 15:52; 16:49)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (11:08; 12:20; 14:42)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (11:44; 15:18)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (17:22)
-0	no@ (Su 00:00 - 24:00; Ago);  yes@ (19:50)
-0	no @ (Su 00:00-24:00;PH 00:00-24:00 )
-0	no@ (Su 00:00 - 24:00; Tu 06:24 - 14:29; Fr 06:24 - 14:29)
-0	no@ (Su 00:00 - 24:00;Tu 06:24 - 14:29; Fr 06:24 - 14:29)
-0	no@ (Su 00:00 - 24:00);  yes@ (05:38)
-0	no@ (Su 00:00 - 24:00);  yes@ (06:00; 07:00;08:00; 12:05; 13:05; 14:05; 17:05; 18:05)
-0	no@ (Su 00:00 - 24:00);  yes@ (06:30; 07:30; 08:30; 09:35; 11:35; 12:35; 13:35; 14:35; 15:35; 16:35; 18:35; 19:35)
-0	no@ (Su 00:00 - 24:00);  yes@ (09:00; 10:35; 17:35; 19:015; 20:35)
-0	no@ (Su 00:00 - 24:00); yes@ (Tu 06:24 - 14:29; Fr 06:24 - 14:29)
-0	no@ (Su 00:00 - 24:00); yes @ (Tu 06:24 - 14:29; Fr 06:24 - 14:29)
+0	no @ (Su 00:00 - 24:00)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (06:30)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (07:00; 8:30; 12:56; 18:34)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (07:45; 17:53)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (09:13; 13:39; 19:14)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (09:48; 10:42; 14:14; 16:20)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (10:16; 15:52; 16:49)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (11:08; 12:20; 14:42)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (11:44; 15:18)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (17:22)
+0	no @ (Su 00:00 - 24:00; Ago); yes @ (19:50)
+0	no @ (Su 00:00-24:00;PH 00:00-24:00)
+0	no @ (Su 00:00 - 24:00; Tu 06:24 - 14:29; Fr 06:24 - 14:29)
+0	no @ (Su 00:00 - 24:00;Tu 06:24 - 14:29; Fr 06:24 - 14:29)
+0	no @ (Su 00:00 - 24:00); yes @ (05:38)
+0	no @ (Su 00:00 - 24:00); yes @ (06:00; 07:00;08:00; 12:05; 13:05; 14:05; 17:05; 18:05)
+0	no @ (Su 00:00 - 24:00); yes @ (06:30; 07:30; 08:30; 09:35; 11:35; 12:35; 13:35; 14:35; 15:35; 16:35; 18:35; 19:35)
+0	no @ (Su 00:00 - 24:00); yes @ (09:00; 10:35; 17:35; 19:015; 20:35)
+0	no @ (Su 00:00 - 24:00); yes @ (Tu 06:24 - 14:29; Fr 06:24 - 14:29)
+0	no @ (Su 00:00 - 24:00); yes @ (Tu 06:24 - 14:29; Fr 06:24 - 14:29)
 0	no @ (Su 0:00 - 22:00, Sa 06:00 - 24:00)
 0	no @ (Su 03:00-20:00)
 0	no @ (Su 06:00-12:00)
@@ -6617,16 +6617,16 @@
 0	no @ (Su 09:00-17:00)
 0	no @ (Su 09:00-18:00)
 0	no @ (Su 09:00-19:00; PH 09:00-19:00)
-0	no@ (Su 0o:00 - 24:00)
+0	no @ (Su 0o:00 - 24:00)
 0	no @ (Su 10:00-18:00;PH 10:00-18:00)
 0	no @ (Su 11:00 - 19:00)
 0	no @ Su 12:00-17:00
 0	no @ (Su 12:00-19:00; PH 12:00-19:00)
-0	no@ (Su 12:00-19:00; PH 12:00-19:00)
+0	no @ (Su 12:00-19:00; PH 12:00-19:00)
 0	no @ (Su 12:00-22:00)
-0	no@ (Su 14:00-19:00;PH 14:00-19:00)
+0	no @ (Su 14:00-19:00;PH 14:00-19:00)
 0	no @ (Su 15:00-19:00)
-0	no @ (Su  AND  PH)
+0	no @ (Su AND PH)
 0	no @ (Su-Fr)
 0	no @ (summer)
 0	no @ sunday
@@ -6636,17 +6636,17 @@
 0	no @ (sunset-sunrise)
 0	no @ (sunset-sunrise)
 0	no @ sunset-sunrise
-0	no@ (sunset-sunrise)
-0	no @ (sunset-sunrise);  no @ Mar-Jul
+0	no @ (sunset-sunrise)
+0	no @ (sunset-sunrise); no @ Mar-Jul
 0	no @ (Sun-Wed 10:00-17:00;Th 10:00-21:00;Fr-Sa 10:00-17:00)
-0	no @ (Sun-Wed 10:00-17:00;Th 10:00-21:00;Fr-Sa 10:00-17:00);  destination @ (Fr-We 17:00-10:00;Th 21:00-10:00)
+0	no @ (Sun-Wed 10:00-17:00;Th 10:00-21:00;Fr-Sa 10:00-17:00); destination @ (Fr-We 17:00-10:00;Th 21:00-10:00)
 0	no @ (Su-PH)
 0	no @ (Su, PH)
 0	no @ (Su,PH)
 0	no @ (Su; PH)
 0	no @ (Su;PH)
 0	no @ Su, PH
-0	no@ (Su;PH)
+0	no @ (Su;PH)
 0	no @ (Su,PH 00:00-24:00)
 0	no @ (Su-Th 05:00-22:00;Fr 05:00-18:00)
 1
@@ -6659,15 +6659,15 @@
 0	no @ (Th 06:30-15:00)
 0	no @ (th 07:00-13:00)
 0	no @ (Th 07:00-13:00)
-0	no@ (Th 07:00-15:00)
+0	no @ (Th 07:00-15:00)
 0	no @ (Th 07:00-19:00)
 0	no @ (Th 09:00-16:00)
 0	no @ (Th 10:00-13:00; Fr 10:00-15:00)
 0	no @ (Th,Sa 07:00-18:00; Fr 07:00-21:00)
 0	no @ (Th-Su 20:00-06:00)
-0	no@ (Th-Su 20:00-06:00)
-0	no @ ( Tu 05:00-16:00 )
-0	no @ (Tu 05:00-16:00);  yes @ (private)
+0	no @ (Th-Su 20:00-06:00)
+0	no @ (Tu 05:00-16:00)
+0	no @ (Tu 05:00-16:00); yes @ (private)
 0	no @ (Tu 06:00-17:00; Sa 06:00-22:00)
 0	no @ Tu 07:00-14:00
 0	no @ (Tu 07:00-15:00)
@@ -6708,30 +6708,30 @@
 0	no @ (weight>12)
 0	no @ (weight>12t)
 0	no @ (weight>15)
-0	no @ (weight>15  AND  06:00-21:00)
+0	no @ (weight>15 AND 06:00-21:00)
 1
 0	no @ (weight>3.5)
 0	no @ (weight > 3.5)
-0	no@ (weight>3.5)
-0	no @ (weight>3.5  AND  motorhome  AND  caravan); yes @ psv
+0	no @ (weight>3.5)
+0	no @ (weight>3.5 AND motorhome AND caravan); yes @ psv
 0	no @ (weight>5)
 0	no @ (weight > 5)
 0	no @ (weight>7)
-0	no @ (weight>7.5 )
+0	no @ (weight>7.5)
 0	no @ (weight>7.5)
 0	no @ (weight > 7.5)
 0	no @ weight > 7.5
-0	no @ (weight>7.5  AND  05:00-12:00)
-0	no @ (weight>7.5  AND  12:00-21:00)
-0	no @ (weight>7.5  AND  19:00-06:00)
-0	no @ (weight > 7.5  AND 20:00-06:00);  yes @ destination
-0	no @ (weight > 7.5  AND 20:00-06:00);  yes @ destination;  yes @ emergency
-0	no @ (weight >7.5  AND  hgv)
-0	no @ (weight>7.5  AND  Mo-Sa 05:00-22:00;PH off)
+0	no @ (weight>7.5 AND 05:00-12:00)
+0	no @ (weight>7.5 AND 12:00-21:00)
+0	no @ (weight>7.5 AND 19:00-06:00)
+0	no @ (weight > 7.5 AND 20:00-06:00); yes @ destination
+0	no @ (weight > 7.5 AND 20:00-06:00); yes @ destination; yes @ emergency
+0	no @ (weight >7.5 AND hgv)
+0	no @ (weight>7.5 AND Mo-Sa 05:00-22:00;PH off)
 0	no @ (weight > 7.5t)
-0	no@ (weight>7.5t  AND  snow)
-0	no @ (weight>7.5);  yes @ agricultural
-0	no @ (weight>7.5);  yes @ destination
+0	no @ (weight>7.5t AND snow)
+0	no @ (weight>7.5); yes @ agricultural
+0	no @ (weight>7.5); yes @ destination
 0	no @ (weight>7.5); yes @ destination
 0	no @ (We,Sa 05:00-14:00)
 0	no @ wet
@@ -6742,10 +6742,10 @@
 0	no|yes @ (Mo-Fr 07:00-09:00)
 0	no; yes @ (Tu 20:00-23:00; Th 20:00-23:00; Su 20:00-23:00)
 0	no|yes|yes @ (weight>7.5)
-0	no|yes|yes@ (weight>7.5)
+0	no|yes|yes @ (weight>7.5)
 0	no|yes|yes @ wet
 0	no|yes|yes|yes @ (weight>7.5)
-0	no|yes|yes|yes@ (weight>7.5)
+0	no|yes|yes|yes @ (weight>7.5)
 0	no|yes|yes|yes @ wet
 0	no|yes|yes|yes|yes @ (weight>7.5)
 0	no @ ""zu Marktzeiten""
@@ -6765,45 +6765,45 @@
 0	permissive @ (06:00-20:00)
 0	permissive @ (06:00-21:00)
 0	permissive @ 07:00-23:00
-0	permissive @ (08:00-21:00  AND  apr - september, 08:00-17:00 october to march, not christmass day)
+0	permissive @ (08:00-21:00 AND apr - september, 08:00-17:00 october to march, not christmass day)
 0	permissive @ (09:00-10:30,16:30-18:00)
-0	permissive @ 09:00 - 21:00;  private @ 21:00 - 09:00
+0	permissive @ 09:00 - 21:00; private @ 21:00 - 09:00
 0	permissive @ (10:00-17:00)
-0	permissive @ 10:00-23:00 ;  private @ 23:00-10:00
-0	permissive @ 11:00-23:00;  private @ 23:00-11:00
+0	permissive @ 10:00-23:00; private @ 23:00-10:00
+0	permissive @ 11:00-23:00; private @ 23:00-11:00
 0	permissive @ (16:30 - 8:00); private @ (8:00 - 16:30)
 0	permissive @ (25.6 - 31.10)
-0	permissive @ 6:00 - 23:00;  private @ 23:00 - 06:00
+0	permissive @ 6:00 - 23:00; private @ 23:00 - 06:00
 0	permissive @ Dec 01-May 01
 0	permissive @ (Jul 15-Mar 15)
 0	permissive @ (Jul-Aug)
 0	permissive @ (Mar 01-Oct 31 08:00-sunset)
-0	permissive@ (Mar-Oct: 05:00-22:00)
+0	permissive @ (Mar-Oct: 05:00-22:00)
 0	permissive @ (Mo-Fr 00:00-07:00,14:00-24:00; SH 00:00-24:00)
 0	permissive @ (Mo-Fr 06:30-21:00;Sa 07:30-19:45;Su 09:00-19:00)
 0	permissive @ (Mo-Fr 09:00-12:00, 15-17; Sa 10:00-17:00)
 0	permissive @ (Mo-Fr 10:00-17:00;Sa 11:00-16:00)
 0	permissive @ (Mo-Fr 10:00-18:00; Sa 10:00-17:00)
-0	permissive@ (Mo-Sa 07:00-10:00)
+0	permissive @ (Mo-Sa 07:00-10:00)
 0	permissive @ (Mo-Sa 07:00-19:00)
 0	permissive @ Mo-Sa 08:00-20:00
 0	permissive @ (Mo-Sa 08:00-20:30)
 0	permissive @ (Mo-Sa 08:00- 22:00)
 0	permissive @ (Mo-Su 08:00- 20:00)
 0	permissive @ (Mo-Su 9:00-20:00)
-0	permissive @ Mo-Th 11:00 - 22:00, Fr-Su 11:00 - 23:00;  private @ Mo-Th 22:00 - 11:00, Fr-Su 23:00 - 11:00
+0	permissive @ Mo-Th 11:00 - 22:00, Fr-Su 11:00 - 23:00; private @ Mo-Th 22:00 - 11:00, Fr-Su 23:00 - 11:00
 0	permissive @ Mo-Th 11:00 - 22:00, Fr-Su 11:00 - 23:00; private @ Mo-Th 22:00 - 11:00, Fr-Su 23:00 - 11:00
 0	permissive @ permit_holder
-0	permissive @ Summer  AND Fall AND Spring 
+0	permissive @ Summer AND Fall AND Spring
 0	permissive @ (sunrise - sunset)
 0	permissive @ (sunrise-sunset)
 0	permissive @ sunrise-sunset
-0	permissive @ working_days;  no @ holidays
+0	permissive @ working_days; no @ holidays
 0	permit_holder @ (00:00-07:30,20:00-24:00)
-0	permit_holder @ (06:00-18:00);  delivery @ (06:00-09:30,16:30-18:00)
-0	permit_holder @ (06:00-18:00);  delivery @ (Mo-Fr 06:00-09:30,16:30-18:00)
+0	permit_holder @ (06:00-18:00); delivery @ (06:00-09:30,16:30-18:00)
+0	permit_holder @ (06:00-18:00); delivery @ (Mo-Fr 06:00-09:30,16:30-18:00)
 0	permit_holder @ Kfz Friedhofsverwaltung und zugelassene Gewerbetreibende nach Â§5b Friedhofsatzung
-0	permit_holder@ (Mo-Fr 16:00-19:00)
+0	permit_holder @ (Mo-Fr 16:00-19:00)
 0	permit_holder @ (Tu 05:00-1800; Fr 05:00-1800)
 1
 0	private @ (00:00-08:00)
@@ -6829,10 +6829,10 @@
 0	private @ (Jun-Sep: 09:30-15:00,16:30-24:00; Oct-May: 09:00-15:00,16:30-21:00)
 0	private @ (Jun-Sep: 09:30-15:00,16:30-24:00;Oct-May: 09:00-15:00,16:30-21:00)
 0	private @ (May 01-Dec 23); no @ (Dec 24-May 01)
-0	private@ (May 01-Sep 30 Su, May 01-Sep 30 PH)
+0	private @ (May 01-Sep 30 Su, May 01-Sep 30 PH)
 0	private @ (May 05-Jul 20); private @ (Okt 01-Nov 30)
-0	private@ (May-Oct);  permissive@ (Nov-Apr)
-0	private@ (May-Sep)
+0	private @ (May-Oct); permissive @ (Nov-Apr)
+0	private @ (May-Sep)
 0	private @ (Mo-Fr)
 0	private @ (Mo-Fr 00:00-16:00)
 0	private @ (Mo-Fr 06:45-07:15,13:45-14:30;PH off)
@@ -6841,12 +6841,12 @@
 0	private @ (Mo-Fr 07:30-17:30)
 0	private @ (Mo-Fr 08:00-08:40, Mo-Fr 16:00-16:40)
 0	private @ (Mo-Fr 08:00-15:00)
-0	private@ (Mo-Fr 08:00-16:00)
+0	private @ (Mo-Fr 08:00-16:00)
 0	private @ (Mo-Fr 18:00-07:00)
 0	private @ (Mo-Fr 21:00-06:00)
 0	private @ (Mo-Su 04:00-09:30, 13:00-16:00, 19:00-21:00)
 0	private @ (Mo-Su 07:00-20:00)
-0	private@ (Mo-Su 22:00-06:00)
+0	private @ (Mo-Su 22:00-06:00)
 0	private @ (Oct 01-Apr 30)
 0	private @ (Oct 01-Apr 30 || ""when barrier is locked closed"")
 1
@@ -6855,9 +6855,9 @@
 0	private @ (Sa-Su, PH)
 0	private @ (Sa-Su;PH)
 0	private @ (summer)
-0	private@ (sunset-sunrise)
+0	private @ (sunset-sunrise)
 0	private @ (Th 06:00-16:00)
-0	private@ (weight>7.5)
+0	private @ (weight>7.5)
 0	PSV @ (7:30-13:30)
 0	psv @ (weight>2.8)
 0	reversible @ (05:30-08:30)
@@ -6908,37 +6908,37 @@
 0	yes @ (00:00-09:00,20:00-24:00)
 0	yes @ (00:00-11:00)
 0	yes @ (00:00-11:00,19:00-24:00)
-0	yes@ (00:00-11:59)
+0	yes @ (00:00-11:59)
 0	yes @ (00:00-12:00)
-0	yes @ (00:00-12:00; PH off);  -1 @ (12:00-00:00; PH off)
-0	yes @ (00:00-24:00);  no @ (Mo-Fr 20:30-05:00; Sa 14:00-24:00; Su,PH 00:00-24:00)
+0	yes @ (00:00-12:00; PH off); -1 @ (12:00-00:00; PH off)
+0	yes @ (00:00-24:00); no @ (Mo-Fr 20:30-05:00; Sa 14:00-24:00; Su,PH 00:00-24:00)
 0	yes @ (010:00-20:00)
 0	yes @ (01:00-09:00)
 0	yes @ (01:00-12:00)
 0	yes @ (01:00-15:00)
 1
-0	yes@ (01 Jul-31 Aug)
+0	yes @ (01 Jul-31 Aug)
 0	yes @ ([0-23]:00-[0-23]:10)
 0	yes @ ([0-23]:15-[0-23]:55)
 0	yes @ (03:00-10:00)
 0	yes @ (04:00 - 06:00)
-0	yes @ (04:00-06:00,09:00-13:00,19:00-22:00);  yes @ permit;  yes @ marked
-0	yes @ (04:00-10:30  AND  delivery)
+0	yes @ (04:00-06:00,09:00-13:00,19:00-22:00); yes @ permit; yes @ marked
+0	yes @ (04:00-10:30 AND delivery)
 0	yes @ (04:00-21:00)
 0	yes @ (04:00-6:00)
 0	yes @ (05:00-10:00)
-0	yes @ (05:00-10:30  AND  delivery)
+0	yes @ (05:00-10:30 AND delivery)
 0	yes @ (05:00-21:00)
 0	yes @ (05:00-21:00); -1 @ (21:00-05:00)
 0	yes @ (05:00-22:00)
 0	yes @ (05:00-24:00)
-0	yes @ (05.30-17.30);  -1 @ (17.30-05.30)
-0	yes @ (06:00-09:00,18:00-22:00);  yes @ marked
+0	yes @ (05.30-17.30); -1 @ (17.30-05.30)
+0	yes @ (06:00-09:00,18:00-22:00); yes @ marked
 0	yes @ (06:00-09:00,18:00-22:00); yes @ marked
 0	yes @ (06:00-10:00)
 0	yes @ (06:00-10:30,19:30-20:30)
 0	yes @ (06:00-11:00)
-0	yes @ (06:00-12:00);  yes @ (day 1,15,16,-1)
+0	yes @ (06:00-12:00); yes @ (day 1,15,16,-1)
 0	yes @ (06:00-13:00)
 0	yes @ (06:00-16:00)
 0	yes @ (06:00-18:00)
@@ -6959,7 +6959,7 @@
 0	yes @ (07:00-11:00)
 0	yes @ (07:00-12:00)
 0	yes @ (07:00-19:00)
-0	yes@ (07:00-19:00)
+0	yes @ (07:00-19:00)
 0	yes @ (07:00 - 20:00)
 0	yes @ (07:00-20:00)
 0	yes @ (07:00-21:00)
@@ -6988,12 +6988,12 @@
 0	yes @ (09:00-16:30)
 0	yes @ (09:00-19:00)
 0	yes @ (10:00-13:00;16:00-19:30)
-0	yes @ (10:00-14:00);  -1 @ (15:00-20:00)
+0	yes @ (10:00-14:00); -1 @ (15:00-20:00)
 0	yes @ (10:00-16:00)
-0	yes @ (10:00-16:00  AND  weight<10); yes @ (22:00-06:00  AND  weight<15)
+0	yes @ (10:00-16:00 AND weight<10); yes @ (22:00-06:00 AND weight<15)
 0	yes @ (10:30-16:30)
 0	yes @ (11:00-17:00)
-0	yes @ (12:00-04:00);  -1 @ (04:00-12:00)
+0	yes @ (12:00-04:00); -1 @ (04:00-12:00)
 0	yes @ (12:00-04:00); -1 @ (04:00-12:00)
 0	yes @ (12:00-19:00)
 0	yes @ (12:00-22:00)
@@ -7003,17 +7003,17 @@
 0	yes @ (14:00-16:30, 20:30-10:30)
 0	yes @ (15.7 - 15.11)
 0	yes @ (15.7. - 15.11)
-0	yes@ (15 Jun-15 Sep)
-0	yes@ (16:00-10:00);  yes@ (permit holders)
+0	yes @ (15 Jun-15 Sep)
+0	yes @ (16:00-10:00); yes @ (permit holders)
 0	yes @ (16:00-22:00)
 0	yes @ 16:00 - 24:00
 0	yes @ (16:00-6:00)
 0	yes @ (17:00-08:00)
 0	yes @ (17:00-09:00)
 0	yes @ (17:00-10:00)
-0	yes @ (17.30-05.30);  no @ (05.30-17.30)
+0	yes @ (17.30-05.30); no @ (05.30-17.30)
 0	yes @ (18:00-01:00)
-0	yes@ (18:00-01:00)
+0	yes @ (18:00-01:00)
 0	yes @ (18:00-06:00)
 0	yes @ (18:00-07:00)
 0	yes @ (18:00-09:00)
@@ -7033,7 +7033,7 @@
 0	yes @ (19:00-09:00)
 0	yes @ (19:00 - 10:00)
 0	yes @ (19:00-10:00)
-0	yes@ (19:00-10:00)
+0	yes @ (19:00-10:00)
 0	yes @ (19:00 - 11:00)
 0	yes @ (19:00-11:00)
 0	yes @ (19:00-9:00)
@@ -7041,10 +7041,10 @@
 0	yes @ (20:00-06:00)
 0	yes @ (20:00-08:00)
 0	yes @ 20:00-08:00
-0	yes @ 20:00-08:00;  yes @ Su PH
+0	yes @ 20:00-08:00; yes @ Su PH
 0	yes @ (20:00-09:00)
-0	yes@ (20.00-09.00)
-0	yes@ (20:00-09:00); yes@ (Su,PH)
+0	yes @ (20.00-09.00)
+0	yes @ (20:00-09:00); yes @ (Su,PH)
 0	yes @ (20:00-10:00)
 0	yes @ (2013 April 1-2013 October 30 20:00-08:00)
 0	yes @ (2015-06-30)
@@ -7071,27 +7071,27 @@
 0	yes @ (23:30-05:00)
 0	yes @ (25.6 - 31.10)
 0	yes @ (2S/2S)
-0	yes@ (4:00-10:00)
+0	yes @ (4:00-10:00)
 0	yes @ (4WD_only=yes)
 0	yes @ (5:00-22:00)
 0	yes @ (6:00-10:00)
 0	yes @ (6:00-18:00)
-0	yes @ (6:00-8:00,13:00-17:00);  no @ (00:00-05:00)
+0	yes @ (6:00-8:00,13:00-17:00); no @ (00:00-05:00)
 0	yes @ (7:00-11:00)
 0	yes @ (7:00-18:00)
 0	yes @ (7:00-20:00)
-0	yes @ (7:00 - 9:00  AND  16:00 - 18:00)
+0	yes @ (7:00 - 9:00 AND 16:00 - 18:00)
 0	yes @ 7:30-8:30,13:00-14:30
 0	yes @ (8:00-20:00)
 0	yes @ (8:00-8:45, 11:00-11:45, 13:30-14:15, 16:30-17:30)
 0	yes @ (9:30-21:30)
 0	yes @ agricultural
-0	yes @ (agricultural  AND  weight < 1.5)
+0	yes @ (agricultural AND weight < 1.5)
 0	yes @ agricultural, yes @ delivery
-0	yes @ agricultural;  yes @ forestry
+0	yes @ agricultural; yes @ forestry
 0	yes @ (Apr 15-May 20)
 0	yes @ (Apr 1-Oct 30 20:00-08:00)
-0	yes@ (april-november)
+0	yes @ (april-november)
 0	yes @ (apr-oct 20:00-08:00)
 0	yes @ (Apr-Oct: Mo-Fr 00:00-10:00,18:00-24:00;Apr-Oct: PH,Sa-Su off;Nov-Mar: Mo-Fr;Nov-Mar: PH,Sa-Su 00:00-10:00,18:00-24:00)
 0	yes @ (Aug 01-Aug 31)
@@ -7103,53 +7103,53 @@
 0	yes @ (Dec 24-May 01)
 0	yes @ (Dec 25 - Su -21 days 10:00-24:00; Dec 25 -Su -22 days 00:00-20:00)
 0	yes @ (Dec-Apr)
-0	yes @ (Dec-Apr);  private @ (May-Nov)
+0	yes @ (Dec-Apr); private @ (May-Nov)
 0	yes @ (Dec-Apr); private @ (May-Nov)
 0	yes @ Dec-Mar
 0	yes @ delivery
 1
-0	yes @ (delivery  AND  18:00-10:30)
-0	yes @ (delivery  AND  Mo-Sa 05:00-22:00  AND  weight < 7.5)
-0	yes @ (delivery  AND  Mo-Sa 08:00-10:30)
+0	yes @ (delivery AND 18:00-10:30)
+0	yes @ (delivery AND Mo-Sa 05:00-22:00 AND weight < 7.5)
+0	yes @ (delivery AND Mo-Sa 08:00-10:30)
 0	yes @ (delivery; disabled; emergency)
-0	yes @ delivery;  yes @ FI:huoltoajo
+0	yes @ delivery; yes @ FI:huoltoajo
 0	yes|designated @ (Mo-Fr 07:00-10:00, 14:00-19:00)
 0	yes @ destination
 0	yes @ (destination)
-0	yes@ destination
-0	yes@ (destination)
+0	yes @ destination
+0	yes @ (destination)
 0	yes @ destination,agricultural,foresty
-0	yes @ destination  AND maxweight <=1.5 t
-0	yes @ (destination  AND  weight<7.5)
-0	yes @ destination;  yes @ bus
-0	yes @ destination;  yes @ delivery
+0	yes @ destination AND maxweight <=1.5 t
+0	yes @ (destination AND weight<7.5)
+0	yes @ destination; yes @ bus
+0	yes @ destination; yes @ delivery
 0	yes @ disabled
-0	yes @ (disabled  AND  Mo 09:00-15:00;disabled  AND  Tu-Sa 09:00-17:00)
+0	yes @ (disabled AND Mo 09:00-15:00;disabled AND Tu-Sa 09:00-17:00)
 0	yes @ disabled, delivery
 0	yes @ (disabled; emergency)
 0	yes @ (disabled; emergency; delivery)
-0	yes @ (disabled; emergency);  delivery @ (08:00-10:00,15:00-17:00)
-0	yes @ (disabled; emergency);  delivery @ (08:00-11:00,15:00-17:00)
+0	yes @ (disabled; emergency); delivery @ (08:00-10:00,15:00-17:00)
+0	yes @ (disabled; emergency); delivery @ (08:00-11:00,15:00-17:00)
 0	yes; dismount @ (09:00-19:00)
 0	yes @ emergency
 0	yes @ (emergency; private)
 0	yes @ FI:huoltoajo
 0	yes @ FI:valtion_virka-auto
-0	yes @ (Fr 15:00-22:00;Sa 9:00-15:00;Su 9:00-14:00); yes @ (Mo-Fr 13:30-22:00  AND  hov=yes)
+0	yes @ (Fr 15:00-22:00;Sa 9:00-15:00;Su 9:00-14:00); yes @ (Mo-Fr 13:30-22:00 AND hov=yes)
 0	yes @ (Fr 23:00-24:00; Sa-Su 00:00-24:00; Mo 00:00-06:00)
 0	yes @ (Fri)
 0	yes @ (Fr-Su 00:00-24:00)
 0	yes @ (fuel=electric)
 0	yes @ (garbage collection)
-0	yes@ (Giu - Set  AND  Mo-Sa 06:35; 07:15; 07:31; 13:21; 19:42)
+0	yes @ (Giu - Set AND Mo-Sa 06:35; 07:15; 07:31; 13:21; 19:42)
 1
-0	yes@ (Giu-Set  AND  Mo-Sa 07:20; 13:30; 18:30)
-0	yes@ (Giu - Set  AND  Mo-Sa 09:00)
+0	yes @ (Giu-Set AND Mo-Sa 07:20; 13:30; 18:30)
+0	yes @ (Giu - Set AND Mo-Sa 09:00)
 1
-0	yes @ (height < 1.7  AND  width < 1.2)
+0	yes @ (height < 1.7 AND width < 1.2)
 0	yes @ (height>1.9)
-0	yes @ (height>3.3);  yes @ (FI:tyÃ¶ajo)
-0	yes @ (height<4.3  AND  length<19)
+0	yes @ (height>3.3); yes @ (FI:tyÃ¶ajo)
+0	yes @ (height<4.3 AND length<19)
 0	yes @ (height > 4.4)
 0	yes @ (inclearance > 0.2)
 0	yes @ (Jan-Mar)
@@ -7162,22 +7162,22 @@
 0	yes @ (Jun-Aug)
 0	yes @ (jun-sept)
 0	yes @ (length<10)
-0	yes @ (length<3.40  AND  width<1.48  AND  height<2.00)
+0	yes @ (length<3.40 AND width<1.48 AND height<2.00)
 0	yes @ (length<8)
 0	yes @ (Mar 15-Dec 1)
 0	yes @ Mar 20-May 17 ""approximate range""
 0	yes @ (Mar-Oct)
 0	yes @ (maxheight < 3.8)
 0	yes @ (maxweight > 3)
-0	yes@ (maxweight<3.5)
+0	yes @ (maxweight<3.5)
 0	yes @ (maxweight < 7.5)
 0	yes @ maxweight < 7.5
 0	yes @ (maxweight<7.5 OR destination)
 0	yes @ (maxweight<7.5t)
 0	yes @ (May 16-Oct 14)
 0	yes @ (May 16 - Sept 30)
-0	yes@ (May-Sep)
-0	yes@ (May-Sept)
+0	yes @ (May-Sep)
+0	yes @ (May-Sept)
 0	yes @ (minclearance > 0.2)
 0	yes @ Mo 06:00-13:00
 0	yes @ Mo 07:00-14:00
@@ -7186,7 +7186,7 @@
 0	| | | |yes @ (Mo-Fr 00:00-06:00,20:00-24:00;Sa-Su 00:00-24:00)
 0	| | |yes @ (Mo-Fr 00:00-06:00,20:00-24:00;Sa-Su 00:00-24:00)
 0	yes @ (Mo-Fr 00:00-06:29, 08:31-11:29, 14:01-15:59, 19:01-23:59, Su off)
-0	yes @ (Mo-Fr 00:00-06:30,09:00-24:00; Sa-Su 00:00-24:00);  no @ (Mo-Fr 06:30-09:00)
+0	yes @ (Mo-Fr 00:00-06:30,09:00-24:00; Sa-Su 00:00-24:00); no @ (Mo-Fr 06:30-09:00)
 0	|yes @ (Mo-Fr 00:00-07:00,09:00-15:00,18:00-24:00; Sa-Su 24h)
 0	yes @ (Mo-Fr 00:00-07:00;Mo-Fr 22:00-24:00)
 0	yes @ (Mo-Fr 00:00-08:00;Mo-Fr 20:00-23:59; Su; Sa)
@@ -7205,22 +7205,22 @@
 0	yes @ (Mo-Fr 06:00-08:30)
 0	yes @ (Mo-Fr 06:00-09:00)
 0	yes @ (Mo-Fr 06:00-09:00,15:00-18:00)
-0	yes @ (Mo-Fr 06:00-09:00,15:00-18:00);  no @ SH
-0	yes @ (Mo-Fr 06:00-09:00);  -1 @ (Mo-Fr 14:00-17:00)
+0	yes @ (Mo-Fr 06:00-09:00,15:00-18:00); no @ SH
+0	yes @ (Mo-Fr 06:00-09:00); -1 @ (Mo-Fr 14:00-17:00)
 0	yes @ (Mo-Fr 06:00-10:00)
-0	yes @ (Mo-Fr 06:00-10:00);  -1 @ (Mo-Fr 14:30-18:00)
+0	yes @ (Mo-Fr 06:00-10:00); -1 @ (Mo-Fr 14:30-18:00)
 0	yes @ (Mo-Fr 06:00-14:00)
 0	yes @ (Mo-Fr 06:00-20:00;Sa-Su 06:00-16:00)
 0	yes @ (Mo-Fr 06:15-09:15, 15:15-18:15)
 0	yes @ (Mo-Fr 06:30-08:00)
 0	yes @ (Mo-Fr 06:30-08:30)
-0	yes @ (Mo-Fr 06:30-09:00);  no @ (Mo-Fr 00:00-06:30,09:00-24:00; Sa-Su 00:00-24:00)
+0	yes @ (Mo-Fr 06:30-09:00); no @ (Mo-Fr 00:00-06:30,09:00-24:00; Sa-Su 00:00-24:00)
 0	yes @ (mo-fr 06:30-10:00)
 0	yes @ (Mo-Fr 07:00-08:00)
 0	yes @ (Mo-Fr 07:00-08:30)
 0	yes @ (Mo-Fr 07:00-09:00)
-0	yes@ (Mo-Fr 07:00-09:00)
-0	yes @ (Mo-Fr 07:00-09:00);  -1 @ (Mo-Fr 14:30-18:00)
+0	yes @ (Mo-Fr 07:00-09:00)
+0	yes @ (Mo-Fr 07:00-09:00); -1 @ (Mo-Fr 14:30-18:00)
 0	yes @ (Mo-Fr 07:00-10:00)
 0	yes @ (Mo-Fr 07:00-10:00,14:00-19:00)
 0	yes @ (Mo-Fr 07:00-15:30)
@@ -7239,11 +7239,11 @@
 0	yes @ (Mo-Fr 07:30-8:30;14:00-15:00)
 0	yes @ (Mo-Fr 08:00-09:00,11:00-12:00,15:00-16:00)
 0	yes @ (Mo-Fr 08:00-09:00,12:00-13:30,15:00-16:00; Sa,Su 00:00-24:00)
-0	yes @ (Mo-Fr 08:00-09:00  AND  Mo-Fr 14:30-15:30)
+0	yes @ (Mo-Fr 08:00-09:00 AND Mo-Fr 14:30-15:30)
 0	yes @ (Mo-Fr 08:00-09:30,14:30-16:00; SH off; PH off)
 0	yes @ (Mo-Fr 08:00-13:00); -1 @ (Mo-Fr 13:00-18:00)
 0	yes @ (Mo-Fr 08:00-14:00)
-0	yes@ Mo-Fr 08:00-17:00
+0	yes @ Mo-Fr 08:00-17:00
 0	yes @ (Mo-Fr 08:15-08:45,15:00-15:30; SH off)
 0	yes @ (mo-fr 08:30-17:00)
 0	||yes @ (Mo-Fr 09:00-15:00, 18:00-07:00; Sa-Su 24h)
@@ -7274,17 +7274,17 @@
 0	yes @ Mo-Fr 16:00-18:30
 0	yes @ (Mo-Fr 16:00-19:00)
 0	yes @ (Mo-Fr 16:00-20:00)
-0	yes @ (Mo-Fr 16:00-20:00);  -1 @ (Mo-Fr 06:00-10:00)
+0	yes @ (Mo-Fr 16:00-20:00); -1 @ (Mo-Fr 06:00-10:00)
 1
 0	yes @ (Mo-Fr 16:30-10:00; Sa 17:30-10:00; Su)
 0	yes @ (mo-fr 16:30-20:30)
 0	yes @ Mo-Fr 16:50-19:10
-0	yes @ (Mo-Fr 17:00-20:00; PH off);  -1 @ (Mo-Fr 07:00-10:00; PH off)
+0	yes @ (Mo-Fr 17:00-20:00; PH off); -1 @ (Mo-Fr 07:00-10:00; PH off)
 0	yes @ (Mo-Fr 17:00-20:00;PH off); -1 @ (Mo-Fr 07:00-10:00;PH off)
 0	yes @ (Mo-Fr 17:00-21:00)
 0	yes @ (Mo-Fr 17:30-06:30;Sa-Su 00:00-24:00)
 0	yes @ (Mo-Fr 17:30-08:00;Mo-Fr 09:00-12:00;Mo-Fr 13:00-16:00;Sa-Su 00:00-24:00)
-0	yes@ (Mo-Fr 17:30; 19:35)
+0	yes @ (Mo-Fr 17:30; 19:35)
 0	yes @ (Mo-Fr 20:00-09:00;Sa 16:00-24:00;Su,PH 00:00-24:00,24:00-09:00)
 0	yes @ (Mo-Fr 22:00-06:00)
 0	yes @ (Mo-Fr 3:00-21:00)
@@ -7293,8 +7293,8 @@
 0	yes @ (Mo-Fr 6:00-21:00)
 0	yes @ (Mo-Fr 7:00-17:00)
 0	yes @ (Mo-Fr 7:00-18:00)
-0	yes@ (Mo-Fr 7:00-18:00)
-0	yes@ (Mo-Fr 7:45-8:15;We-Fr 12:45-13:15;Tu 15:45-16:15)
+0	yes @ (Mo-Fr 7:00-18:00)
+0	yes @ (Mo-Fr 7:45-8:15;We-Fr 12:45-13:15;Tu 15:45-16:15)
 0	yes @ (Mo-Fr 8:00-19:00)
 0	yes @ (Mo-Fri 7:30-3:30)
 0	yes @ (Mo-Fr sun_up-sun_down)
@@ -7314,14 +7314,14 @@
 0	yes @ (Mo-Sa 00:00-24:00)
 0	yes @ (Mo-Sa 05:30-12:00)
 0	yes @ (Mo-Sa 05:30-14:00)
-0	yes@ (Mo-Sa 05:55; 6:25; 6:50; 08:30; 09:00; 09:30; 10:30; 11:30; 12:10; 14:00; 15:00; 16:00; 17:00; 17:30; 18:10)
+0	yes @ (Mo-Sa 05:55; 6:25; 6:50; 08:30; 09:00; 09:30; 10:30; 11:30; 12:10; 14:00; 15:00; 16:00; 17:00; 17:30; 18:10)
 0	yes @ (Mo-Sa 06:00-11:00)
 0	yes @ (Mo-Sa 06:00-20:00)
 0	yes @ (Mo-Sa 06:45-22:45)
-0	yes@ (Mo-Sa 06:53; 09:15; 11:05; 14:30;  AND  Giu-Set 17:45)
+0	yes @ (Mo-Sa 06:53; 09:15; 11:05; 14:30; AND Giu-Set 17:45)
 0	yes @ (Mo-Sa 07:00-09:00)
 0	yes @ (Mo-Sa 07:00-21:00)
-0	yes@ (Mo-Sa 07:05  AND  Tu;We 09:03  AND  Set-Giu 17:24  AND  Giu-Set 17:34)
+0	yes @ (Mo-Sa 07:05 AND Tu;We 09:03 AND Set-Giu 17:24 AND Giu-Set 17:34)
 0	yes @ (Mo-Sa 07:30-08:30)
 0	yes @ (Mo-Sa 07:30-09:00,12:30-14:00)
 0	yes @ (Mo-Sa 07:30-09:00; PH off)
@@ -7338,18 +7338,18 @@
 0	yes @ (Mo-Sa 09:00-21:00)
 0	yes @ (Mo-Sa 10:00-18:00)
 0	yes @ (Mo-Sa 14:00-19:00)
-0	yes @ (Mo-Sa 16:00-10:00; Su);  no @ (Mo-Sa 10:00-16:00)
-0	yes@ (Mo-Sa 16:35)
-0	yes@ (Mo-Sa 17:30-11:00; Su 00:00-24:00)
+0	yes @ (Mo-Sa 16:00-10:00; Su); no @ (Mo-Sa 10:00-16:00)
+0	yes @ (Mo-Sa 16:35)
+0	yes @ (Mo-Sa 17:30-11:00; Su 00:00-24:00)
 0	yes @ (Mo-Sa 18:00-07:00)
 0	yes @ (Mo-Sa 19:00-09:30;Su 00:00-24:00;PH 00:00-24:00)
 0	yes @ (Mo-Sa 19:00-9:00;Su 00:00-24:00;PH 00:00-24:00)
 0	| yes @ (Mo-Sa 20:00-06:00; Su,PH 00:00-24:00)
 0	yes @ (Mo-Sa 20:00-08:00;Su 00:00-24:00)
-0	yes@ (Mo-Sa 20:00-09:00; Su 00:00-24:00)
-0	yes@ (Mo-Sa 20:00-10:00;Su,PH 00:00-24:00)
+0	yes @ (Mo-Sa 20:00-09:00; Su 00:00-24:00)
+0	yes @ (Mo-Sa 20:00-10:00;Su,PH 00:00-24:00)
 0	yes @ (Mo-Sa 21:00-08:30)
-0	yes @ (Mo-Sa  AND  weight<3.5)
+0	yes @ (Mo-Sa AND weight<3.5)
 0	yes @ (Mo-Sat sunrise-sunset)
 0	yes @ (Mo-Su 05:00-09:00)
 0	yes @ (Mo-Su 05:00-11:00;Mo-Su 17:00-19:00)
@@ -7362,7 +7362,7 @@
 0	yes @ (Mo-Su 19:00-13:00)
 0	yes @ (Mo-Su 20:00-01:00)
 0	yes @ (Mo-Su 23:00-06:00)
-0	yes@ Mo-Su,PH 00:00-24:00; no@ Mo-Fr 07:00-16:00; yes@ SH Mo-Fr 07:00-16:00
+0	yes @ Mo-Su,PH 00:00-24:00; no @ Mo-Fr 07:00-16:00; yes @ SH Mo-Fr 07:00-16:00
 1
 0	yes @ (Mo-Th 06:30-23:00;Fr 6:30-24:00;Sa 00:00-02:00,07:30-24:00;Su 00:00-02:00,07:30-23:00)
 0	yes @ (Mo-Th,Su 05:00-09:00; Fr-Sa 05:00-10:00)
@@ -7377,15 +7377,15 @@
 0	yes|no|yes|yes|yes @ (weight>7.5)
 0	yes @ (Oct 1 - Apr 29)
 0	yes @ (Oct 1-April 30)
-0	yes@ (Oct - Giu; 6:23 - 19:28);  no@ (Su 00:00 - 24:00; Sa 14:28 - 24:00)
+0	yes @ (Oct - Giu; 6:23 - 19:28); no @ (Su 00:00 - 24:00; Sa 14:28 - 24:00)
 0	yes @ (oct-mar)
-0	yes@ (pedestrian  AND  bike  AND  horse)
+0	yes @ (pedestrian AND bike AND horse)
 0	yes @ permit
 0	yes @ permit_holder
-0	yes @ (permit_holder  AND  length > 12)
+0	yes @ (permit_holder AND length > 12)
 1
 1
-0	yes @ permit_holders;  yes @ access
+0	yes @ permit_holders; yes @ access
 0	yes @ PH
 0	yes @ police
 0	yes @ private
@@ -7397,17 +7397,17 @@
 0	yes @ (Sa 09:00-17:00)
 0	yes @ (Sa 11:00-16:00)
 0	yes @ (Sa 17:00-22:00;Su 16:00-24:00)
-0	yes @ (Sa 17:00-22:00;Su 16:00-24:00); yes @ (Mo-Fr 6:00-11:30  AND  hov=yes)
+0	yes @ (Sa 17:00-22:00;Su 16:00-24:00); yes @ (Mo-Fr 6:00-11:30 AND hov=yes)
 0	yes @ (Sa 18:00-21:00)
 0	yes @ (Sa-Mo)
 0	yes @ (Sa-So)
 0	yes @ (Sa - Su)
 0	yes @ (Sa-Su)
-0	yes @ (Sa-Su 00:00-12:30);  -1 @ (Sa-Su 13:00-24:00)
-0	yes @ (Sa-Su 00:00-13:00);  -1 @ (Sa-Su 13:30-24:00)
+0	yes @ (Sa-Su 00:00-12:30); -1 @ (Sa-Su 13:00-24:00)
+0	yes @ (Sa-Su 00:00-13:00); -1 @ (Sa-Su 13:30-24:00)
 0	yes @ (Sa-Su 08:00-17:00)
 0	yes @ (Sa-Su 08:00-18:00)
-0	yes@ (Sa,Su 08:00-20:00)
+0	yes @ (Sa,Su 08:00-20:00)
 0	yes @ (Sa-Su 09:00-18:00)
 0	yes @ (Sa,Su 13:00-16:00)
 0	yes @ Sa Su PH
@@ -7418,18 +7418,18 @@
 0	yes @ (Sep-May)
 0	yes @ (Sep: Su[3] -2 days 19:00-24:00, Su[3] -1 day 00:00-06:00,11:00-24:00, Su[3] 00:00-24:00, Su[3] +1 day 00:00-12:00)
 0	yes @ service
-0	yes@ (Set-Giu  AND  Mo-Fr 07:28)
-0	yes@ (Set-Giu  AND  Mo-Fr 07:31)
-0	yes@ (Set-Giu  AND  Mo-Fr 07:35; 14:30; 15:30; 16:30; 19:00)
-0	yes@ (Set-Giu  AND  Mo-Sa 06:32; 07:07; 09:47; 10:44; 12:14; 13:28; 13:57; 14:37; 20:07)
-0	yes@ (Set-Giu  AND  Mo-Sa 07:21)
-0	yes@ (Set-Giu  AND  Mo-Sa 07:25)
-0	yes@ (Set-Giu  AND  Mo-Sa 07:29)
-0	yes@ (Set-Giu  AND  Mo-Sa 07:35; 08:00; 10:00; 11:00; 12:30; 13:15; 13:40)
-0	yes@ (Set-Giu  AND  Mo-Sa 07:50; 12:50; 13:40; 11:00; 12:30; 13:15; 13:40)
-0	yes@ (Set-Giu  AND  Mo-Sa 13:38)
-0	yes@ (Set-Giu  AND  Mo-Sa 13:55)
-0	yes@ (Set-Giu  AND  Sa 07:34)
+0	yes @ (Set-Giu AND Mo-Fr 07:28)
+0	yes @ (Set-Giu AND Mo-Fr 07:31)
+0	yes @ (Set-Giu AND Mo-Fr 07:35; 14:30; 15:30; 16:30; 19:00)
+0	yes @ (Set-Giu AND Mo-Sa 06:32; 07:07; 09:47; 10:44; 12:14; 13:28; 13:57; 14:37; 20:07)
+0	yes @ (Set-Giu AND Mo-Sa 07:21)
+0	yes @ (Set-Giu AND Mo-Sa 07:25)
+0	yes @ (Set-Giu AND Mo-Sa 07:29)
+0	yes @ (Set-Giu AND Mo-Sa 07:35; 08:00; 10:00; 11:00; 12:30; 13:15; 13:40)
+0	yes @ (Set-Giu AND Mo-Sa 07:50; 12:50; 13:40; 11:00; 12:30; 13:15; 13:40)
+0	yes @ (Set-Giu AND Mo-Sa 13:38)
+0	yes @ (Set-Giu AND Mo-Sa 13:55)
+0	yes @ (Set-Giu AND Sa 07:34)
 0	yes @ snow
 0	yes @ (Su)
 0	yes @ (Su 00:00 - 24:00)
@@ -7443,11 +7443,11 @@
 0	yes @ (Su 08:00-12:00)
 0	yes @ (Su 08:30-15:30; PH 08:30-15:30)
 0	yes @ (Su 09:00-17:00)
-0	yes@ (Su 10:00; 13:05; 18:20; 19:30)
+0	yes @ (Su 10:00; 13:05; 18:20; 19:30)
 0	yes @ (Su 8:30-11:30); taxi;delivery @ (5:00-13:00,17:00-19:00)
 0	yes @ (Su-Fr 18:30-10:30,Sa 18:30-10:00)
 0	yes @ (summer)
-0	yes @ Summer  AND Fall AND Spring 
+0	yes @ Summer AND Fall AND Spring
 0	yes @ (Su;Mo-Sa 16:00-10:00)
 0	yes @ (Su;Mo-Sa 18:00--08:00)
 0	yes @ (Su;Mo-Sa 18:00-08:00)
@@ -7468,7 +7468,7 @@
 0	yes @ (Th 07:00-14:00)
 0	yes @ (trafic light)
 0	yes @ (Tu 06:00-14:00)
-0	yes@ (Tu 07:00-16:00)
+0	yes @ (Tu 07:00-16:00)
 0	|||yes @ (turn_right)
 0	yes @ (Tu-Su 10:00-17:00)
 0	yes @ (Tu-Su 12:00-19:00; Th 12:00-21:00)

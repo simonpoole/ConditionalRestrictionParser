@@ -25,7 +25,6 @@ public class Restriction {
 	
 	@Override
 	public String toString() {
-		// note value part doesn't skip WS so don't add any there
-		return value + "@ " + conditions.toString();
+		return value + " @ " + conditions.toString();
 	}
 }
