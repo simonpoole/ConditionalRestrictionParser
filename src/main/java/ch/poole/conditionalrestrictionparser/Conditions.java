@@ -3,15 +3,15 @@ package ch.poole.conditionalrestrictionparser;
 import java.util.List;
 
 public class Conditions {
-	final List<String> conditions;
+	final List<Condition> conditions;
 	boolean conditionsInParen = false;
 	
-	public Conditions(final List<String> conditions, boolean conditionsInParen) {
+	public Conditions(final List<Condition> conditions, boolean conditionsInParen) {
 		this.conditions = conditions;
 		this.conditionsInParen = conditionsInParen;
 	}
 
-	public List<String> getConditions() {
+	public List<Condition> getConditions() {
 		return conditions;
 	}
 	
@@ -26,13 +26,13 @@ public class Conditions {
 			b.append("(");
 		}
 		boolean first = true;
-		for (String s:conditions) {
+		for (Condition c:conditions) {
 			if (!first) {
 				b.append(" AND ");
 			} else {
 				first = false;
 			}
-			b.append(s.trim());
+			b.append(c);
 		}
 		if (conditionsInParen) {
 			b.append(")");

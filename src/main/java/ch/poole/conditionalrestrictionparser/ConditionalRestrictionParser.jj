@@ -75,11 +75,16 @@ TOKEN :
 < CONDITION_STATE >
 TOKEN :
 {
-  < CONDITION_CHAR : ~[ "(", "\"", "\\", ";", " ", "\t" ] >
+  < CONDITION_CHAR : ~[ "(", "\"", "\\", ";", " ", "\t", "<", "=", ">" ] >
 | < WS_COND : [" ","\t"] >
 | < LPAREN :  "(" > { bracketNestingDepth=1; }  : PAREN_STATE
 | < SEMICOLON : ";" > : DEFAULT
 | < AND : "AND" >
+| < EQ : "=" >
+| < GT : ">" >
+| < GTEQ : ">=" >
+| < LT : "<" >
+| < LTEQ : "<=" >
 }
 
 < PAREN_STATE >
@@ -95,9 +100,14 @@ TOKEN :
 | < RPAREN :  ")" >  {
     bracketNestingDepth -= 1;
     SwitchTo( bracketNestingDepth==0 ? CONDITION_STATE : PAREN_STATE );}  
-| < PAREN_CHAR : ~[ "(", ")", "\"", "\\", " ", "\t" ] >
+| < PAREN_CHAR : ~[ "(", ")", "\"", "\\", " ", "\t", "<", "=", ">" ] >
 | < WS_PAREN : [" ","\t"] >
 | < PAREN_AND : "AND" >
+| < PAREN_EQ : "=" >
+| < PAREN_GT : ">" >
+| < PAREN_GTEQ : ">=" >
+| < PAREN_LT : "<" >
+| < PAREN_LTEQ : "<=" >
 }
 
 /**
@@ -242,19 +252,33 @@ void getParenChar(StringBuilder builder) :
 Conditions conditions() :
 {
   StringBuilder builder = new StringBuilder();
-  List < String > result = null;
-  List < String > temp = null;
+  StringBuilder builder2 = new StringBuilder();
+  List < Condition > result = null;
+  List < Condition > temp = null;
   Conditions tempConditions = null;
+  Condition.CompOp op = null;
   boolean inParen = false;
+  Token t = null;
 }
 {
   (
   < WS_COND >
   )*
   (
-    (
-      getConditionChar(builder)
-    )+
+    (      (
+        getConditionChar(builder)
+      )+
+      (
+        (
+          (            t = < EQ > | t = < GT > | t = < GTEQ > | t = < LT > | t =< LTEQ > 
+		  )
+		  (
+            < WS_COND >
+          )*
+          (
+            getConditionChar(builder2)
+          )+        )      )?
+    )
   |
     (
       < LPAREN >
@@ -308,26 +332,49 @@ Conditions conditions() :
     {
       if (result == null)
       {
-        result = new ArrayList < String > ();
+        result = new ArrayList < Condition > ();
       }
-      result.add(builder.toString());
+      Condition c;
+      if (t == null) {
+        c = new Condition(builder.toString(), false);
+      } else {
+        c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
+      }
+      result.add(c);
     }
     Collections.reverse(result);
     return new Conditions(result, inParen);
   }
 }
 
-ArrayList < String > conditionsInParen() :
+ArrayList < Condition > conditionsInParen() :
 {
   StringBuilder builder = new StringBuilder();
-  ArrayList < String > result = null;
-  ArrayList < String > temp = null;
+  StringBuilder builder2 = new StringBuilder();
+  ArrayList < Condition > result = null;
+  ArrayList < Condition > temp = null;
+  Token t = null;
 }
 {
   (
-    (  
-      getParenChar(builder)
-    )+
+    (
+      (  
+        getParenChar(builder)
+      )+
+      (
+        (
+          (
+            t = < PAREN_EQ > | t = < PAREN_GT > | t = < PAREN_GTEQ > | t = < PAREN_LT > | t = < PAREN_LTEQ > 
+		  )
+		  (
+            < WS_COND >
+          )*
+          (
+            getParenChar(builder2)
+          )+
+        )
+      )?
+    )
     (
       (
     	< WS_PAREN >
@@ -364,9 +411,15 @@ ArrayList < String > conditionsInParen() :
     {
       if (result == null)
       {
-        result = new ArrayList < String > ();
+        result = new ArrayList <Condition> ();
       }
-      result.add(builder.toString());
+      Condition c;
+      if (t == null) {
+        c = new Condition(builder.toString(), false);
+      } else {
+        c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
+      }
+      result.add(c);
     }
     return result;
   }

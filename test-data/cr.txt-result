@@ -73,7 +73,7 @@
 0	130 @ (06:00-20:00)
 0	130 @ wet
 0	130 @ (wet)
-0	13 @ (bogie:axles = 2)
+0	13 @ (bogie:axles=2)
 0	140 @ (weight<=3.5); 80 @ (weight>3.5)
 0	140 @ (weight<=3.5); 80 @ (weight>3.5)
 0	15 @ (Mo-Fr 10:00-19:00)
@@ -86,7 +86,7 @@
 0	16 @ (6:00-22:00)
 0	16 @ (7:00-11:00)
 0	16 @ hgv opposing traffic on the bridge
-0	18 @ (bogie:axles = 2); 24 @ (bogie:axles = 3)
+0	18 @ (bogie:axles=2); 24 @ (bogie:axles=3)
 0	1 @ (Mo-Fr 00:00-07:00;Mo-Fr 22:00-24:00)
 0	-1 @ (Mo-Fr 05:00-09:00)
 0	1 @ (Mo-Fr 05:00-10:00,14:00-20:00)
@@ -143,7 +143,7 @@
 0	20 @ (07:00-17:00)
 0	20 @ (18:00-06:00)
 0	20 @ (20:00-06:00)
-0	20 @ (bogie:axles > 2)
+0	20 @ (bogie:axles>2)
 0	20 mph @ (05:00-07:00); 20 mph @ (13:00-15:00)
 0	20mph @ (07:30-08:30)
 0	20 mph @ (7:00-17:00)
@@ -160,13 +160,13 @@
 0	20 mph @ (when lights flash)
 0	20 @ (weight>3.5)
 0	20 @ (weight>7.5)
-0	20 @ (weight > 7.5)
+0	20 @ (weight>7.5)
 0	20 @ wet
 0	2 @ (2014 Nov 1-2014 Nov 30)
-0	22.0 @ maxspeed < 30
+0	22.0 @ maxspeed<30
 0	2.2 @ (2014 Oct 19-2014 Nov 30)
 0	2.2 @ (2014 Oct 6-2014 Oct 26)
-0	24 @ (bogie:axles > 2)
+0	24 @ (bogie:axles>2)
 1
 0	2.5 @ (10.00-20.00,22.30-07.00)
 0	25 mph @ (weight>11.79)
@@ -278,7 +278,7 @@
 0	30 @ (Jun-Aug)
 0	30 @ Jun-Sep 09:00-20:30
 0	30 @ (maxweight>3.5)
-0	30 @ (maxweight > 7.5)
+0	30 @ (maxweight>7.5)
 0	30 @ (Mo-Fr 06:00-08:00)
 0	30 @ (Mo-Fr 06:00-08:00, 12:00-16:00)
 0	30 @ (Mo-Fr 06:00-08:00,12:00-17:00)
@@ -406,10 +406,10 @@
 0	30 @ (weight>5.5)
 0	30 @ (weight>=7.5)
 0	30 @ (weight>7.5)
-0	30 @ (weight >= 7,5)
-0	30 @ (weight > 7.5)
+0	30 @ (weight>=7,5)
+0	30 @ (weight>7.5)
 0	30 @ weight>7.5
-0	30 @ weight > 7.5
+0	30 @ weight>7.5
 0	30 @ wet
 0	30 @ (wet)
 0	3 @ (19:00-06:00)
@@ -476,7 +476,7 @@
 0	40 @ (Nov-Apr); 60 @ (May-Oct)
 0	40 @ snow; 40 @ rain
 0	40 @ (weight>3.5)
-0	40 @ (weight > 3.5)
+0	40 @ (weight>3.5)
 0	40 @ wet
 1
 0	4 @ (1938..1963)
@@ -529,7 +529,7 @@
 0	50 @ (hazmat AND forward)
 0	50 @ (Jun-Aug)
 0	50 @ (lanes=2)
-0	50 @ (maxweight > 7.5)
+0	50 @ (maxweight>7.5)
 0	50 @ (May-Aug)
 0	50 @ (Mo-Fr 00:00-06:00,08:00-24:00; Sa,Su 00:00-24:00)
 0	50 @ (Mo-Fr 00:00-06:00,16:00-24:00; Sa,Su 00:00-24:00)
@@ -578,8 +578,8 @@
 0	50 @ (weight<=3.5); 70 @ (weight>3.5)
 0	50 @ (weight>5)
 0	50 @ (weight>7.5)
-0	50 @ (weight > 7.5)
-0	50 @ (weight > 7.5)
+0	50 @ (weight>7.5)
+0	50 @ (weight>7.5)
 0	50 @ wet
 0	50 @ (wet)
 0	50 @ (wet); 50 @ (snow)
@@ -747,7 +747,7 @@
 0	90 @ (weight<=3.5); 70 @ (weight>3.5)
 0	90 @ (weight<=3.5); 70 @ (weight>3.5)
 0	90 @ (weight<3.5); 70 @ (weight>3.5)
-0	90 @ (weight <= 3.5); 70 @ (weight > 3.5)
+0	90 @ (weight<=3.5); 70 @ (weight>3.5)
 0	90 @ (weight<=3.5); 80 @ (weight>3.5)
 0	90 @ (weight>7.5)
 0	90 @ wet
@@ -763,11 +763,11 @@
 1
 1
 0	agricultural @ (06:00-09:00,15:00-19:00)
-0	agricultural @ axleload < 5t
+0	agricultural @ axleload<5t
 0	agricultural;delivery @ (Mo-Fr_07:00-16:00)
 0	agricultural;forestry @ (Su,PH)
 0	agricultural @ hazmat:water
-0	agricultural @ (maxweight > 12)
+0	agricultural @ (maxweight>12)
 0	agricultural @ (maxweight>3.5); forestry @ (maxweight>3.5)
 0	agricultural @ (Mo-Fr 06:00-08:00); agricultural @ Su; agricultural @ PH
 0	agricultural @ (Mo-Fr 16:00-18:00); agricultural @ Su; agricultural @ PH
@@ -816,7 +816,7 @@
 0	conditional=no @ (Mo-Sa 10:00-17:00;Su 10:30-17:00)
 0	conditional=no @ (Su 09:00-18:00)
 0	conditional=no @ winter
-0	conditional: @ (weight < 3)
+0	conditional: @ (weight<3)
 0	conditional=yes @ (Mo-Sa 07:00-21:00)
 0	construction @ (2014 Jul 08-2014 Nov 30 00:00-24:00)
 0	construction @ (2014 May 01-2015 Jun 22 00:00-24:00)
@@ -837,13 +837,13 @@
 0	delivery @ (05:00-09:00)
 0	delivery @ (05:00-10:00)
 0	delivery @ (05:00-10:00 AND maxweight<7.5)
-0	delivery @ (05:00-10:00 AND maxweight < 7.5)
-0	delivery @ (05:00-10:30,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND maxweight < 7.5)
+0	delivery @ (05:00-10:00 AND maxweight<7.5)
+0	delivery @ (05:00-10:30,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND maxweight<7.5)
 0	delivery @ (05:00-11:00)
 0	delivery @ 05:00-11:00
 0	delivery @ (05:00-13:00)
 0	delivery @ (05:00-19:00)
-0	delivery @ (05:00-22:00 AND maxweight < 7.5)
+0	delivery @ (05:00-22:00 AND maxweight<7.5)
 0	delivery @ (05:00-9:00)
 0	delivery @ (06:00-011:00)
 0	delivery @ (06:00-08:00,15:00-17:00)
@@ -876,7 +876,7 @@
 0	delivery @ (07:00-11:30)
 0	delivery @ (07:00-12:00)
 0	delivery @ (07:00-19:00)
-0	delivery @ (07:00-20:00 AND maxweight < 7.5)
+0	delivery @ (07:00-20:00 AND maxweight<7.5)
 0	delivery @ (07:30-09:30, 14:00-16:00)
 0	delivery @ (07:30-10:00,17:30-18:30)
 0	delivery @ (07:30-10:30)
@@ -940,17 +940,17 @@
 0	delivery @ (8:00-11:00,17:00-20:00)
 1
 0	delivery @ (length>12)
-0	delivery @ (maxweight > 12)
-0	delivery @ (maxweight > 3.5)
+0	delivery @ (maxweight>12)
+0	delivery @ (maxweight>3.5)
 0	delivery @ (maxweight>5); destination @ (maxweight>5)
 0	delivery @ (maxweight<7.5)
-0	delivery @ (maxweight > 7.5)
-0	delivery @ (06:00-10:00; 19:00-22:00 AND maxweight < 7.5)
-0	delivery @ (maxweight <= 7.5 AND 06:00-11:00)
-0	delivery @ (maxweight < 7.5 AND 07:00-11:00)
-0	delivery @ (maxweight < 7.5t)
+0	delivery @ (maxweight>7.5)
+0	delivery @ (06:00-10:00; 19:00-22:00 AND maxweight<7.5)
+0	delivery @ (maxweight<=7.5 AND 06:00-11:00)
+0	delivery @ (maxweight<7.5 AND 07:00-11:00)
+0	delivery @ (maxweight<7.5t)
 0	delivery @ (Mo 06:00-13:00; Tu-Sa 06:00-12:00)
-0	delivery @ (Mo-Fr 00:00-10:30,19:00-24:00;Sa 00:00-10:00,18:00-24:00;Su 00:00-10:30,19:00-24:00 AND weight < 7.5)
+0	delivery @ (Mo-Fr 00:00-10:30,19:00-24:00;Sa 00:00-10:00,18:00-24:00;Su 00:00-10:30,19:00-24:00 AND weight<7.5)
 0	delivery @ (Mo-Fr 05:00-11:30; Sa 06:00-11:30)
 0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND maxweight<7.5)
 0	delivery @ (Mo-Fr 05:00-12:00,19:00-22:00; Sa 05:00-09:00,19:00-22:00 AND weight<7.5t)
@@ -1005,7 +1005,7 @@
 0	delivery @ (Mo-Sa 08:00-18:00); private @ (Mo-Sa 09:00-10:00)
 0	delivery @ (Mo-Sa 08:00-20:00)
 0	delivery @ (Mo-Sa 09:00-11:00)
-0	delivery @ (Mo-Sa 10:00-15:00 AND maxweight < 7.5t)
+0	delivery @ (Mo-Sa 10:00-15:00 AND maxweight<7.5t)
 0	delivery @ (Mo-Sa 10:00-18:00)
 0	delivery @ (Mo-Sa 12:00-14:30,18:30-19:30)
 0	delivery @ (Mo-Sa 16:00-10:00,Su 00:00-24:00); disabled @ (Mo-Sa 16:00-10:00,Su 00:00-24:00)
@@ -1038,15 +1038,15 @@
 0	delivery @ (weight>3.5)
 0	delivery @ (weight>3,5)
 0	delivery @ (weight>3.5)
-0	delivery @ (weight > 3.5)
-0	delivery @ (weight > 3.5t)
+0	delivery @ (weight>3.5)
+0	delivery @ (weight>3.5t)
 0	delivery @ (weight>4)
 0	delivery @ (weight>4.5)
-0	delivery @ (weight > 4 tons)
+0	delivery @ (weight>4 tons)
 0	delivery @ (weight>5)
-0	delivery @ (weight > 5)
+0	delivery @ (weight>5)
 0	delivery @ (weight>5.5)
-0	delivery @ (weight > 5.5)
+0	delivery @ (weight>5.5)
 0	delivery @ (weight>5.5t)
 0	delivery @ (weight>5t)
 0	delivery @ (weight<6)
@@ -1054,10 +1054,10 @@
 0	delivery @ (weight>7.5)
 0	delivery @ (weight>7,5)
 0	delivery @ (weight>7.5)
-0	delivery @ (weight > 7.5)
+0	delivery @ (weight>7.5)
 0	delivery @ (weight<7.5 AND 22:00-11:00)
 0	delivery @ (weight<7.5 AND 5:00-11:00, 19:00-22:00)
-0	delivery @ (weight > 7.5t)
+0	delivery @ (weight>7.5t)
 0	delivery @ (weigth>3.5)
 0	delivery @ (weigth>7.5)
 0	delivery @ yes
@@ -1280,7 +1280,7 @@
 0	destination @ (22:00-06:00)
 0	destination @ 22:00-06:00
 0	destination @ (22:00-06:00 AND weight>12)
-0	destination @ (22:00-06:00 AND weight > 5.5)
+0	destination @ (22:00-06:00 AND weight>5.5)
 0	destination @ (22:00-06:00 AND weight>7.5)
 0	destination @ (22:00-06:00 AND weight>=7.5 t)
 0	destination @ (22:00-06:00); yes @ (22:00-06:00 AND fi:service_traffic); yes @ (22:00-06:00 AND parking_permit:F)
@@ -1307,22 +1307,22 @@
 0	destination @ (easter -48 days 12:00-17:30)
 0	destination @ (easter -49 days 13:00-17:00)
 0	destination @ (Fr 11:30-18:00)
-0	destination @ (height > 1.90)
+0	destination @ (height>1.90)
 1
 0	destination @ (Jul 23-Aug 21 Sa 14:00-20:00;Jul 23-Aug 21 Su,PH 10:00-20:00)
 0	destination @ Juusentie 11
-0	destination @ (length > 10)
+0	destination @ (length>10)
 0	destination @ (Mar-Oct)
 0	destination @ (maxweight>10)
-0	destination @ (maxweight > 12)
-0	destination @ (maxweight > 12); agricultural @ (maxweight > 12)
-0	destination @ (maxweight > 2.5)
-0	destination @ (maxweight > 3)
-0	destination @ (maxweight > 3.5)
+0	destination @ (maxweight>12)
+0	destination @ (maxweight>12); agricultural @ (maxweight>12)
+0	destination @ (maxweight>2.5)
+0	destination @ (maxweight>3)
 0	destination @ (maxweight>3.5)
-0	destination @ (maxweight > 3.5)
+0	destination @ (maxweight>3.5)
+0	destination @ (maxweight>3.5)
 0	destination @ (maxweight>5)
-0	destination @ (maxweight > 5)
+0	destination @ (maxweight>5)
 0	destination @ (maxweight>7.5 AND 22:00-06:00)
 0	destination @ (maxweight=none AND maxweight=none)
 0	destination @ (May 01-Oct 09 Su,PH 08:00-21:00)
@@ -1431,31 +1431,31 @@
 0	destination @ teacher
 0	destination @ (Tu,Th,Su 05:00-15:00)
 0	destination @ (weight>10)
-0	destination @ (weight > 10)
+0	destination @ (weight>10)
 0	destination @ (weight>12)
 0	destination @ (weight>12 AND 06:00-22:00)
 0	destination @ (weight<12 AND axle<3 AND 00:00-11:00,18:00-24:00)
 0	destination @ weight>12; yes @ bus
-0	destination @ weight < 2
+0	destination @ weight<2
 0	destination @ (weight>2.8)
-0	destination @ (weight > 3)
+0	destination @ (weight>3)
 0	destination @ (weight<3.5)
 0	destination @ (weight>3.5)
-0	destination @ (weight > 3.5)
+0	destination @ (weight>3.5)
 0	destination @ weight>3.5
 0	destination @ (weight<3.5)
 0	destination @ (weight>5)
-0	destination @ (weight < 5)
+0	destination @ (weight<5)
 0	destination @ (weight>5.5)
-0	destination @ (weight > 6)
-0	destination @ (weight > 7.5)
+0	destination @ (weight>6)
 0	destination @ (weight>7.5)
-0	destination @ (weight < 7.5)
-0	destination @ (weight > 7.5)
-0	destination @ weight > 7.5
+0	destination @ (weight>7.5)
+0	destination @ (weight<7.5)
+0	destination @ (weight>7.5)
+0	destination @ weight>7.5
 0	destination @ (weight>7.5)
 1
-0	destination @ (weight > 7.5); delivery @ (weight > 7.5)
+0	destination @ (weight>7.5); delivery @ (weight>7.5)
 0	destination @ (weight>=7.5 t)
 0	destination @ (weight>8)
 0	destination @ (weight>9)
@@ -1549,12 +1549,12 @@
 0	no @ (05:00-21:00)
 0	no @ (05:00-22:00 AND weight>7.5)
 0	no @ (05:30-07:00,15:30-17:30)
-0	no @ (06:00-09:00,14:00-17:00 AND weight > 7.5)
+0	no @ (06:00-09:00,14:00-17:00 AND weight>7.5)
 0	no @ (06:00-09:00,15:00-19:00)
 0	no @ (06:00-18:00)
 0	no @ (06:00-19:00)
-0	no @ (06:00-19:00 AND maxweight > 7.5)
-0	no @ (06:00-19:00 AND maxweight > 7.5)
+0	no @ (06:00-19:00 AND maxweight>7.5)
+0	no @ (06:00-19:00 AND maxweight>7.5)
 0	no @ (06:00-19:00 AND weight>7.5)
 0	no @ (06:00-19:00 AND weight>7.5)
 0	no @ (06:00-19:00 AND weight>7.5)
@@ -5886,7 +5886,7 @@
 0	no @ (22:00-06:00)
 0	no @ 22:00-06:00
 0	no @ (22:00-06:00)
-0	no @ (22:00-06:00 AND weight > 5.5)
+0	no @ (22:00-06:00 AND weight>5.5)
 0	no @ (22:00-06:00 AND weight>7.5)
 0	no @ (22:00-06:00); yes @ destination
 0	no @ 22:00-06:00; yes @ destination
@@ -5911,9 +5911,9 @@
 0	no @ (31.03. - 31.07.)
 0	no @ (6:00-10:00)
 0	no @ (6:00 - 16:00)
-0	no @ (6:00-19:00 AND maxweight > 7.5)
-0	no @ (6:00-19:00 AND weight > 7.5)
-0	no @ (6:00-19:00 AND weight > 7.5)
+0	no @ (6:00-19:00 AND maxweight>7.5)
+0	no @ (6:00-19:00 AND weight>7.5)
+0	no @ (6:00-19:00 AND weight>7.5)
 0	no @ 6:00-22:00
 0	no @ 6:00 - 830am
 0	no @ (6:00-9:00)
@@ -5955,7 +5955,7 @@
 0	no @ (Aug Su[1] 9:00-19:00)
 0	no @ Avr-Mai
 0	no @ bus; no @ psv; no @ customers
-0	no @ date < Sept 2015
+0	no @ date<Sept 2015
 0	no @ (Dec 01-May 15)
 0	no @ (Dec 01-May 16)
 0	no @ (Dec 1 - Jun 15)
@@ -6027,12 +6027,12 @@
 0	no @ (grossweight>5)
 0	no @ (grossweight>5.0)
 0	no @ (gross_weight>7.5)
-0	no @ (grossweight > 7.5)
+0	no @ (grossweight>7.5)
 0	no @ (hazmat AND Mo-Su 05:00-22:00)
 0	no @ (hazmat:E AND Mo-Su 05:00-23:00); no @ (hazmat:C AND Mo-Su 23:00-05:00)
 0	no @ (hazmat:E AND Mo-Su 06:00-21:00); no @ (hazmat:C AND Mo-Su 21:00-06:00)
 0	no @ (hazmat:water AND weight>3.5)
-0	no @ height < 3.6
+0	no @ height<3.6
 0	no @ hgv
 0	no @ hgv
 0	no @ (ice AND snow)
@@ -6061,7 +6061,7 @@
 0	no @ length>10
 0	no @ length>12
 0	no @ length>25ft
-0	no @ (length > 7)
+0	no @ (length>7)
 0	no @ length>8
 0	no_limit @ delivery
 0	no @ (Lug 11 - Ago 20 09:50-10:10,16:00-16:20; Su,PH off)
@@ -6084,14 +6084,14 @@
 0	no @ (Mar-Jul)
 0	no @ (Mar-Jun)
 0	no @ (Mar-Sep)
-0	no @ (maxgcweightrating:goods > 2.5)
-0	no @ (maxlength = 10)
-0	no @ (maxlength > 12)
-0	no @ (maxweight > 12)
-0	no @ (maxweight > 3.5)
-0	no @ (maxweight > 7.5)
-0	no @ maxweight > 7.5
-0	no @ (maxweight > 7.5 AND 11:00-07:00)
+0	no @ (maxgcweightrating:goods>2.5)
+0	no @ (maxlength=10)
+0	no @ (maxlength>12)
+0	no @ (maxweight>12)
+0	no @ (maxweight>3.5)
+0	no @ (maxweight>7.5)
+0	no @ maxweight>7.5
+0	no @ (maxweight>7.5 AND 11:00-07:00)
 0	no @ (maxweight>7.5 AND 22:00-06:00)
 1
 1
@@ -6704,31 +6704,31 @@
 0	no @ week 48-18
 0	no @ We,Fr,Su 06:00-14:00
 0	no @ (weight>10)
-0	no @ (weight > 10)
+0	no @ (weight>10)
 0	no @ (weight>12)
 0	no @ (weight>12t)
 0	no @ (weight>15)
 0	no @ (weight>15 AND 06:00-21:00)
 1
 0	no @ (weight>3.5)
-0	no @ (weight > 3.5)
+0	no @ (weight>3.5)
 0	no @ (weight>3.5)
 0	no @ (weight>3.5 AND motorhome AND caravan); yes @ psv
 0	no @ (weight>5)
-0	no @ (weight > 5)
+0	no @ (weight>5)
 0	no @ (weight>7)
 0	no @ (weight>7.5)
 0	no @ (weight>7.5)
-0	no @ (weight > 7.5)
-0	no @ weight > 7.5
+0	no @ (weight>7.5)
+0	no @ weight>7.5
 0	no @ (weight>7.5 AND 05:00-12:00)
 0	no @ (weight>7.5 AND 12:00-21:00)
 0	no @ (weight>7.5 AND 19:00-06:00)
-0	no @ (weight > 7.5 AND 20:00-06:00); yes @ destination
-0	no @ (weight > 7.5 AND 20:00-06:00); yes @ destination; yes @ emergency
-0	no @ (weight >7.5 AND hgv)
+0	no @ (weight>7.5 AND 20:00-06:00); yes @ destination
+0	no @ (weight>7.5 AND 20:00-06:00); yes @ destination; yes @ emergency
+0	no @ (weight>7.5 AND hgv)
 0	no @ (weight>7.5 AND Mo-Sa 05:00-22:00;PH off)
-0	no @ (weight > 7.5t)
+0	no @ (weight>7.5t)
 0	no @ (weight>7.5t AND snow)
 0	no @ (weight>7.5); yes @ agricultural
 0	no @ (weight>7.5); yes @ destination
@@ -7086,7 +7086,7 @@
 0	yes @ (8:00-8:45, 11:00-11:45, 13:30-14:15, 16:30-17:30)
 0	yes @ (9:30-21:30)
 0	yes @ agricultural
-0	yes @ (agricultural AND weight < 1.5)
+0	yes @ (agricultural AND weight<1.5)
 0	yes @ agricultural, yes @ delivery
 0	yes @ agricultural; yes @ forestry
 0	yes @ (Apr 15-May 20)
@@ -7109,7 +7109,7 @@
 0	yes @ delivery
 1
 0	yes @ (delivery AND 18:00-10:30)
-0	yes @ (delivery AND Mo-Sa 05:00-22:00 AND weight < 7.5)
+0	yes @ (delivery AND Mo-Sa 05:00-22:00 AND weight<7.5)
 0	yes @ (delivery AND Mo-Sa 08:00-10:30)
 0	yes @ (delivery; disabled; emergency)
 0	yes @ delivery; yes @ FI:huoltoajo
@@ -7119,7 +7119,7 @@
 0	yes @ destination
 0	yes @ (destination)
 0	yes @ destination,agricultural,foresty
-0	yes @ destination AND maxweight <=1.5 t
+0	yes @ destination AND maxweight<=1.5 t
 0	yes @ (destination AND weight<7.5)
 0	yes @ destination; yes @ bus
 0	yes @ destination; yes @ delivery
@@ -7146,12 +7146,12 @@
 0	yes @ (Giu-Set AND Mo-Sa 07:20; 13:30; 18:30)
 0	yes @ (Giu - Set AND Mo-Sa 09:00)
 1
-0	yes @ (height < 1.7 AND width < 1.2)
+0	yes @ (height<1.7 AND width<1.2)
 0	yes @ (height>1.9)
 0	yes @ (height>3.3); yes @ (FI:tyÃ¶ajo)
 0	yes @ (height<4.3 AND length<19)
-0	yes @ (height > 4.4)
-0	yes @ (inclearance > 0.2)
+0	yes @ (height>4.4)
+0	yes @ (inclearance>0.2)
 0	yes @ (Jan-Mar)
 0	yes @ (Jul 15-Nov 15)
 0	yes @ (Jul-Aug)
@@ -7167,18 +7167,18 @@
 0	yes @ (Mar 15-Dec 1)
 0	yes @ Mar 20-May 17 ""approximate range""
 0	yes @ (Mar-Oct)
-0	yes @ (maxheight < 3.8)
-0	yes @ (maxweight > 3)
+0	yes @ (maxheight<3.8)
+0	yes @ (maxweight>3)
 0	yes @ (maxweight<3.5)
-0	yes @ (maxweight < 7.5)
-0	yes @ maxweight < 7.5
+0	yes @ (maxweight<7.5)
+0	yes @ maxweight<7.5
 0	yes @ (maxweight<7.5 OR destination)
 0	yes @ (maxweight<7.5t)
 0	yes @ (May 16-Oct 14)
 0	yes @ (May 16 - Sept 30)
 0	yes @ (May-Sep)
 0	yes @ (May-Sept)
-0	yes @ (minclearance > 0.2)
+0	yes @ (minclearance>0.2)
 0	yes @ Mo 06:00-13:00
 0	yes @ Mo 07:00-14:00
 0	yes @ (Mo-Fr)
@@ -7382,7 +7382,7 @@
 0	yes @ (pedestrian AND bike AND horse)
 0	yes @ permit
 0	yes @ permit_holder
-0	yes @ (permit_holder AND length > 12)
+0	yes @ (permit_holder AND length>12)
 1
 1
 0	yes @ permit_holders; yes @ access
@@ -7480,12 +7480,12 @@
 0	yes @ (We 14:00-17:00; Fr 12:00-14:00)
 0	yes @ weight<16
 0	yes @ (weight>3.5)
-0	yes @ (weight > 3.5)
+0	yes @ (weight>3.5)
 0	yes @ (weight<5)
 0	yes @ (weight<7.5)
 0	yes @ (weight>7.5)
-0	yes @ (weight < 7.5)
-0	yes @ weight < 7.5
+0	yes @ (weight<7.5)
+0	yes @ weight<7.5
 0	yes @ (wet_season)
 0	yes @ (width>2)
 0	yes @ width<2

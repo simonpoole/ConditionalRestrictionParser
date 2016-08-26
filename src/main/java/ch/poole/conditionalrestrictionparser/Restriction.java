@@ -19,7 +19,7 @@ public class Restriction {
 		this.value = value;
 	}
 	
-	public List<String> getConditions() {
+	public List<Condition> getConditions() {
 		return conditions.getConditions();
 	}
 	
