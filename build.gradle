@@ -47,10 +47,12 @@ javadoc {
 // In this section you declare where to find the dependencies of your project
 repositories {
     mavenCentral()
+    maven { url 'https://dl.bintray.com/simonpoole/osm' }
 }
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
+    compile 'ch.poole:OpeningHoursParser:0.1.0'
 	testCompile 'junit:junit:4.12'
 }
 

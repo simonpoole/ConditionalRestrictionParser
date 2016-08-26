@@ -38,6 +38,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.io.ByteArrayInputStream;
+
+import ch.poole.openinghoursparser.OpeningHoursParser;
+import ch.poole.openinghoursparser.Rule;
 
 public class ConditionalRestrictionParser{ }PARSER_END(ConditionalRestrictionParser)
 TOKEN_MGR_DECLS : {
@@ -336,7 +340,15 @@ Conditions conditions() :
       }
       Condition c;
       if (t == null) {
-        c = new Condition(builder.toString(), false);
+        String s = builder.toString();
+        try {
+		  OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
+		  ArrayList<Rule> rules = parser.rules(false);
+		  c = new Condition(s, true);
+		}
+		catch (Exception ex) {
+		  c = new Condition(s, false);
+		}       
       } else {
         c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
       }
@@ -415,7 +427,15 @@ ArrayList < Condition > conditionsInParen() :
       }
       Condition c;
       if (t == null) {
-        c = new Condition(builder.toString(), false);
+        String s = builder.toString();
+        try {
+		  OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
+		  ArrayList<Rule> rules = parser.rules(false);
+		  c = new Condition(s, true);
+		}
+		catch (Exception ex) {
+		  c = new Condition(s, false);
+		}       
       } else {
         c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
       }
