@@ -9,11 +9,14 @@
 
 plugins {
   id "ca.coglinc.javacc" version "2.3.1"
+  id "com.jfrog.bintray" version "1.7.1"
 }
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 
 version = '0.1.0'
@@ -42,6 +45,31 @@ compileTestJava {
 javadoc {
     source mainSource, testSource
     exclude '**/*.jj'
+}
+
+publishing {
+	publications {
+		MyPublication(MavenPublication) {
+			from components.java
+			groupId 'ch.poole'
+			artifactId 'ConditionalRestrictionParser'
+		}
+	}
+}
+
+bintray {
+	user = System.getenv('BINTRAY_USER')
+	key = System.getenv('BINTRAY_KEY')
+	publications = ['MyPublication']
+	pkg {
+		repo = 'osm'
+		name = 'ConditionalRestrictionParser'
+		licenses = ['BSD 3-Clause']
+		vcsUrl = 'https://github.com/simonpoole/CondtionalRestrictionParser.git'
+		version {
+			name = '0.1.0'
+		}
+	}
 }
 
 // In this section you declare where to find the dependencies of your project
