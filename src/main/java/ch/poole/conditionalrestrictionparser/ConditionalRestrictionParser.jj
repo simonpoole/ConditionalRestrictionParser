@@ -318,6 +318,7 @@ Conditions conditions() :
     {
       if (tempConditions != null)
       {
+        tempConditions.reverse();
         if (result == null)
         {
           result = tempConditions.getConditions();
@@ -352,10 +353,11 @@ Conditions conditions() :
       } else {
         c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
       }
-      result.add(c);
+      result.add(c); 
     }
-    Collections.reverse(result);
-    return new Conditions(result, inParen);
+    Conditions cs = new Conditions(result, inParen);
+    cs.reverse();
+    return cs;
   }
 }
 
@@ -406,6 +408,7 @@ ArrayList < Condition > conditionsInParen() :
       {
         if (temp != null)
         {
+          Collections.reverse(temp);
           if (result == null)
           {
             result = temp;
@@ -441,6 +444,7 @@ ArrayList < Condition > conditionsInParen() :
       }
       result.add(c);
     }
+	Collections.reverse(result);
     return result;
   }
 }

@@ -1,5 +1,6 @@
 package ch.poole.conditionalrestrictionparser;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Conditions {
@@ -38,5 +39,9 @@ public class Conditions {
 			b.append(")");
 		}
 		return b.toString();
+	}
+	
+	public void reverse() {
+		Collections.reverse(conditions);
 	}
 }
