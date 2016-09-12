@@ -325,6 +325,7 @@ Conditions conditions() :
         }
         else
         {
+          Collections.reverse(result);
           result.addAll(tempConditions.getConditions());
         }
         // strictly only one level of parentheses is necessary we merge them here
@@ -353,10 +354,10 @@ Conditions conditions() :
       } else {
         c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
       }
-      result.add(c); 
+      result.add(c);
+      Collections.reverse(result);
     }
     Conditions cs = new Conditions(result, inParen);
-    cs.reverse();
     return cs;
   }
 }

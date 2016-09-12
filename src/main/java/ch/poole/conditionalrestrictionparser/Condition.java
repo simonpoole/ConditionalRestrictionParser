@@ -23,14 +23,14 @@ public class Condition {
 	public static List<String> compOpStrings = Arrays.asList("=",">",">=","<","<=");
 	
 	public Condition(String c, boolean OH) {
-		this.c = c; 
+		this.c = c.trim(); 
 		this.OH = OH;
 	}
 	
 	public Condition(String c, CompOp op, String c2) {
-		this.c = c; 
+		this.c = c.trim(); 
 		this.op = op;
-		this.c2 = c2;
+		this.c2 = c2.trim();
 	}	
 	
 	@Override
@@ -94,14 +94,23 @@ public class Condition {
 		return op != null && c2 != null;
 	}
 	
+	/**
+	 * @return the first term of a comparison expression
+	 */
 	public String term1() {
 		return c;
 	}
 	
+	/**
+	 * @return the second term of a comparison expression
+	 */
 	public String term2() {
 		return c2;
 	}	
 	
+	/**
+	 * @return the comparison operator
+	 */
 	public CompOp operator() {
 		return op;
 	}
