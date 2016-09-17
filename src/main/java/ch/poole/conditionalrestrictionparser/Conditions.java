@@ -63,10 +63,14 @@ public class Conditions {
 		boolean multiple = conditions.size() > 1;
 		for (Condition c:conditions) {
 			if (!first) {
-				b.append("\n AND ");
+				b.append("\n");
+				if (conditionsInParen) {
+					b.append(" ");
+				}
+				b.append("AND ");
 			} else {
 				first = false;
-				if (multiple) {
+				if (conditionsInParen) {
 					b.append(" ");
 				}
 			}
