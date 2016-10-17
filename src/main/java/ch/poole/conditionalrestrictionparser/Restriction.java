@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * Container for an OpenStreetMap conditional restriction
- * @see http://wiki.openstreetmap.org/wiki/Conditional_restrictions
+ * @see <a href="http://wiki.openstreetmap.org/wiki/Conditional_restrictions">conditional restrictions on the OpenStreetMap wiki</a>
  * @author simon
  *
  */
