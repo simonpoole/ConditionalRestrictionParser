@@ -19,7 +19,7 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
 
-version = '0.1.12'
+version = '0.2.0'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
@@ -80,7 +80,7 @@ bintray {
 		licenses = ['BSD 3-Clause']
 		vcsUrl = 'https://github.com/simonpoole/CondtionalRestrictionParser.git'
 		version {
-			name = '0.1.12'
+			name = "${project.version}"
 			released  = new Date()
 			gpg {
 				sign = true //Determines whether to GPG sign the files. The default is false

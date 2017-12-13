@@ -26,7 +26,8 @@ public class Restriction {
 	
 	/**
 	 * Set the value of the restriction if the conditions are true
-	 * @param value
+	 * 
+	 * @param value the value the restriction should evaluate to
 	 */
 	public void setValue(String value) {
 		this.value = value;
@@ -41,7 +42,8 @@ public class Restriction {
 	
 	/**
 	 * Add c to the list of conditions for this restriction
-	 * @param c
+	 * 
+	 * @param c  the Condition we want to add
 	 */
 	public void addCondition(Condition c) {
 		conditions.addCondition(c);
@@ -49,7 +51,8 @@ public class Restriction {
 
 	/**
 	 * Remove c from the list of conditions
-	 * @param c
+	 * 
+	 * @param c  the Condition we want to remove
 	 */
 	public void removeCondition(Condition c) {
 		conditions.removeCondition(c);

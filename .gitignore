@@ -2,3 +2,5 @@
 /build/
 /.settings/
 /bin/
+/.classpath
+/.externalToolBuilders/

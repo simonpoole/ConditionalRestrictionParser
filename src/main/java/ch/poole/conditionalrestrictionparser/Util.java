@@ -5,7 +5,7 @@ import java.util.List;
 public class Util {
 	
 	/**
-	 * @param restrictions
+	 * @param restrictions List of restrictions we want to convert
 	 * @return turn restrictions in to a string representation
 	 */
 	public static String restrictionsToString(List<Restriction> restrictions) {

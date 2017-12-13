@@ -26,7 +26,8 @@ public class Conditions {
 	
 	/**
 	 * Add c to the list of conditions for this restriction
-	 * @param c
+	 * 
+	 * @param c the Condition we want to add
 	 */
 	public void addCondition(Condition c) {
 		conditions.add(c);
@@ -34,7 +35,8 @@ public class Conditions {
 	
 	/**
 	 * Remove c from the list of conditions
-	 * @param c
+	 * 
+	 * @param c the Condition we want to remove
 	 */
 	public void removeCondition(Condition c) {
 		conditions.remove(c);
