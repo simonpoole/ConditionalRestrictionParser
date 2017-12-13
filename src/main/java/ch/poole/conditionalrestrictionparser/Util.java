@@ -14,16 +14,16 @@ public class Util {
 
     /**
 	 * @param restrictions List of restrictions we want to convert
-	 * @param keepEmptyCondition produce something for ampty conditiions
+	 * @param keepEmpty produce something for empty conditiions
 	 * @return turn restrictions in to a string representation
 	 */
-	public static String restrictionsToString(List<Restriction> restrictions, boolean keepEmptyConditions) {
+	public static String restrictionsToString(List<Restriction> restrictions, boolean keepEmpty) {
 		StringBuilder result = new StringBuilder();
 		for (Restriction r:restrictions) {
 			if (result.length() != 0) {
 				result.append("; ");
 			}
-			result.append(r.toString(keepEmptyConditions));
+			result.append(r.toString(keepEmpty));
 		}
 		return result.toString();
 	}
