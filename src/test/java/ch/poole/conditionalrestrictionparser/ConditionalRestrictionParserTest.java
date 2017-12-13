@@ -75,11 +75,11 @@ public class ConditionalRestrictionParserTest {
 					List<Restriction> rs = parser.restrictions();
 					
 					successful++;
-					outputExpected.write("0\t"+Util.restrictionsToString(rs)+"\n");
+					outputExpected.write("0\t"+Util.restrictionsToString(rs, true)+"\n");
 					if (expectedResultCode != null) {
 						assertEquals(expectedResultCode,"0");
 						if (expectedResult != null) {
-							assertEquals(Util.restrictionsToString(rs),expectedResult);
+							assertEquals(Util.restrictionsToString(rs, true),expectedResult);
 						}
 					}
 				}

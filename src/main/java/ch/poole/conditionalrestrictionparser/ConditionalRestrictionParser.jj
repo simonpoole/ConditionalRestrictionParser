@@ -368,7 +368,7 @@ ArrayList < Condition > conditionsInParen() :
   StringBuilder builder2 = new StringBuilder();
   ArrayList < Condition > result = null;
   ArrayList < Condition > temp = null;
-  Token t = null;
+  Token op = null;
 }
 {
   (
@@ -379,7 +379,7 @@ ArrayList < Condition > conditionsInParen() :
       (
         (
           (
-            t = < PAREN_EQ > | t = < PAREN_GT > | t = < PAREN_GTEQ > | t = < PAREN_LT > | t = < PAREN_LTEQ > 
+            op = < PAREN_EQ > | op = < PAREN_GT > | op = < PAREN_GTEQ > | op = < PAREN_LT > | op = < PAREN_LTEQ > 
 		  )
 		  (
             < WS_COND >
@@ -430,7 +430,7 @@ ArrayList < Condition > conditionsInParen() :
         result = new ArrayList <Condition> ();
       }
       Condition c;
-      if (t == null) {
+      if (op == null) {
         String s = builder.toString();
         try {
 		  OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
@@ -441,9 +441,12 @@ ArrayList < Condition > conditionsInParen() :
 		  c = new Condition(s, false);
 		}       
       } else {
-        c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
+        c = new Condition(builder.toString(), Condition.stringToOp(op.image), builder2.toString());
       }
       result.add(c);
+    } else {
+        ParseException pex = new ParseException("Empty term");
+        throw pex;
     }
 	Collections.reverse(result);
     return result;

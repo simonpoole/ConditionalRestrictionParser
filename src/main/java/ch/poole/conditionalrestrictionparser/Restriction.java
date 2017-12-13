@@ -65,12 +65,32 @@ public class Restriction {
 		conditions.setInParen();
 	}
 	
+	/**
+     * Indicate that these conditions don't need to be enclosed in parentheses
+     */
+    public void clearInParen() {
+        conditions.clearInParen();
+    }
+	
 	public String prettyPrint() {
 		return value + " @\n" + conditions.prettyPrint();
 	}
 
 	@Override
 	public String toString() {
-		return value + " @ " + conditions.toString();
+		return toString(true);
+	}
+	
+	/**
+     * Convert the object to a String representation
+     * 
+     * @param keepEmpty keep in pricinple empty or incomplete elements
+     * @return a String representation of the object
+     */
+	public String toString(boolean keepEmpty) {
+	    if (keepEmpty || value != null) {
+	        return value + " @ " + conditions.toString(keepEmpty);
+	    }
+	    return "";
 	}
 }

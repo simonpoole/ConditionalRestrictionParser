@@ -53,8 +53,15 @@ public class Conditions {
 	 * Indicate that these conditions need to be enclosed in parentheses
 	 */
 	public void setInParen() {
-		conditionsInParen = true;
+	    conditionsInParen = true;
 	}
+	
+	/**
+     * Indicate that these conditions don't need to be enclosed in parentheses
+     */
+    public void clearInParen() {
+        conditionsInParen = false;
+    }
 	
 	public String prettyPrint() {
 		StringBuilder b = new StringBuilder();
@@ -86,18 +93,31 @@ public class Conditions {
 	
 	@Override
 	public String toString() {
+	    return toString(true);
+	}
+	
+	/**
+	 * Convert the object to a String representation
+	 * 
+	 * @param keepEmpty keep in pricinple empty or incomplete elements
+	 * @return a String representation of the object
+	 */
+	public String toString(boolean keepEmpty) {
 		StringBuilder b = new StringBuilder();
 		if (conditionsInParen) {
 			b.append("(");
 		}
 		boolean first = true;
 		for (Condition c:conditions) {
-			if (!first) {
-				b.append(" AND ");
-			} else {
-				first = false;
-			}
-			b.append(c);
+		    String term1 = c.term1();
+		    if ((term1 != null && !"".equals(term1)) || keepEmpty) {
+		        if (!first) {
+		            b.append(" AND ");
+		        } else {
+		            first = false;
+		        }
+		        b.append(c);
+		    }
 		}
 		if (conditionsInParen) {
 			b.append(")");
