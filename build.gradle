@@ -58,6 +58,14 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 //	options.encoding = 'UTF-8'
 }
 
+task replaceVersion << {
+    ant.replaceregexp(match:'ch\\.poole\\:ConditionalRestrictionParser\\:([0-9\\.]+)', replace:"ch.poole:ConditionalRestrictionParser:${version}", flags:'g', byline:true) {
+        fileset(dir: '.', includes: 'README.md')
+    }
+}
+build.dependsOn replaceVersion
+
+
 publishing {
 	publications {
 		MyPublication(MavenPublication) {
