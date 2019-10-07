@@ -21,7 +21,10 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  " OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-options{  JDK_VERSION = "1.5";
+
+options
+{
+  JDK_VERSION = "1.5";
 
   static = false;
 
@@ -33,7 +36,11 @@
   DEBUG_PARSER = false;
   DEBUG_LOOKAHEAD = false;
   DEBUG_TOKEN_MANAGER = false;
-  UNICODE_INPUT = true;}PARSER_BEGIN(ConditionalRestrictionParser)package ch.poole.conditionalrestrictionparser;
+  UNICODE_INPUT = true;
+}
+
+PARSER_BEGIN(ConditionalRestrictionParser)
+package ch.poole.conditionalrestrictionparser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,7 +50,11 @@ import java.io.ByteArrayInputStream;
 import ch.poole.openinghoursparser.OpeningHoursParser;
 import ch.poole.openinghoursparser.Rule;
 
-public class ConditionalRestrictionParser{ }PARSER_END(ConditionalRestrictionParser)
+public class ConditionalRestrictionParser
+{
+}
+
+PARSER_END(ConditionalRestrictionParser)
 TOKEN_MGR_DECLS : {
     int bracketNestingDepth ;
     int prevState ; 
@@ -190,7 +201,8 @@ String quotedString() :
   StringBuilder builder = new StringBuilder();
 }
 {
-  (    < QUOTE > | <  CONDITION_QUOTE > | <  PAREN_QUOTE >
+  (
+    < QUOTE > | <  CONDITION_QUOTE > | <  PAREN_QUOTE >
   )
   (
     getQuotedStringChar(builder)
@@ -269,19 +281,23 @@ Conditions conditions() :
   < WS_COND >
   )*
   (
-    (      (
+    (
+      (
         getConditionChar(builder)
       )+
       (
         (
-          (            t = < EQ > | t = < GT > | t = < GTEQ > | t = < LT > | t =< LTEQ > 
+          (
+            t = < EQ > | t = < GT > | t = < GTEQ > | t = < LT > | t =< LTEQ > 
 		  )
 		  (
             < WS_COND >
           )*
           (
             getConditionChar(builder2)
-          )+        )      )?
+          )+
+        )
+      )?
     )
   |
     (
@@ -484,7 +500,8 @@ ArrayList < Restriction > restrictions() :
       }
     )
   )*
-  (    < SEMICOLON >
+  (
+    < SEMICOLON >
   )*
   < EOF >
   {
