@@ -57,7 +57,14 @@ public class Restriction {
 	public void removeCondition(Condition c) {
 		conditions.removeCondition(c);
 	}
-	
+
+	/**
+	 * @return true if the conditions need to be enclosed in parentheses
+	 */
+	public boolean inParen() {
+		return conditions.conditionsInParen;
+	}
+
 	/**
 	 * Indicate that these conditions need to be enclosed in parentheses
 	 */
