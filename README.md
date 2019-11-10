@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/simonpoole/ConditionalRestrictionParser.svg?branch=master)](https://travis-ci.org/simonpoole/ConditionalRestrictionParser)
+
 # ConditionalRestrictionParser
 
 This is a very simplistic parser for string values according to the OSM conditional restriction "specification" see http://wiki.openstreetmap.org/wiki/Conditional_restrictions

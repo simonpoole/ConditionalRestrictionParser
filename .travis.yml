@@ -1,0 +1,10 @@
+language: java
+
+jdk:
+  - openjdk11
+  
+before_install:
+ - chmod +x gradlew
+ 
+after_failure:
+  - cat /home/travis/build/simonpoole/ConditionalRestrictionParser/build/test-results/test/*.xml
