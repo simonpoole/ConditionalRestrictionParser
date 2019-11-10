@@ -8,8 +8,8 @@
  */
 
 plugins {
-  id "ca.coglinc.javacc" version "2.3.1"
-  id "com.jfrog.bintray" version "1.7.1"
+    id "ca.coglinc.javacc" version "2.3.1"
+    id "com.jfrog.bintray" version "1.7.1"
 }
 
 // Apply the java plugin to add support for Java
@@ -48,54 +48,56 @@ javadoc {
 }
 
 task sourcesJar(type: Jar) {
-	from mainSource, testSource
-	classifier = 'sources'
+    from mainSource, testSource
+    classifier = 'sources'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-	classifier = 'javadoc'
-	from javadoc.destinationDir
-//	options.encoding = 'UTF-8'
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+    //	options.encoding = 'UTF-8'
 }
 
-task replaceVersion << {
-    ant.replaceregexp(match:'ch\\.poole\\:ConditionalRestrictionParser\\:([0-9\\.]+)', replace:"ch.poole:ConditionalRestrictionParser:${version}", flags:'g', byline:true) {
-        fileset(dir: '.', includes: 'README.md')
+task replaceVersion {
+    doLast {
+        ant.replaceregexp(match:'ch\\.poole\\:ConditionalRestrictionParser\\:([0-9\\.]+)', replace:"ch.poole:ConditionalRestrictionParser:${version}", flags:'g', byline:true) {
+            fileset(dir: '.', includes: 'README.md')
+        }
     }
 }
 build.dependsOn replaceVersion
 
 
 publishing {
-	publications {
-		MyPublication(MavenPublication) {
-			from components.java
-			groupId 'ch.poole'
-			artifactId 'ConditionalRestrictionParser'
-			artifact sourcesJar
-			artifact javadocJar
-		}
-	}
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            groupId 'ch.poole'
+            artifactId 'ConditionalRestrictionParser'
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
 }
 
 bintray {
-	user = System.getenv('BINTRAY_USER')
-	key = System.getenv('BINTRAY_KEY')
-	publications = ['MyPublication']
-	pkg {
-		repo = 'osm'
-		name = 'ConditionalRestrictionParser'
-		licenses = ['BSD 3-Clause']
-		vcsUrl = 'https://github.com/simonpoole/CondtionalRestrictionParser.git'
-		version {
-			name = "${project.version}"
-			released  = new Date()
-			gpg {
-				sign = true //Determines whether to GPG sign the files. The default is false
-				passphrase = System.getenv('BINTRAY_PASSPHRASE')
-			}
-		}
-	}
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    publications = ['MyPublication']
+    pkg {
+        repo = 'osm'
+        name = 'ConditionalRestrictionParser'
+        licenses = ['BSD 3-Clause']
+        vcsUrl = 'https://github.com/simonpoole/CondtionalRestrictionParser.git'
+        version {
+            name = "${project.version}"
+            released  = new Date()
+            gpg {
+                sign = true //Determines whether to GPG sign the files. The default is false
+                passphrase = System.getenv('BINTRAY_PASSPHRASE')
+            }
+        }
+    }
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -107,7 +109,7 @@ repositories {
 // In this section you declare the dependencies for your production and test code
 dependencies {
     compile 'ch.poole:OpeningHoursParser:0.16.1'
-	testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
 }
 
 
