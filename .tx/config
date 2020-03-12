@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[conditionalresrtictionparser.messagesproperties]
+file_filter = src/main/resources/ch/poole/conditionalresrtictionparser/Messages_<lang>.properties
+source_file = src/main/resources/ch/poole/conditionalresrtictionparser/Messages.properties
+source_lang = en
+minimum_perc = 100

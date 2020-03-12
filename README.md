@@ -34,6 +34,6 @@ You can either download the jar from github or add the following to your build.g
 	
 	dependencies {
 	    ...
-	    compile 'ch.poole:ConditionalRestrictionParser:0.2.3'
+	    compile 'ch.poole:ConditionalRestrictionParser:0.3.0'
 	    ...
 	}

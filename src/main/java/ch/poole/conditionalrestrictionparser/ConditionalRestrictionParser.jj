@@ -4,7 +4,7 @@
  *
  * @author Simon Poole
  *
- * Copyright (c) 2015 Simon Poole
+ * Copyright (c) 2015, 2020 Simon Poole
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
  * and associated documentation files (the "Software"), to deal in the Software without restriction,
@@ -41,29 +41,53 @@ options
 
 PARSER_BEGIN(ConditionalRestrictionParser)
 package ch.poole.conditionalrestrictionparser;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.io.ByteArrayInputStream;
-
 import ch.poole.openinghoursparser.OpeningHoursParser;
 import ch.poole.openinghoursparser.Rule;
 
+import static ch.poole.conditionalrestrictionparser.I18n.tr;
+
 public class ConditionalRestrictionParser
 {
+  /**
+     * Get the output of the parser
+     *
+     * @return a List of Restriction elements
+     * @throws ConditionalRestrictionParseException on parse errors
+     */
+  public List < Restriction > restrictions() throws ConditionalRestrictionParseException
+  {
+    try
+    {
+      return restrictions0();
+    }
+    catch (ConditionalRestrictionParseException ex)
+    {
+      throw ex;
+    }
+    catch (ParseException ex)
+    {
+      throw new ConditionalRestrictionParseException(ex);
+    }
+  }
 }
 
 PARSER_END(ConditionalRestrictionParser)
-TOKEN_MGR_DECLS : {
-    int bracketNestingDepth ;
-    int prevState ; 
+
+TOKEN_MGR_DECLS :
+{
+  int bracketNestingDepth;
+  int prevState;
 }
 
 TOKEN :
 {
   < AT : "@" > : CONDITION_STATE
 }
+
 TOKEN :
 {
   < CHAR : ~[ "@", "\"", "\\" ] >
@@ -71,28 +95,43 @@ TOKEN :
 
 TOKEN :
 {
-  < QUOTE : "\"" > { prevState = curLexState; } : QUOTED_STRING_STATE // save current state
+  < QUOTE : "\"" >
+  {
+    prevState = curLexState;
+  }
+  : QUOTED_STRING_STATE // save current state
 }
 
 < QUOTED_STRING_STATE >
 TOKEN :
 {
-  < ENDQUOTE : < QUOTE >> { SwitchTo(prevState); }  // need to switch to prev state 
+  < ENDQUOTE : < QUOTE > >
+  {
+    SwitchTo(prevState);
+  } // need to switch to prev state 
 | < QUOTED_STRING_CHAR : ~[ "\"", "\\" ] >
 }
 
 < CONDITION_STATE >
 TOKEN :
 {
-  < CONDITION_QUOTE : "\"" > { prevState = curLexState; } : QUOTED_STRING_STATE // save current state
+  < CONDITION_QUOTE : "\"" >
+  {
+    prevState = curLexState;
+  }
+  : QUOTED_STRING_STATE // save current state
 }
 
 < CONDITION_STATE >
 TOKEN :
 {
   < CONDITION_CHAR : ~[ "(", "\"", "\\", ";", " ", "\t", "<", "=", ">" ] >
-| < WS_COND : [" ","\t"] >
-| < LPAREN :  "(" > { bracketNestingDepth=1; }  : PAREN_STATE
+| < WS_COND : [ " ", "\t" ] >
+| < LPAREN : "(" >
+  {
+    bracketNestingDepth = 1;
+  }
+  : PAREN_STATE
 | < SEMICOLON : ";" > : DEFAULT
 | < AND : "AND" >
 | < EQ : "=" >
@@ -105,18 +144,27 @@ TOKEN :
 < PAREN_STATE >
 TOKEN :
 {
-  < PAREN_QUOTE : "\"" > { prevState = curLexState; } : QUOTED_STRING_STATE // save current state
+  < PAREN_QUOTE : "\"" >
+  {
+    prevState = curLexState;
+  }
+  : QUOTED_STRING_STATE // save current state
 }
 
 < PAREN_STATE >
 TOKEN :
 {
-  < PAREN_LPAREN : "(" >  { bracketNestingDepth+=1; }
-| < RPAREN :  ")" >  {
+  < PAREN_LPAREN : "(" >
+  {
+    bracketNestingDepth += 1;
+  }
+| < RPAREN : ")" >
+  {
     bracketNestingDepth -= 1;
-    SwitchTo( bracketNestingDepth==0 ? CONDITION_STATE : PAREN_STATE );}  
+    SwitchTo(bracketNestingDepth == 0 ? CONDITION_STATE : PAREN_STATE);
+  }
 | < PAREN_CHAR : ~[ "(", ")", "\"", "\\", " ", "\t", "<", "=", ">" ] >
-| < WS_PAREN : [" ","\t"] >
+| < WS_PAREN : [ " ", "\t" ] >
 | < PAREN_AND : "AND" >
 | < PAREN_EQ : "=" >
 | < PAREN_GT : ">" >
@@ -150,7 +198,7 @@ void getChar(StringBuilder builder) :
   String s;
 }
 {
-  (    
+  (
     (t = < CHAR >)
     {
       if (t.image.length() < 2)
@@ -159,12 +207,12 @@ void getChar(StringBuilder builder) :
         builder.append(t.image.charAt(0));
       }
     }
-  |
+  | 
     s = quotedString()
     {
       builder.append(s);
     }
-  )    
+  )
 }
 
 /**
@@ -202,7 +250,9 @@ String quotedString() :
 }
 {
   (
-    < QUOTE > | <  CONDITION_QUOTE > | <  PAREN_QUOTE >
+    < QUOTE >
+  | < CONDITION_QUOTE >
+  | < PAREN_QUOTE >
   )
   (
     getQuotedStringChar(builder)
@@ -223,7 +273,10 @@ void getConditionChar(StringBuilder builder) :
 }
 {
   (
-    (t = < CONDITION_CHAR > | t = < WS_COND >)
+    (
+      t = < CONDITION_CHAR >
+    | t = < WS_COND >
+    )
     {
       if (t.image.length() < 2)
       {
@@ -249,7 +302,10 @@ void getParenChar(StringBuilder builder) :
 }
 {
   (
-    (t = < PAREN_CHAR > | t = < WS_PAREN >)
+    (
+      t = < PAREN_CHAR >
+    | t = < WS_PAREN >
+    )
     {
       if (t.image.length() < 2)
       {
@@ -288,10 +344,14 @@ Conditions conditions() :
       (
         (
           (
-            t = < EQ > | t = < GT > | t = < GTEQ > | t = < LT > | t =< LTEQ > 
-		  )
-		  (
-            < WS_COND >
+            t = < EQ >
+          | t = < GT >
+          | t = < GTEQ >
+          | t = < LT >
+          | t = < LTEQ >
+          )
+          (
+          < WS_COND >
           )*
           (
             getConditionChar(builder2)
@@ -329,7 +389,7 @@ Conditions conditions() :
     (
     < WS_COND >
     )* 
-    < AND >
+    < AND > 
     tempConditions = conditions()
     {
       if (tempConditions != null)
@@ -345,7 +405,7 @@ Conditions conditions() :
           result.addAll(tempConditions.getConditions());
         }
         // strictly only one level of parentheses is necessary we merge them here
-        inParen = inParen || tempConditions.inParen(); 
+        inParen = inParen || tempConditions.inParen();
       }
     }
   )*
@@ -357,17 +417,22 @@ Conditions conditions() :
         result = new ArrayList < Condition > ();
       }
       Condition c;
-      if (t == null) {
+      if (t == null)
+      {
         String s = builder.toString();
-        try {
-		  OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
-		  ArrayList<Rule> rules = parser.rules(false);
-		  c = new Condition(s, true);
-		}
-		catch (Exception ex) {
-		  c = new Condition(s, false);
-		}       
-      } else {
+        try
+        {
+          OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
+          List < Rule > rules = parser.rules(false);
+          c = new Condition(s, true);
+        }
+        catch (Exception ex)
+        {
+          c = new Condition(s, false);
+        }
+      }
+      else
+      {
         c = new Condition(builder.toString(), Condition.stringToOp(t.image), builder2.toString());
       }
       result.add(c);
@@ -378,27 +443,31 @@ Conditions conditions() :
   }
 }
 
-ArrayList < Condition > conditionsInParen() :
+List < Condition > conditionsInParen() :
 {
   StringBuilder builder = new StringBuilder();
   StringBuilder builder2 = new StringBuilder();
-  ArrayList < Condition > result = null;
-  ArrayList < Condition > temp = null;
+  List < Condition > result = null;
+  List < Condition > temp = null;
   Token op = null;
 }
 {
   (
     (
-      (  
+      (
         getParenChar(builder)
       )+
       (
         (
           (
-            op = < PAREN_EQ > | op = < PAREN_GT > | op = < PAREN_GTEQ > | op = < PAREN_LT > | op = < PAREN_LTEQ > 
-		  )
-		  (
-            < WS_COND >
+            op = < PAREN_EQ >
+          | op = < PAREN_GT >
+          | op = < PAREN_GTEQ >
+          | op = < PAREN_LT >
+          | op = < PAREN_LTEQ >
+          )
+          (
+          < WS_COND >
           )*
           (
             getParenChar(builder2)
@@ -408,7 +477,7 @@ ArrayList < Condition > conditionsInParen() :
     )
     (
       (
-    	< WS_PAREN >
+      < WS_PAREN >
       )* 
       < PAREN_AND >
       (
@@ -443,28 +512,36 @@ ArrayList < Condition > conditionsInParen() :
     {
       if (result == null)
       {
-        result = new ArrayList <Condition> ();
+        result = new ArrayList < Condition > ();
       }
       Condition c;
-      if (op == null) {
+      if (op == null)
+      {
         String s = builder.toString();
-        try {
-		  OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
-		  ArrayList<Rule> rules = parser.rules(false);
-		  c = new Condition(s, true);
-		}
-		catch (Exception ex) {
-		  c = new Condition(s, false);
-		}       
-      } else {
+        try
+        {
+          OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
+          List < Rule > rules = parser.rules(false);
+          c = new Condition(s, true);
+        }
+        catch (Exception ex)
+        {
+          c = new Condition(s, false);
+        }
+      }
+      else
+      {
         c = new Condition(builder.toString(), Condition.stringToOp(op.image), builder2.toString());
       }
       result.add(c);
-    } else {
-        ParseException pex = new ParseException("Empty term");
-        throw pex;
     }
-	Collections.reverse(result);
+    else
+    {
+      ParseException pex = new ConditionalRestrictionParseException(tr("empty_term"), token.next);
+      pex.currentToken = token;
+      throw pex;
+    }
+    Collections.reverse(result);
     return result;
   }
 }
@@ -481,11 +558,11 @@ Restriction restriction() :
   {
     return new Restriction(value, conditions);
   }
-}  
+}
 
-ArrayList < Restriction > restrictions() :
+List < Restriction > restrictions0() :
 {
-  ArrayList < Restriction > result = new ArrayList < Restriction > ();
+  List < Restriction > result = new ArrayList < Restriction > ();
   Restriction r = null;
   Restriction r1 = null;
 }
@@ -496,13 +573,13 @@ ArrayList < Restriction > restrictions() :
     (
       r1 = restriction()
       {
-      	result.add(0, r1);
+        result.add(0, r1);
       }
     )
   )*
   (
-    < SEMICOLON >
-  )*
+  < SEMICOLON >
+  )* 
   < EOF >
   {
     result.add(r);
@@ -511,7 +588,8 @@ ArrayList < Restriction > restrictions() :
   }
 }
 
-< * > TOKEN :
+<* >
+TOKEN :
 {
-  < UNEXPECTED_CHAR : ~[] >
-} 
+  < UNEXPECTED_CHAR : ~[ ] >
+}
