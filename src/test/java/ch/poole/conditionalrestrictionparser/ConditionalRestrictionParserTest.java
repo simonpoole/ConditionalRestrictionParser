@@ -33,6 +33,9 @@ public class ConditionalRestrictionParserTest {
 	
 	/**
 	 * This completes successfully if parsing gives the same success result and for sucessful parses the same regenerated OH string
+	 * 
+	 * @param inputFile test input
+	 * @param resultsFile file to compare with
 	 */
 	private void parseData(String inputFile,  String resultsFile)
 	{
