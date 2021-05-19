@@ -2,7 +2,14 @@ package ch.poole.conditionalrestrictionparser;
 
 import java.util.List;
 
-public class Util {
+public final class Util {
+    
+    /**
+     * Private constructor to inhibit instantiation
+     */
+    private Util() {
+        // empty
+    }
 	
 	/**
      * @param restrictions List of restrictions we want to convert

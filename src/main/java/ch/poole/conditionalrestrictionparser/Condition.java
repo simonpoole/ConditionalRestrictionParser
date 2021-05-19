@@ -3,6 +3,9 @@ package ch.poole.conditionalrestrictionparser;
 import java.util.Arrays;
 import java.util.List;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 /**
  * Container for a OSM condition
  * 
@@ -10,23 +13,37 @@ import java.util.List;
  *
  */
 public class Condition {
-    boolean OH = false;
-    String  c;
-    String  c2;
+    private boolean isOH = false;
+    private String  c;
+    private String  c2;
 
-    public static enum CompOp {
+    public enum CompOp {
         EQ, GT, GTEQ, LT, LTEQ
     }
 
-    CompOp                     op            = null;
-    public static List<String> compOpStrings = Arrays.asList("=", ">", ">=", "<", "<=");
+    private CompOp op = null;
 
-    public Condition(String c, boolean OH) {
+    public static final List<String> compOpStrings = Arrays.asList("=", ">", ">=", "<", "<=");
+
+    /**
+     * Construct a new Condition
+     * 
+     * @param c a literal string
+     * @param isOH it's an OSM opening_hours value
+     */
+    public Condition(@NotNull String c, boolean isOH) {
         this.c = c.trim();
-        this.OH = OH;
+        this.isOH = isOH;
     }
 
-    public Condition(String c, CompOp op, String c2) {
+    /**
+     * Construct a new Condition
+     * 
+     * @param c first literal
+     * @param op comparison operator
+     * @param c2 2nd literal
+     */
+    public Condition(@NotNull String c, @NotNull CompOp op, @NotNull String c2) {
         this.c = c.trim();
         this.op = op;
         this.c2 = c2.trim();
@@ -43,7 +60,7 @@ public class Condition {
      * @param op the CompOp we want the string representation for
      * @return the string, empty if not found (can't happen)
      */
-    public static String opToString(CompOp op) {
+    public static String opToString(@NotNull CompOp op) {
         switch (op) {
         case EQ:
             return "=";
@@ -66,7 +83,7 @@ public class Condition {
      * @param s String we want the COmpOp for
      * @return null if not a recognized comparison operator
      */
-    public static CompOp stringToOp(String s) {
+    public static CompOp stringToOp(@Nullable String s) {
         if ("=".equals(s)) {
             return CompOp.EQ;
         } else if (">".equals(s)) {
@@ -85,7 +102,7 @@ public class Condition {
      * @return true if this is an OH spec
      */
     public boolean isOpeningHours() {
-        return OH;
+        return isOH;
     }
 
     /**
@@ -117,7 +134,7 @@ public class Condition {
     public String term2() {
         return c2;
     }
-    
+
     /**
      * Set the second term of an expression
      * 

@@ -17,6 +17,13 @@ public class I18n {
     static {
         setLocale(Locale.ROOT);
     }
+    
+    /**
+     * Private constructor to inhibit instantiation
+     */
+    private I18n() {
+        // empty
+    }
 
     /**
      * Sets the locale used for translations.
