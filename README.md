@@ -15,7 +15,7 @@ Running a valid (not so clear what that is, see above) conditional restriction t
     try
 	 {
 	     	ConditionalRestrictionParser parser = new ConditionalRestrictionParser(new ByteArrayInputStream(line.getBytes()));
-			ArrayList<Restriction> list = parser.restrictions();
+			List<Restriction> list = parser.restrictions();
 		  ...	
 	 } catch ...
 
