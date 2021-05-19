@@ -6,14 +6,16 @@ import static ch.poole.conditionalrestrictionparser.I18n.tr;
 
 /**
  * Represents an exception when parsing the conditional restriction string
+ * 
  * @author JOSM team, Simon Legner
  */
 public class ConditionalRestrictionParseException extends ParseException {
+    private static final long serialVersionUID = 1L;
 
     private final int line;
     private final int column;
-    private String encountered = null;
-    private String expected = null;
+    private String    encountered = null; // NOSONAR
+    private String    expected    = null; // NOSONAR
 
     ConditionalRestrictionParseException(String message) {
         this(message, -1, -1);
@@ -39,6 +41,7 @@ public class ConditionalRestrictionParseException extends ParseException {
 
     /**
      * Returns the line number
+     * 
      * @return the line number
      */
     public int getLine() {
@@ -47,6 +50,7 @@ public class ConditionalRestrictionParseException extends ParseException {
 
     /**
      * Returns the column number
+     * 
      * @return the column number
      */
     public int getColumn() {
@@ -55,50 +59,45 @@ public class ConditionalRestrictionParseException extends ParseException {
 
     @Override
     public String getMessage() {
-        final String message = encountered == null || encountered.isEmpty()
-                ? super.getMessage()
-                : tr("exception_encountered", encountered);
-        final String string = line >= 0 && column >= 0
-                ? tr("exception_line_column", message, line, column)
-                : message;
-        final String appendix = expected == null || expected.isEmpty()
-                ? ""
-                : EOL + tr("exception_expecting", expected);
+        final String message = encountered == null || encountered.isEmpty() ? super.getMessage() : tr("exception_encountered", encountered);
+        final String string = line >= 0 && column >= 0 ? tr("exception_line_column", message, line, column) : message;
+        final String appendix = expected == null || expected.isEmpty() ? "" : EOL + tr("exception_expecting", expected);
         return string + appendix;
     }
 
     private void setEncounteredExpected() {
         // localized ch.poole.openinghoursparser.ParseException.initialise
-        StringBuilder expected = new StringBuilder();
+        StringBuilder expectedBuilder = new StringBuilder();
         int maxSize = 0;
         for (int[] expectedTokenSequence : expectedTokenSequences) {
             if (maxSize < expectedTokenSequence.length) {
                 maxSize = expectedTokenSequence.length;
             }
             for (int i : expectedTokenSequence) {
-                expected.append(tokenImage[i]).append(' ');
+                expectedBuilder.append(tokenImage[i]).append(' ');
             }
             if (expectedTokenSequence[expectedTokenSequence.length - 1] != 0) {
-                expected.append("...");
+                expectedBuilder.append("...");
             }
-            expected.append(EOL).append("    ");
+            expectedBuilder.append(EOL).append("    ");
         }
-        this.expected = expected.toString().trim();
+        this.expected = expectedBuilder.toString().trim();
 
-        StringBuilder encountered = new StringBuilder();
+        StringBuilder encounteredBuilder = new StringBuilder();
         Token tok = currentToken.next;
         for (int i = 0; i < maxSize; i++) {
-            if (i != 0) encountered.append(" ");
+            if (i != 0)
+                encounteredBuilder.append(" ");
             if (tok.kind == 0) {
-                encountered.append(tokenImage[0]);
+                encounteredBuilder.append(tokenImage[0]);
                 break;
             }
-            encountered.append(" ").append(tokenImage[tok.kind]);
-            encountered.append(" \"");
-            encountered.append(add_escapes(tok.image));
-            encountered.append(" \"");
+            encounteredBuilder.append(" ").append(tokenImage[tok.kind]);
+            encounteredBuilder.append(" \"");
+            encounteredBuilder.append(add_escapes(tok.image));
+            encounteredBuilder.append(" \"");
             tok = tok.next;
         }
-        this.encountered = encountered.toString();
+        this.encountered = encounteredBuilder.toString();
     }
 }
