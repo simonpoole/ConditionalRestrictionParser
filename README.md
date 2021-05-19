@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/simonpoole/ConditionalRestrictionParser.svg?branch=master)](https://travis-ci.org/simonpoole/ConditionalRestrictionParser)
-
+![build status](https://github.com/simonpoole/ConditionalRestrictionParser/actions) ![Quality Gate Status](https://sonarcloud.io/dashboard?id=ConditionalRestrictionParser) ![Coverage](https://sonarcloud.io/dashboard?id=ConditionalRestrictionParser) ![sonarcloud bugs](https://sonarcloud.io/component_measures?id=ConditionalRestrictionParser&metric=bugs) ![sonarcould maintainability](https://sonarcloud.io/component_measures?id=ConditionalRestrictionParser&metric=Maintainability) ![sonarcloud security](https://sonarcloud.io/component_measures?id=ConditionalRestrictionParser&metric=Security) ![sonarcloud reliability](https://sonarcloud.io/component_measures?id=ConditionalRestrictionParser&metric=Reliability)
 # ConditionalRestrictionParser
 
 This is a very simplistic parser for string values according to the OSM conditional restriction "specification" see http://wiki.openstreetmap.org/wiki/Conditional_restrictions
