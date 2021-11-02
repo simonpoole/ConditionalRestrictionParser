@@ -50,7 +50,7 @@ public class UnitTest {
     }
 
     @Test
-    public void numbericComparisonTest() {
+    public void numericComparisonTest() {
         try {
             ConditionalRestrictionParser parser = new ConditionalRestrictionParser(new ByteArrayInputStream("100 @ (weight<=3.5); 70 @ weight>3.5".getBytes()));
             List<Restriction> rs = parser.restrictions();

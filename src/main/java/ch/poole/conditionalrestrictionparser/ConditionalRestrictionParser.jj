@@ -1,6 +1,6 @@
 /**
- * Parser for OpenStreetMap opening_hours values
- * See http://wiki.openstreetmap.org/wiki/Key:opening_hours/specification
+ * Parser for OpenStreetMap conditional restriction values
+ * See https://wiki.openstreetmap.org/wiki/Conditional_restrictions
  *
  * @author Simon Poole
  *
