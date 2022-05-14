@@ -14,7 +14,7 @@ apply plugin: 'signing'
 apply plugin: "jacoco"
 
 
-version = '0.3.2'
+version = '0.3.3'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -168,7 +168,7 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    compile 'ch.poole:OpeningHoursParser:0.26.0'
+    compile 'ch.poole:OpeningHoursParser:0.27.0'
     compileOnly 'org.jetbrains:annotations:19.0.0'
     testCompileOnly 'org.jetbrains:annotations:19.0.0'
     testCompile 'junit:junit:4.12'
