@@ -3,6 +3,8 @@ package ch.poole.conditionalrestrictionparser;
 import java.util.Collections;
 import java.util.List;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Container for a list of Condition object plus a flag that indicates if they are enclosed in parentheses
  * 
@@ -10,19 +12,20 @@ import java.util.List;
  *
  */
 public class Conditions {
-    final List<Condition> conditions;
-    boolean               conditionsInParen = false;
+    private final List<Condition> conditionList;
+    private boolean               conditionsInParen = false;
 
-    public Conditions(final List<Condition> conditions, boolean conditionsInParen) {
-        this.conditions = conditions;
+    public Conditions(@NotNull final List<Condition> conditions, boolean conditionsInParen) {
+        this.conditionList = conditions;
         this.conditionsInParen = conditionsInParen;
     }
 
     /**
      * @return a List containing the conditions
      */
+    @NotNull
     public List<Condition> getConditions() {
-        return conditions;
+        return conditionList;
     }
 
     /**
@@ -30,8 +33,8 @@ public class Conditions {
      * 
      * @param c the Condition we want to add
      */
-    public void addCondition(Condition c) {
-        conditions.add(c);
+    public void addCondition(@NotNull Condition c) {
+        conditionList.add(c);
     }
 
     /**
@@ -39,8 +42,8 @@ public class Conditions {
      * 
      * @param c the Condition we want to remove
      */
-    public void removeCondition(Condition c) {
-        conditions.remove(c);
+    public void removeCondition(@NotNull Condition c) {
+        conditionList.remove(c);
     }
 
     /**
@@ -70,7 +73,7 @@ public class Conditions {
             b.append("(" + System.lineSeparator());
         }
         boolean first = true;
-        for (Condition c : conditions) {
+        for (Condition c : conditionList) {
             if (!first) {
                 b.append(System.lineSeparator());
                 if (conditionsInParen) {
@@ -108,7 +111,7 @@ public class Conditions {
             b.append("(");
         }
         boolean first = true;
-        for (Condition c : conditions) {
+        for (Condition c : conditionList) {
             String term1 = c.term1();
             if ((term1 != null && !"".equals(term1)) || keepEmpty) {
                 if (!first) {
@@ -126,6 +129,6 @@ public class Conditions {
     }
 
     public void reverse() {
-        Collections.reverse(conditions);
+        Collections.reverse(conditionList);
     }
 }

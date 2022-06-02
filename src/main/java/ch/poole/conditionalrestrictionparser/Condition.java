@@ -1,6 +1,7 @@
 package ch.poole.conditionalrestrictionparser;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +24,7 @@ public class Condition {
 
     private CompOp op = null;
 
-    public static final List<String> compOpStrings = Arrays.asList("=", ">", ">=", "<", "<=");
+    public static final List<String> compOpStrings = Collections.unmodifiableList(Arrays.asList("=", ">", ">=", "<", "<="));
 
     /**
      * Construct a new Condition

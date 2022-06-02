@@ -64,7 +64,7 @@ public class Restriction {
      * @return true if the conditions need to be enclosed in parentheses
      */
     public boolean inParen() {
-        return conditions.conditionsInParen;
+        return conditions.inParen();
     }
 
     /**
