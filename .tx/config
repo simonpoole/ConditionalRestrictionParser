@@ -1,8 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[conditionalrestrictionparser.messagesproperties]
-file_filter = src/main/resources/ch/poole/conditionalrestrictionparser/Messages_<lang>.properties
-source_file = src/main/resources/ch/poole/conditionalrestrictionparser/Messages.properties
-source_lang = en
+[o:openstreetmap:p:conditionalrestrictionparser:r:messagesproperties]
+file_filter  = src/main/resources/ch/poole/conditionalrestrictionparser/Messages_<lang>.properties
+source_file  = src/main/resources/ch/poole/conditionalrestrictionparser/Messages.properties
+source_lang  = en
 minimum_perc = 100
+
