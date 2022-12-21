@@ -423,7 +423,7 @@ Conditions conditions() :
         try
         {
           OpeningHoursParser parser = new OpeningHoursParser(new ByteArrayInputStream(s.getBytes()));
-          List < Rule > rules = parser.rules(false);
+          List < Rule > rules = parser.rules(false, false);
           c = new Condition(s, true);
         }
         catch (Exception ex)
