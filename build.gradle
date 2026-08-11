@@ -1,9 +1,19 @@
 /*
  */
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.github.breadmoirai:github-release:2.5.2"
+    }
+}
 
 plugins {
     id "ca.coglinc.javacc" version "2.4.0"
-    id "org.sonarqube" version "4.0.0.2929"
+    id "org.sonarqube" version "6.2.0.5505"
 }
 
 // Apply the java plugin to add support for Java
@@ -12,9 +22,9 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 apply plugin: "jacoco"
+apply plugin: "com.github.breadmoirai.github-release"
 
-
-version = '0.3.4'
+version = '0.3.5'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -112,6 +122,7 @@ test {
 ext {
     repoUrl = 'https://github.com/simonpoole/ConditionalRestrictionParser.git'
     spdxId = 'MIT'
+    githubToken = System.getenv('GITHUB_TOKEN')
 }
 
 publishing {
@@ -144,12 +155,9 @@ publishing {
             repositories {
                 maven {
                     name = 'sonatype'
-                    credentials {
-                        username System.getenv('SONATYPE_USER')
-                        password System.getenv('SONATYPE_PASSWORD')
-                    }
-                    def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-                    def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+                    credentials(PasswordCredentials)
+                    def releasesRepoUrl = "https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/"
+                    def snapshotsRepoUrl = "https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots/"
                     url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
                 }
             }
@@ -159,6 +167,21 @@ publishing {
 
 signing {
     sign publishing.publications.Release
+}
+
+githubRelease {
+    token project.ext.githubToken == null ? "" : project.ext.githubToken  
+    repo = "ConditionalRestrictionParser"  
+    owner = "simonpoole"
+    tagName = project.version
+    releaseName = project.version
+    targetCommitish = "master" 
+    generateReleaseNotes = true 
+    overwrite = true
+}
+
+afterEvaluate {
+    publishReleasePublicationToSonatypeRepository.dependsOn tasks.githubRelease
 }
 
 // In this section you declare where to find the dependencies of your project
